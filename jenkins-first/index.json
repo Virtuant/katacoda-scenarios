@@ -1,6 +1,6 @@
 {
     "icon":"fa-jenkins",
-    "pathwayTitle": "Jenkins",
+    "pathwayTitle": "Intro to Jenkins",
     "title": "Building Docker Images using Jenkins",
     "description": "Learn how to configure Jenkins to build Docker Images",
     "difficulty": "Advanced",
