@@ -1,7 +1,7 @@
 
 Go to the Jenkins console (Dashboard to the right):
 
-`http://localhost:8080`
+http://localhost:8080 ----------->
 	
 Click on the New Item link.
 
