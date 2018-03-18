@@ -11,8 +11,12 @@ Enter `OracleJDK` for JDK name.
 
 Now check the **Install automatically** option. If unchecked then check it.
 
+I agree to the Java SE Development Kit License Agreement
+
 Now click the prompt to enter a user name and password, and enter:
 
 Email: info@virtuant.com
 
 Password: kAtAcodA1
+
+Click `Save`, then `Close`.
