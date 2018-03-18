@@ -2,11 +2,21 @@ The pipeline that we've defined so far appears to work perfectly. But we haven't
 
 In Eclipse, go to the Project Explorer and locate the file 'Greeting.java'. It will be under src/main/java in the package 'com.simple'. Open 'Greeting.java'.
  
+Locate the line that reads 'return "GOOD";'. Change it to read 'return "BAD";'
+
+![image](https://user-images.githubusercontent.com/558905/37570728-d9fb5fc4-2ac9-11e8-9a31-f5c11e75d5a3.png)
+
 Save the file.
 
 In the Project Explorer, right-click on Greeting.java and then select Team → Commit... (This is a shortcut for committing a single file).
 
 Enter an appropriate commit message and then click Commit and Push.
+
+![image](https://user-images.githubusercontent.com/558905/37570730-de1bc31e-2ac9-11e8-835c-50a0c9a001ac.png)
+![image](https://user-images.githubusercontent.com/558905/37570732-e312ae46-2ac9-11e8-8901-d68d5f2c94cc.png)
+![image](https://user-images.githubusercontent.com/558905/37570742-ec03d1e2-2ac9-11e8-8858-d5854d35b8a6.png)
+![image](https://user-images.githubusercontent.com/558905/37570746-f8733e9a-2ac9-11e8-850d-8042645787f1.png)
+![image](https://user-images.githubusercontent.com/558905/37570747-ffefc058-2ac9-11e8-9dc8-4d375ebe4aed.png)
 
 Click OK in the results box, to close it.
 
