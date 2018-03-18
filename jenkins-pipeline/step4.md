@@ -6,16 +6,19 @@ Go to 'Eclipse' and open the 'Jenkinsfile' if necessary.
 
 Add the following to the end of the file:
 
-stage 'User Acceptance Test'
+    ```console
+    stage 'User Acceptance Test'
 
-def response= input message: 'Is this build good to go?', parameters: [choice(choices: 'Yes\nNo',
-description: '', name: 'Pass')]
+    def response= input message: 'Is this build good to go?', 
+        parameters: [choice(choices: 'Yes\nNo',
+        description: '', name: 'Pass')]
 
-if(response=="Yes") { node {
-stage 'Deploy'
-bat 'mvn -Dmaven.test.failure.ignore install'
-}
-}
+    if(response=="Yes") { 
+        node {
+            stage 'Deploy'
+            bat 'mvn -Dmaven.test.failure.ignore install'
+        }
+    }
 
 This portion of the script creates a new stage called 'User Acceptance Test', then executes an 'input' operation to gather input from the user.  If the result is 'Yes', the script executes a deploy operation in a new 'node' step. (In this case, we're repeating the 'mvn install' that we did previously. Only because we don't actually have a deployment repository setup)
 
