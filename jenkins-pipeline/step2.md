@@ -15,15 +15,15 @@ Click Finish to create the new file.
 
 Enter the following text into the new file (Note: this is the same script that we used above, so you could copy/paste it from the Jenkins Web UI if you want to avoid some typing):
 
-```node
+```console
 node {
-stage 'Checkout'
-git url: 'C:\\Software\\repos\\SimpleGreeting.git'
+  stage 'Checkout'
+  git url: 'C:\\Software\\repos\\SimpleGreeting.git'
 
-stage 'Maven build' bat 'mvn install'
+  stage 'Maven build' bat 'mvn install'
 
-stage 'Archive Test Results' step([$class: 'JUnitResultArchiver',
-testResults: '**/target/surefire-reports/TEST-*.xml'])
+  stage 'Archive Test Results' step([$class: 'JUnitResultArchiver',
+  testResults: '**/target/surefire-reports/TEST-*.xml'])
 }
 ```
 
@@ -54,6 +54,8 @@ In the Jenkins user interface, navigate to the root page, and then click on New 
 
 Enter 'SimpleGreetingPipelineFromGit' as the name of the new item, and select Pipeline as the item type.
 
+Click OK to create the new item.
+    
 Scroll down to the Build Triggers section.
 
 Click on Poll SCM and enter '* * * * *' as the polling schedule. This entry will cause Jenkins to poll once per minute.
