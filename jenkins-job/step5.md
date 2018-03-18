@@ -1,4 +1,3 @@
-### Import the Project into Eclipse
 
 In order to make changes to the source code, we'll clone a copy of the Git repository into an Eclipse project.
 
