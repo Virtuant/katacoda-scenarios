@@ -9,7 +9,7 @@ Then, scroll down and find the **JDK** section, Click Add JDK.
 
 Enter `OracleJDK` for JDK name.
 
-Now check the ‘Install automatically’ option. If unchecked the check it.
+Now check the **Install automatically** option. If unchecked then check it.
 
 Now click the prompt to enter a user name and password, and enter:
 
