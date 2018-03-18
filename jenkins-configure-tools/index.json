@@ -1,8 +1,8 @@
 {
     "icon":"fa-jenkins",
     "pathwayTitle": "Jenkins",
-    "title": "Building Docker Images using Jenkins",
-    "description": "Learn how to configure Jenkins to build Docker Images",
+    "title": "Configure Tools with Jenkins",
+    "description": "Learn how to configure Jenkins to build tools",
     "difficulty": "Advanced",
     "time": "15-20 minutes",
     "details": {
@@ -23,14 +23,6 @@
                 "title": "Create Build Project",
                 "text": "step4.md"
             },
-            {
-                "title": "Build Project",
-                "text": "step5.md"
-            },
-            {
-                "title": "View Console Output",
-                "text": "step6.md"
-            }
         ],
         "intro": {
             "text": "intro.md",
