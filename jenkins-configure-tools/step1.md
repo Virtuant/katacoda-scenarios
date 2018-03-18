@@ -10,3 +10,8 @@ Then, scroll down and find the JDK section, Click Add JDK.
 Enter OracleJDK for JDK name.
 
 Don't check the ‘Install automatically’ option. Uncheck if already checked.
+
+Now click the prompt to enter a user name and password, and enter:
+
+Email: info@virtuant.com
+Password: kAtAcodA1
