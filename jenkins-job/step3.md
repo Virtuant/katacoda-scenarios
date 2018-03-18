@@ -1,4 +1,3 @@
-### Create the Jenkins Job
 
 Go to the Jenkins console (Dashboard to the right):
 
