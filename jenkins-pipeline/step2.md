@@ -33,18 +33,7 @@ In the Project Explorer, right-click on the SimpleGreeting node, and then select
 
 Eclipse will display the Commit Changes dialog. Click the checkbox next to Jenkinsfile (to include that file in the commit) and enter a commit message.
 
-![image](https://user-images.githubusercontent.com/558905/37570714-b6c448c2-2ac9-11e8-8703-9ba728eb6127.png)
 ![image](https://user-images.githubusercontent.com/558905/37570719-bf54b8b4-2ac9-11e8-89eb-b90bae914cc9.png)
-![image](https://user-images.githubusercontent.com/558905/37570721-c3990448-2ac9-11e8-8559-7c9362135d2d.png)
-![image](https://user-images.githubusercontent.com/558905/37570722-c933ce10-2ac9-11e8-80c7-ffc4d027389e.png)
-![image](https://user-images.githubusercontent.com/558905/37570725-cdc509f8-2ac9-11e8-96f7-4fde9f04c36b.png)
-![image](https://user-images.githubusercontent.com/558905/37570728-d9fb5fc4-2ac9-11e8-9a31-f5c11e75d5a3.png)
-![image](https://user-images.githubusercontent.com/558905/37570730-de1bc31e-2ac9-11e8-835c-50a0c9a001ac.png)
-![image](https://user-images.githubusercontent.com/558905/37570732-e312ae46-2ac9-11e8-8901-d68d5f2c94cc.png)
-![image](https://user-images.githubusercontent.com/558905/37570742-ec03d1e2-2ac9-11e8-8858-d5854d35b8a6.png)
-![image](https://user-images.githubusercontent.com/558905/37570746-f8733e9a-2ac9-11e8-850d-8042645787f1.png)
-![image](https://user-images.githubusercontent.com/558905/37570747-ffefc058-2ac9-11e8-9dc8-4d375ebe4aed.png)
-
 
 Click Commit and Push, and then click OK to dismiss the status dialog.
 
@@ -54,11 +43,15 @@ In the Jenkins user interface, navigate to the root page, and then click on New 
 
 Enter 'SimpleGreetingPipelineFromGit' as the name of the new item, and select Pipeline as the item type.
 
+![image](https://user-images.githubusercontent.com/558905/37570721-c3990448-2ac9-11e8-8559-7c9362135d2d.png)
+
 Click OK to create the new item.
     
 Scroll down to the Build Triggers section.
 
 Click on Poll SCM and enter '* * * * *' as the polling schedule. This entry will cause Jenkins to poll once per minute.
+
+![image](https://user-images.githubusercontent.com/558905/37570722-c933ce10-2ac9-11e8-80c7-ffc4d027389e.png)
 
 Scroll down to the Pipeline section, and change the Definition entry to 'Pipeline Script from SCM'
 
@@ -69,6 +62,8 @@ SCM:	Git
 Repository URL:	C:\Software\repos\SimpleGreeting.git
 
 The Pipeline section should look similar to:
+
+![image](https://user-images.githubusercontent.com/558905/37570725-cdc509f8-2ac9-11e8-96f7-4fde9f04c36b.png)
 
 Click Save to save the new configuration.
 
