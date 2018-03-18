@@ -9,6 +9,18 @@ In the Project Explorer, right-click on the root node of the SimpleGreeting proj
 
 Enter 'Jenkinsfile' as the file name
 
+![image](https://user-images.githubusercontent.com/558905/37570714-b6c448c2-2ac9-11e8-8703-9ba728eb6127.png)
+![image](https://user-images.githubusercontent.com/558905/37570719-bf54b8b4-2ac9-11e8-89eb-b90bae914cc9.png)
+![image](https://user-images.githubusercontent.com/558905/37570721-c3990448-2ac9-11e8-8559-7c9362135d2d.png)
+![image](https://user-images.githubusercontent.com/558905/37570722-c933ce10-2ac9-11e8-80c7-ffc4d027389e.png)
+![image](https://user-images.githubusercontent.com/558905/37570725-cdc509f8-2ac9-11e8-96f7-4fde9f04c36b.png)
+![image](https://user-images.githubusercontent.com/558905/37570728-d9fb5fc4-2ac9-11e8-9a31-f5c11e75d5a3.png)
+![image](https://user-images.githubusercontent.com/558905/37570730-de1bc31e-2ac9-11e8-835c-50a0c9a001ac.png)
+![image](https://user-images.githubusercontent.com/558905/37570732-e312ae46-2ac9-11e8-8901-d68d5f2c94cc.png)
+![image](https://user-images.githubusercontent.com/558905/37570742-ec03d1e2-2ac9-11e8-8858-d5854d35b8a6.png)
+![image](https://user-images.githubusercontent.com/558905/37570746-f8733e9a-2ac9-11e8-850d-8042645787f1.png)
+![image](https://user-images.githubusercontent.com/558905/37570747-ffefc058-2ac9-11e8-9dc8-4d375ebe4aed.png)
+
 
 Click Finish to create the new file.
 
