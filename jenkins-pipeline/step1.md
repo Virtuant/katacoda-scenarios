@@ -5,8 +5,6 @@ Go to the Jenkins console (Dashboard to right):
 
 http://localhost:8080 ----------->
 
-At the login screen, enter admin as the userid and password as the password, then click log in.
-
 Click on the New Item link.
 
 item type.
