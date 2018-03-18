@@ -10,21 +10,27 @@ http://localhost:8080 ----------->
 
 Click on the New Item link.
 
-item type.
+![image](https://user-images.githubusercontent.com/558905/37570706-8e719db6-2ac9-11e8-932c-e7f3ad0a04e8.png)
+
+Enter 'SimpleGreetingPipeline' as the new item name, and select 'Pipeline' as the item type.
+
+![image](https://user-images.githubusercontent.com/558905/37570708-9b6b9a1c-2ac9-11e8-86bb-70df3e5655c8.png)
 
 When the input looks as above, click on OK to create the new item.
 
+![image](https://user-images.githubusercontent.com/558905/37570712-a3423f3e-2ac9-11e8-9989-e1644e2003b5.png)
+
 Scroll down to the Pipeline section and enter the following in the Script text window.
 
-```node
+```console
 node {
-stage 'Checkout'
-git url: 'C:\\Software\\repos\\SimpleGreeting.git'
+  stage 'Checkout'
+  git url: 'C:\\Software\\repos\\SimpleGreeting.git'
 
-stage 'Maven build' bat 'mvn install'
+  stage 'Maven build' bat 'mvn install'
 
-stage 'Archive Test Results' step([$class: 'JUnitResultArchiver',
-testResults: '**/target/surefire-reports/TEST-*.xml'])
+  stage 'Archive Test Results' step([$class: 'JUnitResultArchiver',
+  testResults: '**/target/surefire-reports/TEST-*.xml'])
 }
 ```
 
@@ -33,4 +39,10 @@ All of the above is wrapped inside the 'node' command, to indicate that we want 
   
 Click on Save to save the changes and return to the project page.
 
-After a few moments, you should see the Stage View appear, and successive stages will appear as the build proceeds, until all three stages are completed.
+Now, click on Build Now to startup a pipeline instance:
+    
+![image](https://user-images.githubusercontent.com/558905/37570713-a7bff89e-2ac9-11e8-86e0-630e5b66beba.png)
+
+After a few moments, you should see the Stage View appear, and successive stages will appear as the build proceeds, until all three stages are completed:
+
+![image](https://user-images.githubusercontent.com/558905/37570714-b6c448c2-2ac9-11e8-8703-9ba728eb6127.png)
