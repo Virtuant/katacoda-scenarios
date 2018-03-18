@@ -18,8 +18,6 @@ Enter 'SimpleGreetingPipeline' as the new item name, and select 'Pipeline' as th
 
 When the input looks as above, click on OK to create the new item.
 
-![image](https://user-images.githubusercontent.com/558905/37570712-a3423f3e-2ac9-11e8-9989-e1644e2003b5.png)
-
 Scroll down to the Pipeline section and enter the following in the Script text window.
 
 ```console
@@ -40,9 +38,9 @@ All of the above is wrapped inside the 'node' command, to indicate that we want 
 Click on Save to save the changes and return to the project page.
 
 Now, click on Build Now to startup a pipeline instance:
-    
-![image](https://user-images.githubusercontent.com/558905/37570713-a7bff89e-2ac9-11e8-86e0-630e5b66beba.png)
+
+![image](https://user-images.githubusercontent.com/558905/37570712-a3423f3e-2ac9-11e8-9989-e1644e2003b5.png)
 
 After a few moments, you should see the Stage View appear, and successive stages will appear as the build proceeds, until all three stages are completed:
 
-![image](https://user-images.githubusercontent.com/558905/37570714-b6c448c2-2ac9-11e8-8703-9ba728eb6127.png)
+![image](https://user-images.githubusercontent.com/558905/37570713-a7bff89e-2ac9-11e8-86e0-630e5b66beba.png)
