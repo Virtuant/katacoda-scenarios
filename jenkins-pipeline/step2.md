@@ -7,6 +7,9 @@ Open the Eclipse editor. If this lab is completed in the normal sequence, you sh
 
 In the Project Explorer, right-click on the root node of the SimpleGreeting project, and then select New → File.
 
+Enter 'Jenkinsfile' as the file name
+
+
 Click Finish to create the new file.
 
 Enter the following text into the new file (Note: this is the same script that we used above, so you could copy/paste it from the Jenkins Web UI if you want to avoid some typing):
