@@ -1,4 +1,3 @@
-### Make Changes and Trigger a Build
 
 The project that we used as a sample consists of a basic "Hello World" style application, and a unit test for that application. In this section, we'll alter the core application so it fails the test, and then we'll see how that failure appears in Jenkins.
 
