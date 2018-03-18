@@ -7,21 +7,17 @@
 	"time": "15-20 minutes",
 	"details": {
 		"steps": [{
-				"title": "Launch Jenkins",
+				"title": "Config Jenkins",
 				"text": "step1.md"
 			},
 			{
-				"title": "Configure Docker Plugin",
+				"title": "Configure a JDK",
 				"text": "step2.md"
 			},
 			{
-				"title": "Add Docker Agent",
+				"title": "Add Maven",
 				"text": "step3.md"
 			},
-			{
-				"title": "Create Build Project",
-				"text": "step4.md"
-			}
 		],
 		"intro": {
 			"text": "intro.md",
