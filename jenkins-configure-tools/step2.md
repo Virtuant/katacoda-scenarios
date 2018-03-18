@@ -7,3 +7,8 @@ Enter Maven for Maven name.
 Uncheck the ‘Install automatically’ option.
 
 Enter C:\Software\apache-maven-3.3.9 for MAVEN_HOME. Make sure this folder is correct.
+
+When you are finished, you'll see something like this:
+
+![image](https://user-images.githubusercontent.com/558905/37561649-3138c902-2a2a-11e8-8169-03e977ed2676.png)
+
