@@ -14,4 +14,5 @@ Don't check the ‘Install automatically’ option. Uncheck if already checked.
 Now click the prompt to enter a user name and password, and enter:
 
 Email: info@virtuant.com
+
 Password: kAtAcodA1
