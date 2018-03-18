@@ -2,11 +2,11 @@
 
 As a distributed version control system, Git works by moving changes between different repositories. Any repository apart from the one you're currently working in is called a "remote" repository. Git doesn't differentiate between remote repositories that reside on different machines and remote repositories on the same machine. They're all remote repositories as far as Git is concerned. In this lab, we're going to start from a source tree, create a local repository in the source tree, and then clone it to a local repository. Then we'll create a Jenkins job that pulls the source files from that remote repository. Finally, we'll make some changes to the original files, commit them and push them to the repository, showing that Jenkins automatically picks up the changes.
  
-1. Right click in the empty area and select Git Bash Here. The Git command prompt will open.
+Right click in the empty area and select Git Bash Here. The Git command prompt will open.
 
 	![image015](https://user-images.githubusercontent.com/558905/37422363-77b63ec8-2791-11e8-866f-7984ad0c658f.png)
 
-1. Enter the following commands:
+Enter the following commands:
 
 	`ls`{{execute}}
 
@@ -15,22 +15,20 @@ As a distributed version control system, Git works by moving changes between dif
 	`git config --global user.email "admin@engage.com" 
 git config --global user.name "Bob Smith"`{{execute}}
 
-
 	The lines above are actually part of the initial configuration of Git. Because of Git's distributed nature, the user's identity is included with every commit as part of the commit data. So we have to tell Git who we are before we'll be able to commit any code.
 
-1. Enter the following lines to actually create the Git repository:
+Enter the following lines to actually create the Git repository:
 
 	`git init git add .
 git commit -m "Initial Commit"`{{execute}}
-
 	
-	The above lines create a git repository in the current directory (which will be C:\LabFiles\Create a Jenkins Job\SimpleGreeting), add all the files to the current commit set (or 'index' in git parlance), then actually performs the commit.
+The above lines create a git repository in the current directory (which will be C:\LabFiles\Create a Jenkins Job\SimpleGreeting), add all the files to the current commit set (or 'index' in git parlance), then actually performs the commit.
 
-1. Enter the following, to create a folder called repos under the C:\Software folder.
+Enter the following, to create a folder called repos under the C:\Software folder.
 
 	`mkdir /c/Software/repos`{{execute}}
 	
-1. Enter the following to clone the current Git repository into a new remote repository.
+Enter the following to clone the current Git repository into a new remote repository.
 
 	`git clone --bar . /c/Software/repos/SimpleGreeting.git`{{execute}}
 
