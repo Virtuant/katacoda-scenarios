@@ -1,5 +1,8 @@
 We can create a pipeline job that includes the pipeline script in the job configuration, or the pipeline script can be put into a 'Jenkinsfile' that's checked-in to version control.
+
 To get a taste of the pipeline, we'll start off with a very simple pipeline defined in the job configuration.
+
+>Note: We need to have a project in source control to check-out and build. For this example, we're using the 'SimpleGreeting' project that we previously cloned to a 'Git' repository at 'C:\Software\repos\SimpleGreeting.git'
 
 Go to the Jenkins console (Dashboard to right):
 
