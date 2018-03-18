@@ -1,4 +1,3 @@
-### Enable Polling on the Repository
 
 So far, we have created a Jenkins job that pulls a fresh copy of the source tree prior to building. But we triggered the build manually. In most cases, we would like to have the build triggered automatically whenever a developer makes changes to the source code in the version control system.
 
