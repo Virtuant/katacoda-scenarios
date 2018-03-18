@@ -1,5 +1,5 @@
 {
-	"icon":"fa-ansible",
+    "icon":"fa-ansible",
     "pathwayTitle": "Ansible",
     "title": "Ansible Playbook",
     "description": "Create a playbook to work with Ansible",
