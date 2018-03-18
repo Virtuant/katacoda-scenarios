@@ -13,16 +13,14 @@ In the Project Explorer, right-click on Greeting.java and then select Team → C
 Enter an appropriate commit message and then click Commit and Push.
 
 ![image](https://user-images.githubusercontent.com/558905/37570730-de1bc31e-2ac9-11e8-835c-50a0c9a001ac.png)
-![image](https://user-images.githubusercontent.com/558905/37570732-e312ae46-2ac9-11e8-8901-d68d5f2c94cc.png)
-![image](https://user-images.githubusercontent.com/558905/37570742-ec03d1e2-2ac9-11e8-8858-d5854d35b8a6.png)
-![image](https://user-images.githubusercontent.com/558905/37570746-f8733e9a-2ac9-11e8-850d-8042645787f1.png)
-![image](https://user-images.githubusercontent.com/558905/37570747-ffefc058-2ac9-11e8-9dc8-4d375ebe4aed.png)
 
 Click OK in the results box, to close it.
 
 Switch back to Jenkins.
- 
-up the change in the 'Git' repository and initiated a build. If nothing happens then click Build Now.
+
+In a minute or so, you should see a build launched automatically. Jenkins has picked up the change in the 'Git' repository and initiated a build. If nothing happens then click Build Now.
+
+![image](https://user-images.githubusercontent.com/558905/37570732-e312ae46-2ac9-11e8-8901-d68d5f2c94cc.png)
 
 This time, the results are a little different. The 'Maven Build' stage is showing a failure, and the 'Archive Test Results' stage was never executed.
 What's happened is that the unit tests have failed, and Maven exited with a non-zero result code because of the failure. As a result, the rest of the pipeline was canceled. This behavior probably isn't what you want or what you expect in most cases. We'd like to go ahead and archive the test results, even when there's a failure. That way, we can see the trend including failed tests.
@@ -35,7 +33,9 @@ Alter the 'bat "mvn..." line to read as follows:
 `bat 'mvn -Dmaven.test.failure.ignore install'`{{execute}}
 
 Save the 'Jenkinsfile'. Commit and push the changes using the same technique as above.
- 
-happens then click Build Now.
+
+After a minute or so, you should see a new Pipeline instance launched. If nothing happens then click Build Now.
+
+![image](https://user-images.githubusercontent.com/558905/37570742-ec03d1e2-2ac9-11e8-8858-d5854d35b8a6.png)
 
 This time, the pipeline runs to completion, and the test results are archived as expected. Notice that the build is now flagged as 'unstable' (indicated by the yellow color and the icon). The JUnit archiver noticed the failures and flagged the build unstable, even though Maven exited normally.
