@@ -1,6 +1,6 @@
-Go to the Jenkins console:
+Go to the Jenkins console (Dashboard to right):
 
-http://localhost:8080
+http://localhost:8080 ----------->
 
 Click on the Manage Jenkins link
 
