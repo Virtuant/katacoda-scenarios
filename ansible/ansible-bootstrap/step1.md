@@ -14,10 +14,9 @@ In this tutorial, we already have started an ansible and a target container in t
  
 Repeat sending the command until it looks similar to
 <pre>
-CONTAINER ID      IMAGE                                   COMMAND                 CREATED         STATUS
-            PORTS NAMES
-c96e3a45e164      ubuntu:14.04                            "/bin/bash -c 'whi..."  11 seconds ago  Up 9 seconds target
-caf61a258abb      williamyeh/ansible:ubuntu14.04-onbuild  "/bin/bash -c 'whi..."  13 seconds ago  Up 11 seconds ansible
+CONTAINER ID      IMAGE                                   COMMAND                 CREATED         STATUS        PORTS NAMES
+c96e3a45e164      ubuntu:14.04                            "/bin/bash -c 'whi..."  11 seconds ago  Up 9 seconds  target
+caf61a258abb      virtuant/ansible-node-ubuntu14.04:v1    "/bin/bash -c 'whi..."  13 seconds ago  Up 11 seconds ansible
 </pre>
 
 This should take no longer than 30 sec.

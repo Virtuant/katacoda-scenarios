@@ -1,9 +1,8 @@
 {
-	"pathwayTitle": "Ansible",
 	"title": "Ansible Bootstrapping",
 	"description": "Learn how to connect to a target",
-	"difficulty": "beginner",
-	"time": "15 minutes",
+	"difficulty": "advanced",
+	"time": "15-20 minutes",
 	"details": {
 
 		"steps": [{
@@ -39,7 +38,8 @@
 		}
 	},
 	"environment": {
-		"uilayout": "terminal",
+		"showdashboard": true,
+		"uilayout": "editor-terminal",
 		"uimessage1": "\u001b[32mYour Interactive Docker Host Terminal.\u001b[m\r\n"
 	},
 	"backend": {

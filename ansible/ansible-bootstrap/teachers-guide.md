@@ -179,12 +179,6 @@ Are you sure you want to continue connecting (yes/no)? yes
 > 3. copying the public key to the target system
 > We have tested the connection by using an Ansible "ping", which is an SSH connection, actually.
 
-
-
-
-
-
-
 Now open a new terminal by clicking on the + sign right of the Terminal tab (otherwise, the next command will not work).
 
 In the second terminal, we run a separate Docker container. This will be our target system.

@@ -1,4 +1,4 @@
-Now let us perform the first remote shell command.
+Now we can perform the first remote shell command!
 
 Now, since the target knows about the Ansible host's public SSH key, we are ready to connect from the Ansible host to our target:
  
@@ -29,5 +29,17 @@ The output should be
 <pre>
 hello world!
 </pre>
+
+But, that's no fun. Can't we verify that same inforamtion from our ansible host, also? And the answer is yes!
+
+So, let's now log back out of our current host instance, which in this case should be the target host, and then log back into our ansible host, again:
+
+`exit`{{execute HOST1}}
+ 
+`a`{{execute HOST1}}
+
+And finally, print out the contends of the test file, from our ansible host, just like this:
+
+`ansible all -i 'target,' -m shell -a "cat ~/testfile"`{{execute HOST1}}
 
 > Success!
