@@ -1,7 +1,7 @@
 Create a folder named provisioning and a file inside it named `playbook.yml`, and that'll get us started.
 
 
-`mkdir
+`mkdir provisioning
 vi provisioning/playbook.yml`{{execute}}
 
 >Note: Keep Vim open as you move to the next section.
