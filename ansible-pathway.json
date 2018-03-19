@@ -4,8 +4,8 @@
   "paid": false,
   "courses": [
     {
-      "title": "Configure Tools in Jenkins",
-      "description": "Learn how to launch tools in Jenkins",
+      "title": "Intro to Ansible",
+      "description": "Learn how to use Ansible",
       "course_id": "ansible-bootstrap",
       "pathway_id": "ansible",
       "id": "ansible-bootstrap"
