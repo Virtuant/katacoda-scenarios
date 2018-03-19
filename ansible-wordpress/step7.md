@@ -14,7 +14,7 @@ You’ll also need to copy this file onto your remote machine using the template
 
 Edit `provisioning/templates/nginx/default` and make sure that it contains the following content:
 
-```console
+```nginx
 server {
         server_name book.example.com;
         root /var/www/book.example.com;
