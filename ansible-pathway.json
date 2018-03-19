@@ -18,11 +18,11 @@
       "id": "jenkins-job"
     },
     {
-      "title": "Add Development Metrics with Jenkins",
-      "description": "Learn how to do dev metrics in Jenkins",
-      "course_id": "jenkins-development-metrics",
-      "pathway_id": "jenkins",
-      "id": "jenkins-development-metrics"
+      "title": "Ansible and Wordpress",
+      "description": "Learn how to start a Wordpress site using Ansible",
+      "course_id": "ansible-wordpress",
+      "pathway_id": "ansible",
+      "id": "ansible-wordpress"
     },
     {
       "title": "Create a Pipelne in Jenkins",
