@@ -1,0 +1,43 @@
+{
+  "title": "Ansible",
+  "description": "Ansible pathway",
+  "paid": false,
+  "courses": [
+    {
+      "title": "Configure Tools in Jenkins",
+      "description": "Learn how to launch tools in Jenkins",
+      "course_id": "jenkins-configure-tools",
+      "pathway_id": "jenkins",
+      "id": "jenkins-configure-tools"
+    },
+    {
+      "title": "Create a Job in Jenkins",
+      "description": "Learn how to deploy a Job with Jenkins",
+      "course_id": "jenkins-job",
+      "pathway_id": "jenkins",
+      "id": "jenkins-job"
+    },
+    {
+      "title": "Add Development Metrics with Jenkins",
+      "description": "Learn how to do dev metrics in Jenkins",
+      "course_id": "jenkins-development-metrics",
+      "pathway_id": "jenkins",
+      "id": "jenkins-development-metrics"
+    },
+    {
+      "title": "Create a Pipelne in Jenkins",
+      "description": "Learn how to create and deploy a Pipeline",
+      "course_id": "jenkins-pipeline",
+      "pathway_id": "jenkins",
+      "id": "jenkins-pipeline"
+    },
+    {
+      "icon": "fa-fsharp",
+      "title": "Build Docker images with Jenkins",
+      "description": "Learn how to build and deploy Docker images",
+      "course_id": "jenkins-build-docker-images",
+      "pathway_id": "dotnet-in-docker",
+      "id": "jenkins-build-docker-images"
+    }
+  ]
+}
