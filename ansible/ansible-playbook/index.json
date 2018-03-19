@@ -1,0 +1,50 @@
+{
+    "icon":"fa-ansible",
+    "pathwayTitle": "Ansible",
+    "title": "Ansible Playbook",
+    "description": "Create a playbook to work with Ansible",
+    "difficulty": "Advanced",
+    "time": "15-20 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Create the playbook",
+                "text": "step1.md"
+            },
+            {
+                "title": "Writing Your First Playbook",
+                "text": "step2.md"
+            },
+            {
+                "title": "Installation Additions",
+                "text": "step3.md"
+            },
+            {
+                "title": "Testing Installed Additions",
+                "text": "step4.md"
+            },
+            {
+                "title": "Playbook Simplification",
+                "text": "step5.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "courseData": "courseBase.sh",
+            "credits": ""
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboard": "Dashboard",
+        "uilayout": "terminal-iframe",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "docker",
+        "port": 8080
+    }
+}
