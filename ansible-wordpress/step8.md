@@ -1,9 +1,9 @@
 Now, you need to create an upstream definition in the configuration file so that nginx knows where to pass the request on to. Add the following at the **top** of your template before the opening server { line }:
 
-```txt
-        upstream php {
-                server unix:/run/php/php7.2-fpm.sock;
-}
+```nginx
+   upstream php {
+       server unix:/run/php/php7.2-fpm.sock;
+   }
 ```
 
 >Note: Understand that php7.2 made not be right and you'll only know that by doing the next step.
