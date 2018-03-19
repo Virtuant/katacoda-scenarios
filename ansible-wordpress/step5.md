@@ -6,7 +6,7 @@ the root user can run MySQL commands automatically.
 First, you need to create a folder to hold your template and create the file that you are going to copy over. Run these commands from your terminal, in the same directory as your vagrantfile, to create the required folders and files:
 
 `mkdir -p provisioning/templates/mysql
-vi provisioning/templates/mysql/my.cnf`{{execute}}}
+vim provisioning/templates/mysql/my.cnf`{{execute}}}
 
 Once you’ve created `my.cnf`, edit it and make sure that it has the following contents:
 
