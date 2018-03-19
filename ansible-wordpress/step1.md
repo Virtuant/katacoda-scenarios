@@ -2,9 +2,11 @@ Create a folder named provisioning and a file inside it named `playbook.yml`, an
 
 
 `mkdir provisioning
-vi provisioning/playbook.yml`{{execute}}
+vim provisioning/playbook.yml`{{execute}}
 
 >Note: Keep Vim open as you move to the next section.
+
+>Note: You can install `nano` if you wish: `apt-get install nano'.
 
 
 ### Writing Your First Playbook
