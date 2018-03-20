@@ -96,7 +96,7 @@ Go to this URL: http://localhost:8080/job/pipe1/configure (or go to the dashboar
 
 Switch to the Pipeline tab (or scroll down) to the text entry box with our code. Add the lines in bold below. ( We discussed what these lines are doing in the lecture. 
 
->Note: the underscore character that is required at the end of the @Library line. Also, those are parentheses around ‘Utilities2’, not brackets.)
+>Note: the underscore character that is required at the end of the @Library line. Also, those are parentheses around ‘Utilities2’, not brackets.
  
 `@Library('Utilities2')_
 node('worker_node1') {
