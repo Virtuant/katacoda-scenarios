@@ -52,11 +52,9 @@ You’ll now be on the Configure page for your new pipeline.
 
 Switch to the Pipeline tab at the top (or scroll down the page to the Pipeline section. In that section is a place to type in the code for our pipeline. We’ll add the main block for our pipeline here to run on our new node.
 
-```console
-node('worker_node1') {
+`node('worker_node1') {
 
-}
-```
+}`{{execute}}
 
 Enter (or copy and paste) the code below into the text box.
 
