@@ -98,7 +98,17 @@ Switch to the Pipeline tab (or scroll down) to the text entry box with our code.
 
 >Note: the underscore character that is required at the end of the @Library line. Also, those are parentheses around ‘Utilities2’, not brackets.)
  
-![image037](https://user-images.githubusercontent.com/558905/37634646-e2a3e4e8-2bcd-11e8-9de6-b04ea188dbe1.gif)
+`@Library('Utilities2')_
+node('worker_node1') {
+   stage('Source') {
+     //Get code from the Git repo
+     git 'git@diyvb2:/home/git/repositories/workshp.git'
+   }
+   stage('Compile') {
+     // Run gradle to execute compile
+     gbuild3 "clean compileJava -x test"
+   }
+}`{{execute}}
 
 Before we leave this page, let’s setup our job in Jenkins to poll the SCM to watch for changes in source control and then trigger a build.
 
