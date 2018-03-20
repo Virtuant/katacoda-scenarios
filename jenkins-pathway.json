@@ -32,6 +32,13 @@
       "id": "jenkins-pipeline"
     },
     {
+      "title": "Create an Expanded Pipelne in Jenkins",
+      "description": "Learn how to create an expanded Pipeline",
+      "course_id": "jenkins-expanded-pipeline",
+      "pathway_id": "jenkins",
+      "id": "jenkins-expanded-pipeline"
+    },
+    {
       "icon": "fa-fsharp",
       "title": "Build Docker images with Jenkins",
       "description": "Learn how to build and deploy Docker images",
