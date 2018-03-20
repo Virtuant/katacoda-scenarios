@@ -6,21 +6,33 @@ For each of the major parts of our pipeline, we are going to create a stage for 
 First, we’ll create a stage to retrieve the source. In your Jenkins session, you should still be on the page from the first lab where we added the code for the node definition. Within the node definition, we’ll add our first stage.
 
 Add the following code (in bold) inside the node definition. (You can leave out the comments (lines starting with //) if you want.)
-
-![image018](https://user-images.githubusercontent.com/558905/37634637-e20ac2d6-2bcd-11e8-9ac5-a299e78d5b56.gif)
  
+`node('worker_node1') {
+   stage('Source') {
+     //Get code from the Git repo
+     git 'git@diyvb2:/home/git/repositories/workshp.git'
+   }
+}`{{execute}}
+
 The source code to pull down is located on our local system in /home/git/repositories/workshop.git in the default branch master.
 
 Now, with our first stage complete, let’s move on to the next one – the Compile stage to build our code. Go ahead and add the framework for the stage under the Source stage. We’ll fill in the command next.
 
 Add the lines in bold into your code as shown.
 
-![image019](https://user-images.githubusercontent.com/558905/37634638-e21d80e2-2bcd-11e8-8b20-862c64011466.gif)
+`node('worker_node1') {
+   stage('Source') {
+     //Get code from the Git repo
+     git 'git@diyvb2:/home/git/repositories/workshp.git'
+   }
+   stage('Compile') {
+     // Run gradle to execute compile
+   }
+}`{{execute}}
 
 Save your changes when done.
 
-
-Before we can use Gradle in our pipeline, we need to have it installed and tell Jenkins where it is. Gradle is installed on our VM in /usr/share/gradle.
+Before we can use Gradle in our pipeline, we need to have it installed and tell Jenkins where it is. Gradle is installed on our VM in `/usr/share/gradle`.
 
 To tell Jenkins about this, go to the Jenkins homepage/dashboard (http://localhost:8080).
 
