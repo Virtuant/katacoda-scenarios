@@ -5,7 +5,7 @@ We’ll see how to add shared libraries to our pipeline to encapsulate functiona
 For each of the major parts of our pipeline, we are going to create a stage for the code related to that part.
 First, we’ll create a stage to retrieve the source. In your Jenkins session, you should still be on the page from the first lab where we added the code for the node definition. Within the node definition, we’ll add our first stage.
 
-Add the following code (in bold) inside the node definition. (You can leave out the comments (lines starting with //) if you want.)
+Add the following code (in bold) inside the node definition:
  
 `node('worker_node1') {
    stage('Source') {
@@ -14,7 +14,9 @@ Add the following code (in bold) inside the node definition. (You can leave out 
    }
 }`{{execute}}
 
-The source code to pull down is located on our local system in /home/git/repositories/workshop.git in the default branch master.
+>Note: You can leave out the comments (lines starting with //) if you want
+
+The source code to pull down is located on our local system in `/home/git/repositories/workshop.git` in the default branch master.
 
 Now, with our first stage complete, let’s move on to the next one – the Compile stage to build our code. Go ahead and add the framework for the stage under the Source stage. We’ll fill in the command next.
 
@@ -36,22 +38,20 @@ Before we can use Gradle in our pipeline, we need to have it installed and tell 
 
 To tell Jenkins about this, go to the Jenkins homepage/dashboard (http://localhost:8080).
 
-Click on Manage Jenkins in the left menu. Then click on Global Tool Configuration.
+Click on **Manage Jenkins** in the left menu. Then click on **Global Tool Configuration**.
 
 ![image020](https://user-images.githubusercontent.com/558905/37634639-e22c7ebc-2bcd-11e8-8e26-dd0994f75c10.jpg)
 
-Scroll down and find the Gradle section.
+Scroll down and find the **Gradle** section.
 
 ![image021](https://user-images.githubusercontent.com/558905/37634640-e24009fa-2bcd-11e8-9561-10f2d663548f.jpg)
 
 Click the Add Gradle button. A new section pops up on the screen. Uncheck the Install automatically box since we don’t want Jenkins to install Gradle for us. (We already have it installed.) Then, for name, enter `gradle3`.
 
-This is so we can refer to it by this label. For the GRADLE_HOME value, fill in where Gradle is installed -
+This is so we can refer to it by this label. For the `GRADLE_HOME` value, fill in where Gradle is installed -
 `/usr/share/gradle`.
 
-Your screen should look like the one below.
-
-Click the Save button to save your global configuration changes.
+Your screen should look like the one below - click the Save button to save your global configuration changes.
 
 ![image024](https://user-images.githubusercontent.com/558905/37634641-e2513c7a-2bcd-11e8-9a1a-7338c101b1a2.png)
 
@@ -62,7 +62,7 @@ To see the routine, first open up a terminal window by going to the VM’s deskt
 
 ![image026](https://user-images.githubusercontent.com/558905/37634642-e2601092-2bcd-11e8-942a-7d549687e766.jpg)
 
-Then, switch to the local area for our shared_libraries project and print out the file on screen. Type the commands below in the terminal window to do this.
+Then, switch to the local area for our `shared_libraries` project and print out the file on screen. Type the commands below in the terminal window to do this.
 
 `cd shared_libraries/vars
 cat gbuild3.groovy`{{execute}}
@@ -84,7 +84,7 @@ Now that we have our code to invoke Gradle in the shared library repository, let
 
 Go back to the Jenkins `homepage/dashboard` (http://localhost:8080).
 
-Click on Manage Jenkins/Configure System.
+Click on **Manage Jenkins/Configure System**.
  
 Scroll down on this page until you find the Global Pipeline Libraries section. This is where we load in the library from Git that we were just looking at. There is nothing to change here, but look at the different fields – particularly the Project Repository field. Notice that the location in here is the same location on the Git remote where we have our shared pipeline library.
 
@@ -94,7 +94,7 @@ Now, we need to go back to our pipeline, bring in the shared library with the gr
 
 Go to this URL: http://localhost:8080/job/pipe1/configure (or go to the dashboard, then to the pipe1 project, and click configure).
 
-Switch to the Pipeline tab (or scroll down) to the text entry box with our code. Add the lines in bold below. ( We discussed what these lines are doing in the lecture. 
+Switch to the **Pipeline** tab (or scroll down) to the text entry box with our code. Add the lines in bold below. ( We discussed what these lines are doing in the lecture. 
 
 >Note: the underscore character that is required at the end of the @Library line. Also, those are parentheses around ‘Utilities2’, not brackets.
  
@@ -118,6 +118,6 @@ Switch to the Build Triggers tab (or scroll up to the Build Triggers section of 
 
 Click on Save. After a minute or so, Jenkins should automatically detect that there is “new” code it hasn’t built and start a build running. After the build completes, you will be able to see the results in the Staging View. Notice the matrix here with rows for each build (we only have 1 so far) and columns corresponding to the stages that we have defined so far (Source and Build). Hover over each box and look at the logs from each byclicking on the Logs link in the pop up window.
 
->Note: You may need to Disable Auto Refresh in the upper right corner to keep the pop ups on the screen.
+>Note: You may need to **Disable Auto Refresh** in the upper right corner to keep the pop ups on the screen.
 
 ![image041](https://user-images.githubusercontent.com/558905/37634648-e2c09138-2bcd-11e8-893e-4d52f3a957f9.jpg)
