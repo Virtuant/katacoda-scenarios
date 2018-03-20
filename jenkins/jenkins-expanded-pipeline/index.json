@@ -4,7 +4,7 @@
     "title": "Create an Expanded Jenkins Pipeline",
     "description": "In this lab you will further explore the Pipeline functionality",
     "difficulty": "Advanced",
-    "time": "15-20 minutes",
+    "time": "50 minutes",
     "details": {
         "steps": [
             {
