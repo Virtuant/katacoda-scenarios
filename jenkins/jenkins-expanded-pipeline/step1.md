@@ -52,13 +52,13 @@ You’ll now be on the Configure page for your new pipeline.
 
 Switch to the Pipeline tab at the top (or scroll down the page to the Pipeline section. In that section is a place to type in the code for our pipeline. We’ll add the main block for our pipeline here to run on our new node.
 
-`node('worker_node1') {
+Enter (or copy and paste) the code below into the text box:
 
-}`{{execute}}
-
-Enter (or copy and paste) the code below into the text box.
+`node('worker_node1') {}`{{execute}}
 
 ![image015](https://user-images.githubusercontent.com/558905/37634636-e1fcb902-2bcd-11e8-8ca1-8df75a520159.png)
+
+>Note: you can expand the curlies
 
 Leave this page open for the next lab.
 
