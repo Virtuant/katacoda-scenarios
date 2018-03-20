@@ -39,6 +39,13 @@
       "id": "jenkins-expanded-pipeline"
     },
     {
+      "title": "Jenkins Environment Upgrade",
+      "description": "A developer enviroment with and updated Jenkins",
+      "course_id": "jenkins-env-upgrade",
+      "pathway_id": "jenkins",
+      "id": "jenkins-env-upgrade-id"
+    },
+    {
       "icon": "fa-fsharp",
       "title": "Build Docker images with Jenkins",
       "description": "Learn how to build and deploy Docker images",
@@ -46,5 +53,6 @@
       "pathway_id": "dotnet-in-docker",
       "id": "jenkins-build-docker-images"
     }
+
   ]
 }
