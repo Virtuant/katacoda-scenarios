@@ -23,22 +23,21 @@ sleep 30
 
 # 1. Prepare Environment for easier Toggling between Ansible and Target System
 
-To make our lives easier later, let us define the commands "a" and "t" for quickly connecting from the base system to the ansible and target container: 
+To make our lives easier later, let us define the commands "a" and "t" for quickly connecting from the base system to the ansible and target container:
 
 Connect to the Ansible container:
 
-```a() { docker exec -it ansible bash -c "echo 'PS1='\''ansible# '\' >> /root/.bashrc; bash"; } ```{{execute HOST1}} 
+`a() { docker exec -it ansible bash -c "echo 'PS1='\''ansible# '\' >> /root/.bashrc; bash"; }`{{execute HOST1}}
 
 Connect to the Target container:
 
-```
-t() {  docker exec -it target bash -c "echo 'PS1='\''target# '\' >> /root/.bashrc; bash";  } ```{{execute HOST1}} 
+`t() {  docker exec -it target bash -c "echo 'PS1='\''target# '\' >> /root/.bashrc; bash";  }`{{execute HOST1}}
 
 In this tutorial, we already have started an ansible and a target container in the background. However, they have been started in the background, and they need some time to become available. Repeat using a docker ps command to check, whether Docker containers named 'ansible' and 'target' have been started already:
 
 `docker ps`{{execute HOST1}}
 
-Repeat sending the command until it looks similar to 
+Repeat sending the command until it looks similar to
 <pre>
 CONTAINER ID      IMAGE                                   COMMAND                 CREATED         STATUS
             PORTS NAMES
@@ -92,13 +91,13 @@ The same will occur, when wir specify our remote target instead of 'localhost':
 We will resolve this issue during the next steps.
 # Next Step: Prepare Remote Target
 
-Let us exit from the ansible container 
+Let us exit from the ansible container
 
 `exit`{{execute HOST1}}
 
 and enter the target container:
 
-`t`{{execute HOST1}} 
+`t`{{execute HOST1}}
 
 In our case, the target is an Ubuntu machine with no SSH server installed. Let us do that now:
 
@@ -111,22 +110,22 @@ obsolete:
 
 In order to be able to connect from the Ansible container to the target container, we need to create a private + public SSH key pair on Ansible and copy the public key to the target machine.
 
-For that, let us exit from the target container 
+For that, let us exit from the target container
 
 `exit`{{execute HOST1}}
 
 and enter the ansible container again.
 
-`a`{{execute HOST1}} 
+`a`{{execute HOST1}}
 
-On the ansible system, let us generate a SSH key pair like follows: 
-`ssh-keygen -t rsa`{{execute HOST1}} 
+On the ansible system, let us generate a SSH key pair like follows:
+`ssh-keygen -t rsa`{{execute HOST1}}
 
 Just keep the defaults, click into the black terminal space and press return three times.
 
 This will generate ~/.ssh/id_rsa.pub and ~/.ssh/id_rsa on the ~/.ssh directory:
 
-`ls -ltr ~/.ssh`{{execute HOST1}} 
+`ls -ltr ~/.ssh`{{execute HOST1}}
 
 Let us copy the public key to a shared folder, we have prepared beforehand.
 
@@ -143,9 +142,8 @@ Now we need to connect to our target again:
 
 The public SSH key of ansible needs to be appended to the list of authorized_keys:
 
-```[ ! -d ~/.ssh ] && mkdir ~/.ssh;
-cat /shared_volume/ansible_id_rsa.pub >> ~/.ssh/authorized_keys`
-```{{execute HOST1}}
+`[ ! -d ~/.ssh ] && mkdir ~/.ssh;
+cat /shared_volume/ansible_id_rsa.pub >> ~/.ssh/authorized_keys`{{execute HOST1}}
 
 # Next Step: Connect to remote Target
 
@@ -190,7 +188,7 @@ On the target system, we install and start a SSH Server:
 `apt-get update; apt-get install -y openssh-server;service ssh start`{{execute HOST2}}
 
 On the ansible system Terminal 1), let us generate a SSH key pair like follows:
-`ssh-keygen -t rsa`{{execute HOST1}} 
+`ssh-keygen -t rsa`{{execute HOST1}}
 
 Just keep the defaults and press return three times.
 
@@ -247,7 +245,7 @@ The system is asking for a root password. Instead of allowing users to log in wi
 # Prepare the SSH key and try again to connect to localhost via SSH using Ansible
 
 Let us generate a SSH key pair like follows:
-`ssh-keygen -t rsa`{{execute HOST1}} 
+`ssh-keygen -t rsa`{{execute HOST1}}
 
 Now we will add the public key to the list of authorized keys of the ansible host:
 
@@ -272,7 +270,7 @@ On the target system, we install and start a SSH Server:
 `apt-get update; apt-get install -y openssh-server;service ssh start`{{execute HOST2}}
 
 On the ansible system, let us generate a SSH key pair like follows:
-`ssh-keygen -t rsa`{{execute HOST1}} 
+`ssh-keygen -t rsa`{{execute HOST1}}
 
 Just keep the defaults and press return three times.
 
@@ -297,19 +295,15 @@ Now let us define the commands "a" and "t" for quickly connecting to the ansible
 
 Connect to the Ansible container:
 
-```
-a() { 
-    docker exec -it ansible bash -c "echo 'PS1='\''ansible# '\' >> /root/.bashrc; bash"; 
-}
-```{{execute HOST1}}
+`a() {
+    docker exec -it ansible bash -c "echo 'PS1='\''ansible# '\' >> /root/.bashrc; bash";
+}`{{execute HOST1}}
 
 Connect to the Target container:
 
-```
-t() { 
-    docker exec -it target bash -c "echo 'PS1='\''target# '\' >> /root/.bashrc; bash"; 
-}
-```{{execute HOST1}}
+`t() {
+    docker exec -it target bash -c "echo 'PS1='\''target# '\' >> /root/.bashrc; bash";
+}`{{execute HOST1}}
 
 We already have started an ansible and a target container in the background. However, it sometimes takes some time to be available. Use a docker ps command to check, whether Docker containers named 'ansible' and 'target' have been started already:
 
@@ -320,13 +314,13 @@ As soon as the containers are available, we should be able to connect to the Ans
 
 # 3. Prepare Remote Target: Install SSH
 
-Let us exit from the ansible container 
+Let us exit from the ansible container
 
 `exit`{{execute HOST1}}
 
 and enter the target container:
 
-`t`{{execute HOST1}} 
+`t`{{execute HOST1}}
 
 In our case, the target is an Ubuntu machine with no SSH server installed. Let us do that now:
 
@@ -336,22 +330,22 @@ In our case, the target is an Ubuntu machine with no SSH server installed. Let u
 
 In order to be able to connect from the Ansible container to the target container, we need to create a private + public SSH key pair on Ansible and copy the public key to the target machine.
 
-For that, let us exit from the target container 
+For that, let us exit from the target container
 
 `exit`{{execute HOST1}}
 
 and enter the ansible container again.
 
-`a`{{execute HOST1}} 
+`a`{{execute HOST1}}
 
-On the ansible system, let us generate a SSH key pair like follows: 
-`ssh-keygen -t rsa`{{execute HOST1}} 
+On the ansible system, let us generate a SSH key pair like follows:
+`ssh-keygen -t rsa`{{execute HOST1}}
 
 Just keep the defaults and press return three times.
 
 This will generate ~/.ssh/id_rsa.pub and ~/.ssh/id_rsa on the ~/.ssh directory:
 
-`ls -ltr ~/.ssh`{{execute HOST1}} 
+`ls -ltr ~/.ssh`{{execute HOST1}}
 
 # 5. Prepare Remote Connection: Transfer SSH public Key to Target
 
@@ -422,5 +416,3 @@ Let us summarize, what we have achieved so far:
 > 2. creating an SSH key pair on the Ansible system
 > 3. copying the public key to the target system
 > We have tested the connection by using an Ansible "ping", which is an SSH connection from the Ansible host to the target, actually.
-
- 
