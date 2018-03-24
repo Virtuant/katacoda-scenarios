@@ -1,7 +1,6 @@
 {
-	"icon":"fa-coffee",
-	"pathwayTitle": "Ansible",
-	"title": "Ansible: Getting Started",
+	"icon": "fa-coffee",
+	"title": "Ansible-Getting Started",
 	"description": "Experience Ansible by learning how to connect a target host",
 	"difficulty": "Intermediate",
 	"time": "15-20 minutes",
