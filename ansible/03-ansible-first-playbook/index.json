@@ -1,5 +1,5 @@
 {
-    "icon": "fa-ansible",
+
     "title": "Ansible-First Playbook",
     "description": "Create our first playbook to work with Ansible",
     "difficulty": "Intermediate",

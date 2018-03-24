@@ -1,5 +1,5 @@
 {
-	"icon": "fa-coffee",
+
     "title": "Ansible-Installing Wordpress",
     "description": "Using Ansible to install Wordpress on our target host",
     "difficulty": "Advanced",

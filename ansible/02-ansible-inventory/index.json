@@ -1,5 +1,5 @@
 {
-	"icon": "fa-coffee",
+
 	"title": "Ansible-Inventory",
 	"description": "Create an inventory file to tell Ansible where to run",
 	"difficulty": "Intermediate",
