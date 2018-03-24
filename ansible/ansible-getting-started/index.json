@@ -1,7 +1,9 @@
 {
-	"title": "Ansible Bootstrapping",
-	"description": "Learn how to connect to a target",
-	"difficulty": "advanced",
+	"icon":"fa-coffee",
+	"pathwayTitle": "Ansible",
+	"title": "Ansible: Getting Started",
+	"description": " Experienc Ansible by learning how to connect to a target host",
+	"difficulty": "Intermediate",
 	"time": "15-20 minutes",
 	"details": {
 
@@ -35,8 +37,7 @@
 		},
 		"finish": {
 			"text": "finish.md"
-		}
-	},
+		},
 	"environment": {
 		"showdashboard": true,
 		"uilayout": "editor-terminal",

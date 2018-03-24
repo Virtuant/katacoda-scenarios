@@ -8,6 +8,10 @@
     "details": {
         "steps": [
             {
+              "title": "Preparing Our Environement",
+              "text": "step0.md"
+            },
+            {
                 "title": "Create the playbook",
                 "text": "step1.md"
             },

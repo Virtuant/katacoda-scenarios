@@ -38,7 +38,7 @@ This will lead to following error:
 }
 </pre>
 
-The same will occur, when wir specify our remote target instead of 'localhost ...
+The same will occur, when we specify our remote target instead of 'localhost ...
 
 `ansible all -i 'target,' -m ping`{{execute HOST1}}
 
