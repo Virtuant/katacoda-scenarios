@@ -44,4 +44,8 @@ The same will occur, when we specify our remote target instead of 'localhost ...
 
 ...and accept the SSH fingerprint with `yes`{{execute HOST1}}
 
-We will resolve this issue during the next steps.
+So, how do we resolve these issues and why are they happening?
+
+The neat things about Ansible is that you don't have to install an Ansible agent on your target hosts, like with Puppet or Chef. However, this means that Ansible is using SSH to connect and execute tasks on target host. We've got a target host, but we haven't installed an SSH server, much less started it up!
+
+That's what you're going to do next...
