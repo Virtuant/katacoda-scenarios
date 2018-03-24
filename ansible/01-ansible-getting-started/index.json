@@ -38,12 +38,12 @@
 		},
 		"environment": {
 			"showdashboard": true,
-			"Dashboard": "Dashboard",
+			"dashboards": [{ "name": "Nginx", "port": 8080, "host": "host01" }],
 			"uilayout": "terminal",
 			"uimessage1": "\u001b[32mYour Interactive Host Terminal.\u001b[m\r\n"
 		},
 		"backend": {
 			"imageid": "docker",
-			"port": "8080"
+			"port": 8080
 		}
 	}
