@@ -6,28 +6,22 @@
 	"time": "15-20 minutes",
 	"details": {
 			"steps": [{
-				"title": "Step 1 - Prepare Environment for easier Toggling between Ansible and Target System",
+				"title": "Step 1 - TITLE HERE",
 				"text": "step1.md"
 			}, {
-				"title": "Step 2 - Verify the Ansible Installation",
+				"title": "Step 2 - TITLE HERE",
 				"text": "step2.md"
 			}, {
-				"title": "Step 3 - Prepare Remote Target: Install SSH",
+				"title": "Step 3 - TITLE HERE",
 				"text": "step3.md"
 			}, {
-				"title": "Step 4 - Prepare Remote Connection: Create SSH Key on Ansible Host",
+				"title": "Step 4 - TITLE HERE",
 				"text": "step4.md"
 			}, {
-				"title": "Step 5 - Prepare Remote Connection: Transfer SSH public Key to Target",
+				"title": "Step 5 - TITLE HERE",
 				"text": "step5.md"
-			}, {
-				"title": "Step 6 - Connect from Ansible host to Target",
-				"text": "step6.md"
-			}, {
-				"title": "Step 7 - Remotely Perform a Shell Command on the Target",
-				"text": "step7.md"
-			}
-			],
+			   },
+		  ],
 			"intro": {
 				"text": "intro.md",
 				"courseData": "env-init.sh"

@@ -12,7 +12,7 @@ In our case, the target is an Ubuntu machine with no SSH server installed. Let u
 
 Now, an ssh server is not only installed, but it's running. You can verify that by running:
 
-`service --status-all`{{execute HOST1}}
+`service ssh status`{{execute HOST1}}
 
 Do you see it?
 
