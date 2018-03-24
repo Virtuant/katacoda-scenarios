@@ -4,32 +4,32 @@
   "paid": false,
   "courses": [
     {
-      "title": "Intro to Ansible",
-      "description": "Learn how to use Ansible",
-      "course_id": "ansible-bootstrap",
+      "title": "Ansible: Getting Started",
+      "description": "Experience Ansible by learning how to connect a target host",
+      "course_id": "01-ansible-getting-started",
       "pathway_id": "ansible",
-      "id": "ansible-bootstrap"
+      "id": "ansible"
     },
     {
-      "title": "Ansible Bootstrapping",
-      "description": "Learn how to connect to a target",
-      "course_id": "ansible-bootstrap",
+      "title": "Ansible: Inventory",
+      "description": "Create an inventory file to tell Ansible where to run",
+      "course_id": "02-ansible-inventory",
       "pathway_id": "ansible",
-      "id": "ansible-bootstrap"
+      "id": "ansible"
     },
     {
-      "title": "Ansible and Wordpress",
+      "title": "Ansible: First Playbook",
       "description": "Learn how to start a Wordpress site using Ansible",
-      "course_id": "ansible-wordpress",
+      "course_id": "03-ansible-first-playbook",
       "pathway_id": "ansible",
-      "id": "ansible-wordpress"
+      "id": "ansible"
     },
     {
-      "title": "Ansible Playbook",
-      "description": "Create a Playbook to work with Ansible",
-      "course_id": "ansible-playbook",
+      "title": "Ansible: Installing Wordpress ",
+      "description": "Using Ansible to install Wordpress on our target host",
+      "course_id": "04-ansible-wordpress",
       "pathway_id": "ansible",
-      "id": "ansible-playbook"
+      "id": "ansible"
     }
   ]
 }

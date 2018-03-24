@@ -1,8 +1,8 @@
 {
-    "icon":"fa-ansible",
+    "icon":"fa-coffee",
     "pathwayTitle": "Ansible",
-    "title": "Ansible Playbook",
-    "description": "Create a playbook to work with Ansible",
+    "title": "Ansible: Inventory",
+    "description": "Create an inventory file to tell Ansible where to run",
     "difficulty": "Advanced",
     "time": "15-20 minutes",
     "details": {

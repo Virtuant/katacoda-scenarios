@@ -1,1 +1,0 @@
-# katacoda-scenarios
