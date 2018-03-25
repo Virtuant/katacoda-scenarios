@@ -48,12 +48,17 @@ default         : ok=2    changed=0    unreachable=0    failed=0
 
 5\. Thankfully, Ansible lets you add a name to each task to explain its purpose. Let’s do that to our ping action now:
 
-<pre class="file" data-filename="playbook.yml" data-target="replace">
+<pre class="file" filename="playbook.yml" target="replace">
+
 ---
 - hosts: all
   tasks:
     - name: "Your Text Description Here"
       ping:
+
 </pre>
 
-Run it! It will no longer say `TASK: [ping ]`. Instead, it will show the description that you provided.
+6\. Run it! It will no longer say `TASK: [ping ]`. Instead, it will show the description that you provided.
+
+# REPLACE
+`ansible-playbook ...`{{execute}}
