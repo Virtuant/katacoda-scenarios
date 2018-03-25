@@ -2,7 +2,7 @@
 
 1\. Now, tell Ansible to run on all available hosts by adding - hosts: all to our new playbook. After adding these lines, your playbook should now look like this:
 
-<pre class="file" data-filename="playbook.yml">
+<pre class="file" filename="playbook.yml">
 ---
 - hosts: all
 </pre>
