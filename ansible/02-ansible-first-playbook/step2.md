@@ -2,7 +2,7 @@
 
 1\. Now, tell Ansible to run on all available hosts by adding - hosts: all to our new playbook. After adding these lines, your playbook should now look like this:
 
-<pre class="text" filename="playbook.yml">
+<pre class="file" data-filename="playbook.yml" data-target="replace">
 ---
 - hosts: all
 </pre>
@@ -11,7 +11,7 @@
 
 3\. Inside tasks, you are going to tell Ansible to just ping your machines to make sure that you can connect to them:
 
-<pre class="file" data-filename="playbook.yml" data-target="replace">
+<pre class="file" data-filename="playbook.yml">
 ---
 - hosts: all
   tasks:
@@ -48,14 +48,12 @@ default         : ok=2    changed=0    unreachable=0    failed=0
 
 5\. Thankfully, Ansible lets you add a name to each task to explain its purpose. Let’s do that to our ping action now:
 
-<pre class="file" filename="playbook.yml" target="replace">
-
+<pre class="file" data-filename="playbook.yml">
 ---
 - hosts: all
   tasks:
     - name: "Your Text Description Here"
       ping:
-
 </pre>
 
 6\. Run it! It will no longer say `TASK: [ping ]`. Instead, it will show the description that you provided.
