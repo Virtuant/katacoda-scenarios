@@ -3,7 +3,7 @@
 
 2\. Now, let's pull out our `with_items` construct and combine it with the special `{{item}}` notation, so can compress our `apt` module installs. Try to put this into place without looking down at the code snippet, but the following is the end result of this emplementation:
 
-```
+<pre class="file" data-filename="playbook.yml">
 ---
 - hosts: all
   become: true
@@ -14,12 +14,14 @@
         - php5-cli
         - nginx
         - mysql-server-5.6
-```
+</pre>
 
 3\. Run `vagrant provision` again, see that it will collapse all output for that one task into one block.
 
+# REPLACE
 ```
 $ vagrant provision
+$ ansible-playbook...
 ```
 
 Output:
@@ -42,6 +44,4 @@ PLAY RECAP
 
 default                    : ok=2    changed=0    unreachable=0    failed=0
 ```
-
-#### Conclusion
-Congratulations! You just put together your first playbook.
+> SUCCESS!
