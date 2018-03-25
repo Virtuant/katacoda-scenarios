@@ -1,12 +1,5 @@
- To correct this, create a folder named provisioning and a file inside it named playbook.yml, and that'll get us started.
-
-$ mkdir provisioning
-$ vi provisioning/playbook.yml
-
-    Note: Keep Vim open as you move to the next section.
-
-Writing Your First Playbook
-Bare Essentials Playbook
+#### Writing Your First Playbook
+##### Bare Essentials Playbook
 
 1. Now, tell Ansible to run on all available hosts by adding - hosts: all to our new playbook. After adding these lines, your playbook should now look like this:
 

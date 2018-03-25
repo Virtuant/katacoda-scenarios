@@ -1,4 +1,4 @@
-Let’s add PHP by adding another module entry, like ping: to the playbook.yml file, so that it looks like the following:
+Let’s add PHP by adding another module entry, like ping: to the `playbook.yml` file, so that it looks like the following:
 
 ---
 - hosts: all
@@ -16,6 +16,7 @@ $ vagrant provision
 
 Output:
 
+```
 ...
 
 TASK [Make sure that we can connect to the machine] ****************************
@@ -27,9 +28,9 @@ fatal: [default]: FAILED! => {"changed": false, "failed": true, "msg": "Failed t
 
 PLAY RECAP *********************************************************************
 default                    : ok=2    changed=0    unreachable=0    failed=1   
+```
 
-Ansible failed to complete successfully. Any error output should be
-visible above. Please fix these errors and try again.
+Ansible failed to complete successfully. Any error output should be visible above. Please fix these errors and try again.
 
 3. Ansible basically needs to sudo this command! However, let's add it to the playbook in such a way that the permission granted, can be reused by other commands. You'll do that by adding become: true to our playbook, like this:
 
@@ -67,6 +68,7 @@ $ vagrant provision
 
 Output:
 
+```
 ...
 
 TASK [Install PHP] *************************************************************
@@ -80,3 +82,4 @@ changed: [default]
 
 PLAY RECAP *********************************************************************
 default        : ok=5    changed=2    unreachable=0    failed=0
+```
