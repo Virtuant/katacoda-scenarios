@@ -12,10 +12,10 @@
 3\. Inside tasks, you are going to tell Ansible to just ping your machines to make sure that you can connect to them:
 
 <pre class="file" data-filename="playbook.yml">
----
-- hosts: all
+---\
+-\ hosts: all
   tasks:
-    - ping:
+    -\ ping:
 </pre>
 
 4\. Now, "provision" your newest changes to Ansible on the machine by executing:
