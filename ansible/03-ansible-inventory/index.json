@@ -35,7 +35,7 @@
 		},
 		"files": [
 	    "playbook.yml",
-	    "inventory"
+	    "myhosts"
 	    	],
 		"environment": {
 			"showdashboard": true,

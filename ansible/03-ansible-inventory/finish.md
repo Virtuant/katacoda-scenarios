@@ -1,5 +1,5 @@
 ### Conclusion
 
-Congratulations! You just put together your first playbook.
+Congratulations!
 
 >Next: Ansible-Installing Wordpress
