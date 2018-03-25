@@ -46,13 +46,12 @@
       "id": "jenkins-env-upgrade-id"
     },
     {
-      "icon": "fa-fsharp",
-      "title": "Build Docker images with Jenkins",
-      "description": "Learn how to build and deploy Docker images",
-      "course_id": "jenkins-build-docker-images",
-      "pathway_id": "dotnet-in-docker",
-      "id": "jenkins-build-docker-images"
-    }
 
+      "title": "Build Docker Images with Jenkins",
+      "description": "Learn how to build and deploy Docker images with Jenkins",
+      "course_id": "jenkins-build-docker-images",
+      "external_link": "https://katacoda.com/virtuant/courses/jenkins/jenkins-build-docker-images"
+
+    }
   ]
 }
