@@ -3,8 +3,8 @@
 1\. Now, tell Ansible to run on all available hosts by adding - hosts: all to our new playbook. After adding these lines, your playbook should now look like this:
 
 <pre class="file" data-filename="playbook.yml" data-target="replace">
-    ---
-    -\ "hosts: all"
+    \---
+    -\hosts: all
 </pre>
 
 2\. You'll need to add a section named tasks. Try to remember how from the lecture, but if you need help, peek ahead.
