@@ -4,7 +4,7 @@
 
 <pre class="file" data-filename="playbook.yml" data-target="replace">
     ---
-    - "hosts: all"
+    -\ "hosts: all"
 </pre>
 
 2\. You'll need to add a section named tasks. Try to remember how from the lecture, but if you need help, peek ahead.
