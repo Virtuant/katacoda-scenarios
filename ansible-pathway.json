@@ -13,13 +13,13 @@
       "external_link": "https://katacoda.com/virtuant/courses/ansible/02-ansible-inventory",
       "title": "Ansible-Inventory",
       "description": "Create an inventory file to tell Ansible where to run",
-      "course_id": "02-ansible-inventory"
+      "course_id": "01-ansible-inventory"
     },
     {
       "external_link": "https://katacoda.com/virtuant/courses/ansible/03-ansible-first-playbook",
       "title": "Ansible-First Playbook",
       "description": "Create our first playbook to work with Ansible",
-      "course_id": "03-ansible-first-playbook"
+      "course_id": "02-ansible-first-playbook"
     },
     {
       "external_link": "https://katacoda.com/virtuant/courses/ansible/04-ansible-wordpress",
