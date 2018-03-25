@@ -54,11 +54,13 @@ visible above. Please fix these errors and try again.
 
 </blockquote></pre>
 
->Note: This installation process take up to a minute, so please be patient. 
+>Note: This installation process may take up to a minute, so please be patient.
 
-4\. Once you’ve saved this change, run the playbook again. Ansible should tell you that PHP was installed successfully:
+4\. Once you’ve entered this change, run the playbook again. This time, Ansible should tell you that PHP has been installed successfully:
 
 `$ ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+
+>Note: This installation process may take up to a minute, so please be patient.
 
 5\. You can add more steps to install Nginx and MySQL by adding more calls to the `apt` module saying that you expect `nginx` and `mysql-server-5.6` to be present.
 

@@ -1,12 +1,9 @@
 #### Testing Installed Additions
+At this point, you can begin to test your instance, to make sure that everything is installed as it should be. We've used Ansible to install each service on the localhost, so that won't be hard at all, but nevertheless important. As a result of installing everything on localhost, the following commands will all be preformed from your current working directory.
 
-# REPLACE
-At this point, you can log in to your virtual machine to make sure that everything is installed as you would expect it to be.
+1\. First, test to ensure that PHP has been installed correctly:
 
-# REPLACE
-1\. Like before, to do this, you run `vagrant ssh` to log in. Then, you can run a few commands to check whether certain programs are installed:
-
-`# which php`{{execute HOST1}}
+`$ which php`{{execute HOST1}}
 
 Output:
 
@@ -14,7 +11,9 @@ Output:
 /usr/bin/php
 ```
 
-`# which nginx`{{execute HOST1}}
+2\. Secondly, look to make sure Nginx has been installed accordingly:
+
+`$ which nginx`{{execute HOST1}}
 
 Output:
 
@@ -22,14 +21,12 @@ Output:
 /usr/sbin/nginx
 ```
 
-`# which mysqld`{{execute HOST1}}
+3\. Lastly, run the same command to check MySQL installation:
+
+`$ which mysqld`{{execute HOST1}}
 
 Output:
 
 ```
 /usr/sbin/mysqld
 ```
-
-2\. Before moving forward, be sure to exit the instance by issuing the following:
-
-`exit`{{execute HOST1}}
