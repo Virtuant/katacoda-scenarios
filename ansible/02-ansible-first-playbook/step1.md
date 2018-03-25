@@ -1,4 +1,4 @@
-#### Introduction
+#### Installing Ansible
 
 1\. Install Ansible
 

@@ -14,18 +14,13 @@
 
 </blockquote></pre>
 
-Previously, you used the `ping` module to connect to your machine. This time, you’ll be using the `apt` module.
+Previously, you used the `ping` module to connect to your machine. This time, you’ll be using the `apt` module to install something on that machine.
 
-2\. If you run `vagrant provision` again, it should attempt to install the `php5` package. Unfortunately, it will fail, giving a message such as the following:
+2\. If you provision this changes again, it should attempt to install the `php5` package.
 
-# REPLACE
-```
-$ vagrant provision
-$ ansible-playbook...
-```
+`$ ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
 
-Output:
-
+Unfortunately, it fails, giving a message such as the following:
 ```
 ...
 
@@ -58,15 +53,11 @@ visible above. Please fix these errors and try again.
 
 </blockquote></pre>
 
-4\. Once you’ve saved this change, run `vagrant provision` again. Ansible should tell you that PHP was installed successfully:
+4\. Once you’ve saved this change, run the playbook again. Ansible should tell you that PHP was installed successfully:
 
-# REPLACE
-```
-$ vagrant provision
-$ ansible-playbook...
-```
+`$ ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
 
-5\. You can add more steps to install nginx and mySQL by adding more calls to the `apt` module saying that you expect nginx and `mysql-server-5.6` to be present.
+5\. You can add more steps to install Nginx and MySQL by adding more calls to the `apt` module saying that you expect `nginx` and `mysql-server-5.6` to be present.
 
 <pre class="file" data-filename="playbook.yml" data-target="replace"><blockquote>
 
@@ -85,18 +76,14 @@ $ ansible-playbook...
 
 </blockquote></pre>
 
-6\. As with the `php5-cli` package, this should show up in your Ansible output when you run `vagrant provision` again:
+6\. As with the `php5-cli` package, this should show up in your Ansible output when you run the playbook once again:
 
-# REPLACE
-```
-$ vagrant provision
-$ ansible-playbook...
-```
+`$ ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
 
 Output:
 
 ```
-...
+...yaml
 
 TASK [Install PHP] *************************************************************
 ok: [default]

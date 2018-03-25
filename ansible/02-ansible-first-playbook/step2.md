@@ -28,7 +28,7 @@
 
 You should see output that looks like the following:
 
-```yaml
+```bash
 ==> default: Running provisioner: ansible...
 
 PLAY [all]
