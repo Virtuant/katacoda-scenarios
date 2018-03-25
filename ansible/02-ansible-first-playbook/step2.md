@@ -12,7 +12,7 @@
 3\. Inside tasks, you are going to tell Ansible to just ping your machines to make sure that you can connect to them:
 
 <pre class="file" data-filename="playbook.yml" data-target="replace">
----\
+---
 -\ hosts: all
   tasks:
     -\ ping:
