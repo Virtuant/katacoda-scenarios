@@ -1,7 +1,6 @@
 {
   "title": "Jenkins",
   "description": "Jenkins pathway",
-  "paid": false,
   "courses": [
     {
       "title": "Configure Tools in Jenkins",
