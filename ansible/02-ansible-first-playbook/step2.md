@@ -1,95 +1,59 @@
-Let’s add PHP by adding another module entry, like ping: to the playbook.yml file, so that it looks like the following:
+#### Bare Essentials Playbook
+
+1. Now, tell Ansible to run on all available hosts by adding - hosts: all to our new playbook. After adding these lines, your playbook should now look like this:
 
 <pre class="file" data-filename="playbook.yml">
 ---
 - hosts: all
-  tasks:
-    - name: Make sure that we can connect to the machine
-      ping:
-    - name: Install PHP
-      apt: name=php5-cli state=present update_cache=yes
 </pre>
 
-Previously, you used the ping module to connect to your machine. This time, you’ll be using the apt module.
+2. You'll need to add a section named tasks. Try to remember how from the lecture, but if you need help, peek ahead.
 
-2. If you run vagrant provision again, it should attempt to install the php5 package. Unfortunately, it will fail, giving a message such as the following:
+3. Inside tasks, you are going to tell Ansible to just ping your machines to make sure that you can connect to them:
+
+<pre class="file" data-filename="playbook.yml" data-target="replace">
+---
+- hosts: all
+  tasks:
+    - ping:
+</pre>
+
+4. Now, "provision" your newest changes to Ansible on the machine by executing:
 
 # Replace
 $ vagrant provisio
 $ ansible-playbook...
 
-Output:
-```
-...
+You should see output that looks like the following:
 
-TASK [Make sure that we can connect to the machine] ****************************
+```
+==> default: Running provisioner: ansible...
+
+PLAY [all]
+********************************************************************
+
+GATHERING FACTS
+***************************************************************
 ok: [default]
 
-TASK [Install PHP] *************************************************************
-fatal: [default]: FAILED! => {"changed": false, "failed": true, "msg": "Failed to lock apt for exclusive operation"}
-	to retry, use: --limit @path/to/playbook.retry
-
-PLAY RECAP *********************************************************************
-default                    : ok=2    changed=0    unreachable=0    failed=1   
-```
-
-Ansible failed to complete successfully. Any error output should be visible above. Please fix these errors and try again.
-
-3. Ansible basically needs to sudo this command! However, let's add it to the playbook in such a way that the permission granted, can be reused by other commands. You'll do that by adding become: true to our playbook, like this:
-
-<pre class="file" data-filename="playbook.yml">
----
-- hosts: all
-  become: true
-  tasks:
-    - name: Make sure that we can connect to the machine
-      ping:
-    - name: Install PHP
-      apt: name=php5-cli state=present update_cache=yes
-</pre>
-
-4. Once you’ve saved this change, run vagrant provision again. Ansible should tell you that PHP was installed successfully:
-
-# Replace
-$ vagrant provisio
-$ ansible-playbook...
-
-5. You can add more steps to install nginx and mySQL by adding more calls to the apt module saying that you expect nginx and mysql-server-5.6 to be present.
-
-<pre class="file" data-filename="playbook.yml">
----
-- hosts: all
-  become: true
-  tasks:
-    - name: Make sure that we can connect to the machine
-      ping:
-    - name: Install PHP
-      apt: name=php5-cli state=present update_cache=yes
-    - name: Install nginx
-      apt: name=nginx state=present
-    - name: Install mySQL
-      apt: name=mysql-server-5.6 state=present
-</pre>
-
-6. As with the php5-cli package, this should show up in your Ansible output when you run vagrant provision again:
-
-# Replace
-$ vagrant provisio
-$ ansible-playbook...
-
-Output:
-```
-...
-
-TASK [Install PHP] *************************************************************
+TASK: [ping ]
+*****************************************************************
 ok: [default]
 
-TASK [Install nginx] ***********************************************************
-changed: [default]
+PLAY RECAP
+********************************************************************
 
-TASK [Install mySQL] ***********************************************************
-changed: [default]
-
-PLAY RECAP *********************************************************************
-default        : ok=5    changed=2    unreachable=0    failed=0
+default         : ok=2    changed=0    unreachable=0    failed=0
 ```
+
+5. Thankfully, Ansible lets you add a name to each task to explain its purpose. Let’s do that to our ping action now:
+
+<pre class="file" data-filename="playbook.yml" data-target="replace">
+---
+- hosts: all
+  tasks:
+    - name: "Your Text Description Here"
+      ping:
+</pre>
+
+Run it! It will no longer say `TASK: [ping ]`. Instead, it will show the description that you provided.
