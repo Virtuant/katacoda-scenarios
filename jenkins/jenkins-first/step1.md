@@ -7,6 +7,11 @@ The command used to launch the container was:
     -v /root/jenkins:/var/jenkins_home \
     jenkins:1.651.1-alpine`
 
+    docker run \
+    -p 8080:8080 \
+    -p 50000:50000 \
+    -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+
 All plugins and configurations get persisted to the host at _/root/jenkins_. Port 8080 opens the web dashboard, 50000 is used to communicate with other Jenkins agents. Finally, the image has an alpine base to reduce the size footprint.
 
 #### Load Dashboard

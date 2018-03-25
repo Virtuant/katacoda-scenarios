@@ -8,7 +8,7 @@ This is built on an Ubuntu 14.04 base instance, so this is Linux. There is nothi
 Your first job will be to install Ansible on the host machine. Before, we used container technology to setup a container where Ansible was already installed, this time you'll learn what it takes to install Ansible on a Linux host machine.
 
 ###### Bare Essentials Playbook
-You can't learn about Ansible
+You can't learn about Ansible without learning about playbooks! In this lab you'll get your first taste of running commands with Ansible that are predefined in a `playbook.yml` file.
 
 Installation Additions
 
