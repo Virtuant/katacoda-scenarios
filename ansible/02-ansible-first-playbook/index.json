@@ -33,12 +33,8 @@
         },
         "finish": {
             "text": "finish.md"
-        },
-
-	"assets": {
-      "client": [{"file": "playbook.yml", "target": "/home/scrapbook/tutorial", "chmod": "+x"}]
-		}
-	},
+        }
+	  },
 	"files": [
     "playbook.yml"
     	],
