@@ -2,7 +2,7 @@
 
 1\. Let’s add PHP by adding another module entry, like `ping:` to the `playbook.yml` file, so that it looks like the following:
 
-<pre class="file" data-filename="playbook.yml">
+<pre class="file" data-filename="playbook.yml" data-target="replace"><blockquote>
 ---
 - hosts: all
   tasks:
@@ -10,7 +10,7 @@
       ping:
     - name: Install PHP
       apt: name=php5-cli state=present update_cache=yes
-</pre>
+</blockquote></pre>
 
 Previously, you used the `ping` module to connect to your machine. This time, you’ll be using the `apt` module.
 
@@ -43,7 +43,7 @@ visible above. Please fix these errors and try again.
 
 3\. Ansible basically needs to sudo this command! However, let's add it to the playbook in such a way that the permission granted, can be reused by other commands. You'll do that by adding `become: true` to our playbook, like this:
 
-<pre class="file" data-filename="playbook.yml">
+<pre class="file" data-filename="playbook.yml" data-target="replace"><blockquote>
 ---
 - hosts: all
   become: true
@@ -52,7 +52,7 @@ visible above. Please fix these errors and try again.
       ping:
     - name: Install PHP
       apt: name=php5-cli state=present update_cache=yes
-</pre>
+</blockquote></pre>
 
 4\. Once you’ve saved this change, run `vagrant provision` again. Ansible should tell you that PHP was installed successfully:
 
@@ -64,7 +64,7 @@ $ ansible-playbook...
 
 5\. You can add more steps to install nginx and mySQL by adding more calls to the `apt` module saying that you expect nginx and `mysql-server-5.6` to be present.
 
-<pre class="file" data-filename="playbook.yml">
+<pre class="file" data-filename="playbook.yml" data-target="replace"><blockquote>
 ---
 - hosts: all
   become: true
@@ -77,7 +77,7 @@ $ ansible-playbook...
       apt: name=nginx state=present
     - name: Install mySQL
       apt: name=mysql-server-5.6 state=present
-</pre>
+</blockquote></pre>
 
 6\. As with the `php5-cli` package, this should show up in your Ansible output when you run `vagrant provision` again:
 
