@@ -1,4 +1,5 @@
 #### Playbook Simplification
+
 1\. The first thing to do is to delete the `ping` task. Go to your playbook in the editor now, highlight, then and erase the `ping` task entirely. Be careful not to erase, or cripple the syntax of remaining code.
 
 2\. Now, let's pull out the `with_items` module and combine it with the special `{{item}}` notation, so can compress our `apt` module installs. Try to put this into place without looking down at the code snippet, but the following is the end result of this implementation:

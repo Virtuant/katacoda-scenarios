@@ -30,7 +30,8 @@
 			],
 			"intro": {
 				"text": "intro.md",
-				"courseData": "env-init.sh"
+				"courseData": "env-init.sh",
+				"credits": "https://github.com/oveits"
 			},
 			"finish": {
 				"text": "finish.md"
