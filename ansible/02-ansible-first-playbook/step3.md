@@ -21,7 +21,8 @@ Previously, you used the `ping` module to connect to your machine. This time, yo
 `$ ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
 
 Unfortunately, it fails, giving a message such as the following:
-```
+
+```bash
 ...
 
 TASK [Make sure that we can connect to the machine] ****************************
@@ -53,6 +54,8 @@ visible above. Please fix these errors and try again.
 
 </blockquote></pre>
 
+>Note: This installation process take up to a minute, so please be patient. 
+
 4\. Once you’ve saved this change, run the playbook again. Ansible should tell you that PHP was installed successfully:
 
 `$ ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
@@ -82,8 +85,8 @@ visible above. Please fix these errors and try again.
 
 Output:
 
-```
-...yaml
+```bash
+...
 
 TASK [Install PHP] *************************************************************
 ok: [default]
