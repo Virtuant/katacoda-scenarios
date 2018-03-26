@@ -5,7 +5,7 @@ If you want a specific version, you append it to the package name, for example:
 
 ```
 ---
-- hosts: host02
+- hosts: host01
   become: true
   tasks:
     - name: Install required packages
@@ -18,9 +18,9 @@ If you want a specific version, you append it to the package name, for example:
 
 If you want to ensure that the package is not installed, you can declare that with state: absent, and Ansible will ensure it.
 
-Update the playbook to remove sysstat.
+Update the playbook to remove `mysql-server-5.6`.
 
-sed -i -e 's/state: present/state: absent/' -e 's/ensure.*/ensure item is removed/' playbook.yml
+`sed -i -e 's/state: present/state: absent/' -e 's/ensure.*/ensure mysql-server-5.6 is removed/' playbook.yml`{{execute HOST1}}
 
 Then re-run the playbook:
 

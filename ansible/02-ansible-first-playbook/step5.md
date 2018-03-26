@@ -15,7 +15,7 @@
       with_items:
         - php5-cli
         - nginx
-        - mysql-server-5.6
+        - mysql-server
 
 </blockquote></pre>
 

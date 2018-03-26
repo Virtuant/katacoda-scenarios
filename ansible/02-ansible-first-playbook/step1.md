@@ -13,4 +13,4 @@ apt-get install -y ansible`{{execute HOST1}}
 
 3\. Verifying Ansible Installation  
 
-`ansible-`{{execute HOST1}}
+`ansible-`{{execute}} # TAB twice

@@ -60,7 +60,7 @@ visible above. Please fix these errors and try again.
 
 >Note: This installation process may take up to a minute, so please be patient.
 
-5\. You can add more steps to install Nginx and MySQL by adding more calls to the `apt` module saying that you expect `nginx` and `mysql-server-5.6` to be present.
+5\. You can add more steps to install Nginx and MySQL by adding more calls to the `apt` module saying that you expect `nginx` and `mysql-server` to be present.
 
 <pre class="file" data-filename="playbook.yml" data-target="replace"><blockquote>
 
@@ -75,7 +75,7 @@ visible above. Please fix these errors and try again.
     - name: Install nginx
       apt: name=nginx state=present
     - name: Install mySQL
-      apt: name=mysql-server-5.6 state=present
+      apt: name=mysql-server state=present
 
 </blockquote></pre>
 

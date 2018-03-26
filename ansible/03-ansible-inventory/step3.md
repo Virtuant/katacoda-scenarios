@@ -9,7 +9,7 @@ This playbook runs one task, on our one host, `host01`. Note the indentation - i
 <pre class="files" data-filename="playbook.yml"><blockquote>
 
 ---
-- hosts: host02
+- hosts: host01
   become: true
   tasks:
     - name: Install required packages

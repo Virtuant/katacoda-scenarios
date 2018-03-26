@@ -5,7 +5,7 @@ From the previous example:
 
 ```
 ---
-- hosts: host02
+- hosts: host01
   become: true
   tasks:
     - name: Install required packages
