@@ -1,6 +1,6 @@
 #### Installation Additions
 
-1\. Let’s add PHP by adding another module entry, like `ping:` to the `playbook.yml` file, so that it looks like the following:
+1\. Previously, you used the `ping` module to connect to your machine. This time, you’ll be using the `apt` module to install something on that machine:
 
 <pre class="file" data-filename="playbook.yml" data-target="replace"><blockquote>
 
@@ -13,8 +13,6 @@
       apt: name=php5-cli state=present update_cache=yes
 
 </blockquote></pre>
-
-Previously, you used the `ping` module to connect to your machine. This time, you’ll be using the `apt` module to install something on that machine.
 
 2\. If you provision this changes again, it should attempt to install the `php5` package.
 
