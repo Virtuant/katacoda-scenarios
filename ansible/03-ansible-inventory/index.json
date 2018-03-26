@@ -35,14 +35,14 @@
 				"text": "finish.md"
 			},
 			"assets": {
-	      "client": [{"file": "playbook.yml", "target": "/home/scrapbook/tutorial", "chmod": "+x"}]
+	      "host01": [{"file": "playbook.yml", "target": "/home/scrapbook/tutorial", "chmod": "+x"}]
 			}
 		},
 
 		"files": [
-	    "playbook.yml",
-	    "myhosts"
-	    	],
+	    "playbook1.yml",
+	    "myhosts1"
+	    ],
 
 		"environment": {
 			"showdashboard": true,
