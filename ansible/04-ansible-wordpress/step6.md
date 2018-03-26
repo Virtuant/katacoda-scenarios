@@ -1,18 +1,24 @@
-Now, let’s install nginx by adding the following to the end of playbook.yml:
+#### Adding Nginx Upstream
 
-```yml
-# nginx
-- name: Install nginx
-  apt: name=nginx state=present
-  
-- name: Start nginx
-  service: name=nginx state=started
+1\. Now, you need to create an upstream definition in the configuration file so that nginx knows where to pass the request on to. Add the following at the **top** of your template before the opening server { line }:
+
+```txt
+        upstream php {
+                server unix:/run/php/php7.2-fpm.sock;
+}
 ```
 
-Run `vagrant provision` again to install nginx and start it running.
+>Note: Understand that php7.2 made not be right and you'll only know that by doing the next step.
 
-Now, visit `192.168.33.20` in your web browser, you will see the “Welcome to nginx” page.
+2\. [Important] Remember from the lecture, you'll need to confirm which socket your PHP-FPM pool is listening on. If the results are differ from the code sample above, you will have to update the code. Go ahead an ssh into your machine and run the following commands:
 
->Note: This IP is the one you've established in your Vagrantfile. It may vary from the one above, check your Vagrantfile, if needed.
+```console
+$ vagrant ssh
+# ls /etc/php/
+# cat /etc/php/7.X/fpm/pool.d/www.conf  | grep "listen ="
+# exit
+```
 
-![image](https://user-images.githubusercontent.com/21102559/32392705-0895e2d2-c0ad-11e7-8d23-1bdcf4f379b0.png)
+>Note: Remember, pay close attention to whether ($) or (#) are used, because they indicate where the code is to be run.
+
+3\. Make sure that you run `vagrant provision` to bring everything up to date.

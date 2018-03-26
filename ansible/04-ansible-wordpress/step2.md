@@ -1,97 +1,54 @@
-Let’s add PHP by adding another module entry, like ping: to the `playbook.yml` file, so that it looks like the following:
 
-```yaml
----
-- hosts: all
-  tasks:
-    - name: Make sure that we can connect to the machine
-      ping:
-    - name: Install PHP
-      apt: name=php5-cli state=present update_cache=yes
+#### Installing MySQL
+1\. Once you have PHP installed (and Apache removed), you can move on to the next dependency, MySQL. Add the following to your playbook:
+
+```yml
+# MySQL
+- name: Install MySQL
+  apt: name={{item}} state=present
+  with_items:
+    - mysql-server-5.6
+    - python-mysqldb
 ```
 
-Previously, you used the ping module to connect to your machine. This time, you’ll be using the apt module.
+2\. Now, you should run `vagrant provision` now to install all of the PHP and MySQL packages. It may take a few minutes, but it should complete successfully.
 
-If you run vagrant provision again, it should attempt to install the php5 package. Unfortunately, it will fail, giving a message such as the following:
+#### [Optional] MySQL Security  
+Ansible installs MySQL with an empty root password and leaves some of the test databases accessible to anonymous users.
 
-```
-$ vagrant provision
-```
+1\. To change the default password, you need to generate a password to use. To do this, you can use the `openssl` utility to generate a 15-character password. Add the following to your playbook:
 
-Output:
-
-```
-...
-
-TASK [Make sure that we can connect to the machine] ****************************
-ok: [default]
-
-TASK [Install PHP] *************************************************************
-fatal: [default]: FAILED! => {"changed": false, "failed": true, "msg": "Failed to lock apt for exclusive operation"}
-	to retry, use: --limit @path/to/playbook.retry
-
-PLAY RECAP *********************************************************************
-default                    : ok=2    changed=0    unreachable=0    failed=1   
+```yml
+- name: Generate new root password
+  command: openssl rand -hex 7
+  register: mysql_new_root_pass
 ```
 
-Ansible failed to complete successfully. Any error output should be visible above. Please fix these errors and try again.
+> Note: Remember, the register keyword lets you save the return value of commands as a variable for use later in a playbook.
 
-Ansible basically needs to sudo this command! However, let's add it to the playbook in such a way that the permission granted, can be reused by other commands. You'll do that by adding become: true to our playbook, like this:
+2\. The next thing to do is to remove the anonymous users and test databases. This is very straightforward, thanks to the `mysql_db` and `mysql_user` modules. You need to do this before you change the root password so that Ansible can make the changes. Again, you need to add some tasks to your playbook:
 
-```yaml
----
-- hosts: all
-  become: true
-  tasks:
-    - name: Make sure that we can connect to the machine
-      ping:
-    - name: Install PHP
-      apt: name=php5-cli state=present update_cache=yes
+```yml
+- name: Remove anonymous users
+  mysql_user: name="" state=absent
+
+- name: Remove test database
+  mysql_db: name=test state=absent
 ```
 
-Once you’ve saved this change, run vagrant provision again. Ansible should tell you that PHP was installed successfully:
+3\. To change the root password and output it to the screen, use the special `ansible_hostname` variable that evaluates to the current machine’s hostname and then set the password for the three different formats used to denote localhost:
 
-```
-$ vagrant provision
-```
+```yml
+- name: Update root password
+  mysql_user: name=root host={{item}} password={{mysql_new_root_pass.stdout}}
+  with_items:
+    - "{{ ansible_hostname }}"
+    - 127.0.0.1
+    - ::1
+    - localhost
 
-You can add more steps to install nginx and mySQL by adding more calls to the apt module saying that you expect nginx and mysql-server-5.6 to be present.
-
-```yaml
----
-- hosts: all
-  become: true
-  tasks:
-    - name: Make sure that we can connect to the machine
-      ping:
-    - name: Install PHP
-      apt: name=php5-cli state=present update_cache=yes
-    - name: Install nginx
-      apt: name=nginx state=present
-    - name: Install mySQL
-      apt: name=mysql-server-5.6 state=present
+- name: Output new root password
+  debug: msg="New root password is {{mysql_new_root_pass.stdout}}"
 ```
 
-As with the php5-cli package, this should show up in your Ansible output when you run vagrant provision again:
-
-```
-$ vagrant provision
-```
-
-Output:
-
-```
-...
-
-TASK [Install PHP] *************************************************************
-ok: [default]
-
-TASK [Install nginx] ***********************************************************
-changed: [default]
-
-TASK [Install mySQL] ***********************************************************
-changed: [default]
-
-PLAY RECAP *********************************************************************
-default        : ok=5    changed=2    unreachable=0    failed=0
-```
+Great job! You're halfway there.

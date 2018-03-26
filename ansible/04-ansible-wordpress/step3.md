@@ -1,75 +1,95 @@
-Now that you know Ansible will run, let’s install PHP. Add the following to your playbook in the tasks section:
 
-ONDREJ, or GENERALIZED? - DAVID
+#### Creating a New Config File
+This is actually quite a lot of work! At this point, your installation is secure, but you’re not quite done. Like we learned, Ansible expects to be able to run database commands without a password, which was fine when you didn’t have a root password, but will fail now that you do. You need to write out a new config file (located at `/root/.my.cnf`) containing the new root password so that the root user can run MySQL commands automatically.
 
-```yml
-# PHP
-- name: Add the ondrej PHP PPA
-  apt_repository: repo='ppa:ondrej/php'
-```
-OR
-
-```yaml
----
-- hosts: all
-  become: true
-  tasks:
-    - name: Make sure that we can connect to the machine
-      ping:
-    - name: Install PHP
-      apt: name=php5-cli state=present update_cache=yes
-    - name: Install nginx
-      apt: name=nginx state=present
-    - name: Install mySQL
-      apt: name=mysql-server-5.6 state=present
-```
-
->Note: Remember, PPA stands for Personal Package Archive and it's what's used to assist the installation process.
-
-Once that’s installed, the next step is to install PHP. As you’ve added a PPA, you’ll want to update the apt package cache:
-
-```yml
-- name: Update the apt cache
-  apt: update_cache=yes cache_valid_time=3600
-
-- name: Install PHP
-  apt: name=php state=present
-```
-
-Once you’re logged in, run `which php` and make sure that it yields something similar to the following:
+1\. First, you need to create a folder to hold your template and create the file that you are going to copy over. Run these commands from your terminal, in the same directory as your vagrantfile, to create the required folders and files:
 
 ```console
-$ which php
+$ mkdir -p provisioning/templates/mysql
+$ vi provisioning/templates/mysql/my.cnf
 ```
 
-Output:
+2\. Once you’ve created `my.cnf`, edit it and make sure that it has the following contents:
 
-```console
-/usr/bin/php
+```cnf
+[client]
+user=root
+password={{ mysql_new_root_pass.stdout }}
 ```
 
->Note: Once that runs, go ahead and exit out of the VM.
-
-Looks good, so let’s continue and install all of the other PHP packages that you’ll need. Let’s use `with_items` to make the playbook easier to read.
+3\. You also need to tell Ansible to copy this template into your environment; this is done using the template module, as discussed in the lecture. Add the following task to your playbook:
 
 ```yml
-- name: Install PHP
-  apt: name={{item}} state=installed
+- name: Create my.cnf
+  template: src=templates/mysql/my.cnf dest=/root/.my.cnf
+```
+
+This file will contain the username and password for the root MySQL user.
+
+4\. While it’s not a bad thing to rotate root passwords frequently, this may not be the behavior that you are seeking. To disable this behavior, you can tell Ansible not to run certain commands if a specific file exists. Ansible has a special creates option that determines if a file exists before executing a module:
+
+```yml
+- name: Generate new root password
+  command: openssl rand -hex 7 creates=/root/.my.cnf
+  register: mysql_new_root_pass
+```
+
+If the file `/root/.my.cnf` does not exist, `mysql_new_root_pass.changed` will be true, and if it does exist, it'll be set to false.
+
+5\. Here’s a small set of example tasks that show the new root password if `.my.cnf` does not exist and show a message if it already exists:
+
+```yml
+- name: Generate new root password
+  command: openssl rand -hex 7 creates=/root/.my.cnf
+  register: mysql_new_root_pass
+# If /root/.my.cnf doesn't exist and the command is run
+- debug: msg="New root password is {{ mysql_new_root_pass.stdout }}"
+  when: mysql_new_root_pass.changed
+# If /root/.my.cnf exists and the command is not run
+- debug: msg="No change to root password"
+  when: not mysql_new_root_pass.changed
+```
+
+6\. Once you make the change to add `creates=/root/.my.cnf`, you should add a `when` argument to all of the relevant operations. After making these changes, the MySQL section of your playbook should look like this:
+
+>Note: Make sure you are able to spot the changes we are making and that you understand why they are being made.
+
+```yml
+# MySQL
+- name: Install MySQL
+  apt: name={{item}}
   with_items:
-    - php
-    - php-fpm
-    - php-mysql
-    - php-xml
+    - mysql-server
+    - python-mysqldb
+- name: Generate new root password
+  command: openssl rand -hex 7 creates=/root/.my.cnf
+  register: mysql_new_root_pass
+- name: Remove anonymous users
+  mysql_user: name="" state=absent
+  when: mysql_new_root_pass.changed
+- name: Remove test database
+  mysql_db: name=test state=absent
+  when: mysql_new_root_pass.changed
+- name: Output new root password
+  debug: msg="New root password is  {{mysql_new_root_pass.stdout}}"
+  when: mysql_new_root_pass.changed
+- name: Update root password
+  mysql_user: name=root host={{item}} password={{mysql_new_root_pass.stdout}}
+  with_items:
+    - "{{ ansible_hostname }}"
+    - 127.0.0.1
+    - ::1
+    - localhost
+  when: mysql_new_root_pass.changed
+- name: Create my.cnf
+  template: src=templates/mysql/my.cnf dest=/root/.my.cnf
+  when: mysql_new_root_pass.changed
 ```
 
->Note: You're only to change the "Install PHP" section.
+7\. Run vagrant provision now to generate a new root password and clean up your MySQL installation. If you run `vagrant provision` again, you should see that all of these steps are skipped:
 
-Unfortunately, installing PHP also installs Apache2. You don’t want to use that in this exercise.
-There’s no way around this, but you can remove it as soon as it’s installed by adding the following task to your playbook:
-
-```yml
-- name: Remove apache2
-  apt: name=apache2 state=absent
+```console
+TASK [Remove anonymous users]
+**************************************************
+skipping: [default]
 ```
-
-Great job!

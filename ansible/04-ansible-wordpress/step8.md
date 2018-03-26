@@ -1,22 +1,28 @@
-Now, you need to create an upstream definition in the configuration file so that nginx knows where to pass the request on to. Add the following at the **top** of your template before the opening server { line }:
+## Handler and Configuration Testing
 
-```nginx
-   upstream php {
-       server unix:/run/php/php7.2-fpm.sock;
-   }
+After running vagrant up, your new config should rollout and nginx should be restarted.
+
+1\. To test this, include the IP address and domain that you’ve been using to the bottom of the `/etc/hosts` file, on your host machine (not your VM):
+
+```yaml
+192.168.33.20 book.example.com
 ```
 
->Note: Understand that php7.2 made not be right and you'll only know that by doing the next step.
+2\. Now, as before, log in to the virtual machine with `vagrant ssh`.
 
-[Important] Remember you'll need to confirm which socket your PHP-FPM pool is listening on. If the results are differ from the code sample above, you will have to update the code. Go ahead an ssh into your machine and run the following commands:
+3\. Once you've successfully logged in, run the following commands to formulate the test display:
 
 ```console
-$ vagrant ssh
-# ls /etc/php/
-# cat /etc/php/7.X/fpm/pool.d/www.conf  | grep "listen ="
+# sudo mkdir -p /var/www/book.example.com
+# echo "<?php echo date('H:i:s'); " | sudo tee /var/www/book.example.com/index.php
+```
+
+4\. Always remember to exit out of your instances, before running further commands!
+
+```
 # exit
 ```
 
->Note: Remember, pay close attention to whether ($) or (#) are used, because they indicate where the code is to be run.
+5\. Finally, visit `http://book.example.com` in your browser. You should see the current time.
 
-Make sure that you run `vagrant provision` to bring everything up to date.
+Now, that is pretty cool, huh? I hope you're proud of yourself.
