@@ -1,7 +1,7 @@
 ## Creating an Inventory
-By default, Ansible will read /etc/ansible/hosts as its default inventory file. Using this file is not recommended, though. You should maintain a different inventory file for each project that you have and pass it to both the ansible and ansible-playbook commands using the –i option.
+By default, Ansible will read `/etc/ansible/hosts` as its default inventory file. Using this file is not recommended, though. You should maintain a different inventory file for each project that you have and pass it to both the `ansible` and `ansible-playbook` commands using the `–i` option.
 
-Here is an example of passing a custom inventory file to ansible before running the ping module:
+Here is an example of passing a custom inventory file to `ansible` before running the `ping` module:
 
 ```
 ansible all –i /path/to/inventory –m ping

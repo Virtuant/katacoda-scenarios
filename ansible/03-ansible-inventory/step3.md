@@ -17,7 +17,7 @@ This playbook runs one task, on our one host, `host01`. Note the indentation - i
       with_items:
         - php5-cli
         - nginx
-        - mysql-server-5.6
+        - mysql-server
 
 </blockquote></pre>
 
@@ -29,6 +29,6 @@ To run the playbook, use the `ansible-playbook` command with the inventory file 
 
 `ansible-playbook -i myhosts playbook.yml`{{execute HOST1}}
 
-Ansible should return the result 'Changed=1', indicating that the package was installed.
+Ansible should return the result `'Changed=1'`, indicating that the package was installed.
 
 What happened here?

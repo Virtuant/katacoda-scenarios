@@ -13,10 +13,10 @@ From the previous example:
       with_items:
         - php5-cli
         - nginx
-        - mysql-server-5.6
+        - mysql-server
 ```
 
->Note: If for some reason you've gotten to this point and you've notice your playbook.yml files is 
+>Note: If for some reason you've gotten to this point and you've notice that your playbook.yml file does not resemble the one given, please copy and paste the code given into your editor.
 
 This tells Ansible to check if the items listed using `with_items` are present. If they are, Ansible will do nothing more, since the state is already achieved. However, if the items are not present, or if it's an older version, Ansible will ensure the items are present by installing the latest version.
 
