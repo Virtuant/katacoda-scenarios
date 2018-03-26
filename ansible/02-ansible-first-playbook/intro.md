@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/21102559/37881960-a21cb032-306c-11e8-8123-f95b4d39af4d.png)
+
 ### Introduction
 Welcome to your second lab and your first glance at Ansible Playbooks!
 
@@ -16,6 +18,6 @@ You can't learn about Ansible without learning about playbooks! In this lab you'
 You will then be installing some additions. Most projects require multiple components and in this lab, you will introduce multiple services, such as: Nginx, MySQL, and PHP to your instance. This is still just the tip of the iceberg, but you'll get a feel basic installations and configurations done through a playbook.
 
 ##### Playbook Simplification
-Part of building smart playbooks, is learning how to simplify them. In the final step in this lab, you'll learn basic ways to simplify playbooks, using some of the tried and true methods of Asnsible developers. 
+Part of building smart playbooks, is learning how to simplify them. In the final step in this lab, you'll learn basic ways to simplify playbooks, using some of the tried and true methods of Asnsible developers.
 
 So, let's get this ball rolling! Click on "Start Scenario" to get started learning about Ansible Playbooks. Take your time, have fun, and learn something. Be sure to ask questions, if you have them!
