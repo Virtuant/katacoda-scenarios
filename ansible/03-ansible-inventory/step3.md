@@ -1,6 +1,4 @@
-STEP03
-Running a playbook
-Playbook
+## Running a Playbook
 A playbook is an entirely different way of running Ansible, that is far more powerful.
 
 What is a play?
