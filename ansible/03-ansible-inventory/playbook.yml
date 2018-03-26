@@ -1,7 +1,7 @@
 
 ---
 
-- hosts: all
+- hosts: host01
   become: true
   tasks:
     - name: Install required packages

@@ -1,15 +1,19 @@
-STEP05
-Ansible ensures
-A fundamental principle of Ansible is that it ensures a desired state.
+STOP05
+Ensure a package is removed
+The apt module allows you to specify the state you wish the package to be in. If you want a specific version, you append it to the package name, for example:
 
-From the previous example:
-
-- name: ensure latest sysstat is installed
+- name: ensure sysstat is installed at version 10.2.0-1
   apt:
-    name: sysstat
-    state: latest
-This tells Ansible to check if the latest version of sysstat is installed. If it is, Ansible will do nothing more, since the "latest" state is already achieved. If sysstat is not already there, or of an older version than what is available, Ansible installs the latest version.
+    name: sysstat=10.2.0-1
+    state: installed
+If you want to ensure that the package is not installed, you can declare that with state: absent, and Ansible will ensure it.
 
-If you run the playbook again, Ansible does the former, and instead of "Changed: 1", you will get "OK: 2, Changed 0". Try it out:
+Update the playbook to remove sysstat.
 
-ansible-playbook -i myhosts site.yml
+sed -i -e 's/state: latest/state: absent/' -e 's/ensure.*/ensure sysstat is removed/' playbook.yml
+
+Then re-run the playbook:
+
+ansible-playbook -i myhosts playbook.yml
+
+In summary, the same playbook should always be able to run on a host and - assuming there are no errors - produce exactly the desired state, regardless of what state the host started in. For example, should your playbook halt halfway through due to a network error, it would still finish successfully when you re-run it.
