@@ -18,7 +18,7 @@ Now, tell Ansible to run on all available hosts by adding - hosts: all to our ne
 - hosts: all
 ```
 
-You'll need to add a section named tasks. Inside tasks, you are going to tell Ansible to just ping your machines to make sure that you can connect to them. In `provisioning/playbook.yml`, we specify on which hosts the playbook should run as well as a set of tasks to run. 
+You'll need to add a section named tasks. Inside tasks, you are going to tell Ansible to just ping your machines to make sure that you can connect to them. In `provisioning/playbook.yml`, we specify on which hosts the playbook should run as well as a set of tasks to run.
 Just implement the `ping` module for now:
 
 ```yml

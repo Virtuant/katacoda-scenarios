@@ -26,7 +26,7 @@ If you need to import the database, you’ll need to copy your database to the r
 - name: Copy WordPress DB
   copy: src=files/wp-database.sql dest=/tmp/wp-database.sql
   when: db_exist.rc > 0
-  
+
 - name: Import WordPress DB
   mysql_db: target=/tmp/wp-database.sql state=import name=wordpress
   when: db_exist.rc > 0

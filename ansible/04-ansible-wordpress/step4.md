@@ -42,8 +42,8 @@ Once you have PHP installed (and Apache removed), you can move on to the next de
 Now, you should run `vagrant provision` now to install all of the PHP and MySQL packages. It may take a few minutes, but it should complete successfully.
 
 #### [Optional] MySQL Security
-  
-Ansible installs MySQL with an empty root password and leaves some of the test databases accessible to anonymous users. 
+
+Ansible installs MySQL with an empty root password and leaves some of the test databases accessible to anonymous users.
 
 To change the default password, you need to generate a password to use. To do this, you can use the `openssl` utility to generate a 15-character password. Add the following to your playbook:
 
@@ -75,7 +75,7 @@ To change the root password and output it to the screen, use the special `ansibl
     - 127.0.0.1
     - ::1
     - localhost
-    
+
 - name: Output new root password
   debug: msg="New root password is {{mysql_new_root_pass.stdout}}"
 ```

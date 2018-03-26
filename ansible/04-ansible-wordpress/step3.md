@@ -31,7 +31,7 @@ Once that’s installed, the next step is to install PHP. As you’ve added a PP
 ```yml
 - name: Update the apt cache
   apt: update_cache=yes cache_valid_time=3600
-  
+
 - name: Install PHP
   apt: name=php state=present
 ```
@@ -64,7 +64,7 @@ Looks good, so let’s continue and install all of the other PHP packages that y
 
 >Note: You're only to change the "Install PHP" section.
 
-Unfortunately, installing PHP also installs Apache2. You don’t want to use that in this exercise. 
+Unfortunately, installing PHP also installs Apache2. You don’t want to use that in this exercise.
 There’s no way around this, but you can remove it as soon as it’s installed by adding the following task to your playbook:
 
 ```yml

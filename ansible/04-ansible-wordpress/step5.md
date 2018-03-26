@@ -1,6 +1,6 @@
 This is actually quite a lot of work! At this point, your installation is secure, but you’re not quite done. 
-Like we learned, Ansible expects to be able to run database commands without a password, which was fine when you didn’t have a root password, 
-but will fail now that you do. You need to write out a new config file (located at `/root/.my.cnf`) containing the new root password so that 
+Like we learned, Ansible expects to be able to run database commands without a password, which was fine when you didn’t have a root password,
+but will fail now that you do. You need to write out a new config file (located at `/root/.my.cnf`) containing the new root password so that
 the root user can run MySQL commands automatically.
 
 First, you need to create a folder to hold your template and create the file that you are going to copy over. Run these commands from your terminal, in the same directory as your vagrantfile, to create the required folders and files:
@@ -16,14 +16,14 @@ user=root
 password={{ mysql_new_root_pass.stdout }}
 ```
 
-You also need to tell Ansible to copy this template into your environment; this is done using the template module, as discussed in the lecture. Add the following task to your playbook: 
+You also need to tell Ansible to copy this template into your environment; this is done using the template module, as discussed in the lecture. Add the following task to your playbook:
 
 ```yml
 - name: Create my.cnf
   template: src=templates/mysql/my.cnf dest=/root/.my.cnf
 ```
 
-This file will contain the username and password for the root MySQL user. 
+This file will contain the username and password for the root MySQL user.
 
 While it’s not a bad thing to rotate root passwords frequently, this may not be the behavior that you are seeking. To disable this behavior, you can tell Ansible not to run certain commands if a specific file exists. Ansible has a special creates option that determines if a file exists before executing a module:
 
@@ -61,19 +61,19 @@ Once you make the change to add `creates=/root/.my.cnf`, you should add a `when`
     - mysql-server
     - python-mysqldb
 - name: Generate new root password
-  command: openssl rand -hex 7 creates=/root/.my.cnf 
+  command: openssl rand -hex 7 creates=/root/.my.cnf
   register: mysql_new_root_pass
-- name: Remove anonymous users 
-  mysql_user: name="" state=absent 
+- name: Remove anonymous users
+  mysql_user: name="" state=absent
   when: mysql_new_root_pass.changed
-- name: Remove test database 
-  mysql_db: name=test state=absent 
+- name: Remove test database
+  mysql_db: name=test state=absent
   when: mysql_new_root_pass.changed
 - name: Output new root password
-  debug: msg="New root password is  {{mysql_new_root_pass.stdout}}" 
+  debug: msg="New root password is  {{mysql_new_root_pass.stdout}}"
   when: mysql_new_root_pass.changed
 - name: Update root password
-  mysql_user: name=root host={{item}} password={{mysql_new_root_pass.stdout}} 
+  mysql_user: name=root host={{item}} password={{mysql_new_root_pass.stdout}}
   with_items:
     - "{{ ansible_hostname }}"
     - 127.0.0.1
@@ -81,7 +81,7 @@ Once you make the change to add `creates=/root/.my.cnf`, you should add a `when`
     - localhost
   when: mysql_new_root_pass.changed
 - name: Create my.cnf
-  template: src=templates/mysql/my.cnf dest=/root/.my.cnf 
+  template: src=templates/mysql/my.cnf dest=/root/.my.cnf
   when: mysql_new_root_pass.changed
 ```
 

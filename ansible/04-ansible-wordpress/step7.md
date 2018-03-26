@@ -20,7 +20,7 @@ server {
         root /var/www/book.example.com;
 
         index index.php;
-        
+
         location = /favicon.ico {
                 log_not_found off;
                 access_log off;
@@ -30,14 +30,14 @@ server {
                 log_not_found off;
                 access_log off;
 	      }
-        
+
 	      location ~ /\. {
                 deny all;
-	      }	
+	      }
  	      location ~* /(?:uploads|files)/.*\.php$ {
                 deny all;
-	      }	
-        
+	      }
+
 	      location / {
                 try_files $uri $uri/ /index.php?$args;
 	      }
@@ -48,12 +48,12 @@ server {
                 access_log off;
                 log_not_found off;
 	               expires max;
-	      }	
+	      }
 
 	      location ~ [^/]\.php(/|$) {
                  fastcgi_split_path_info ^(.+?\.php)(/.*)$;
                  if (!-f $document_root$fastcgi_script_name) {
-			                   return 404; 
+			                   return 404;
 		             }
 		             include fastcgi_params;
 		             fastcgi_index index.php;
