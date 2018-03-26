@@ -31,18 +31,11 @@
 				"text": "intro.md",
 				"courseData": "env-init.sh"
 			},
+
 			"finish": {
 				"text": "finish.md"
-			},
-			"assets": {
-	      "host01": [{"file": "playbook.yml", "target": "/home/scrapbook/tutorial", "chmod": "+x"}]
-			}
-		},
-
-		"files": [
-	    "playbook1.yml",
-	    "myhosts1"
-	    ],
+				}
+	},
 
 		"environment": {
 			"showdashboard": true,
