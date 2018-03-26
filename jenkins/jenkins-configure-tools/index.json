@@ -21,20 +21,21 @@
 		],
 		"intro": {
 			"text": "intro.md",
-			"courseData": "env-init.sh",
+			"code": "env-init.sh",
 			"credits": ""
 		},
 		"finish": {
 			"text": "finish.md"
 		}
 	},
+
 	"environment": {
 		"showdashboard": true,
 		"dashboard": "Dashboard",
-		"dashboards": [{ "name": "Nginx", "port": 8080, "host": "host01" }],
 		"uilayout": "terminal",
 		"uimessage1": "\u001b[32mYour Interactive Host Terminal.\u001b[m\r\n"
 	},
+
 	"backend": {
 		"imageid": "ubuntu",
 		"port": 8080
