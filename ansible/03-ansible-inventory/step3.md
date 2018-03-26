@@ -7,6 +7,8 @@ A play is a set of tasks mapped to a set of hosts. Plays are organised inside a 
 Running a playbook
 This playbook runs one task, on our one host, host01. Note the indentation - it's important for how the file gets parsed. Blank lines are ignored, but makes the playbook more readable for humans.
 
+<pre class="files" data-filename="playbook.yml"><blockquote>
+
 ---
 - hosts: host02
   become: true
@@ -17,6 +19,8 @@ This playbook runs one task, on our one host, host01. Note the indentation - it'
         - php5-cli
         - nginx
         - mysql-server-5.6
+
+</blockquote></pre>
 
 The above code is already in a file called site.yml. Let's check the contents:
 

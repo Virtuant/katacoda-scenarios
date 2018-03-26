@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/21102559/37881960-a21cb032-306c-11e8-8123-f95b4d39af4d.png)
+<img style="float: left;" src="https://user-images.githubusercontent.com/21102559/37881960-a21cb032-306c-11e8-8123-f95b4d39af4d.png">
 
 ### Introduction
 Welcome to your second lab and your first glance at Ansible Playbooks!
