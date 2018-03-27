@@ -12,6 +12,8 @@ were `b36` is the first few letters of the container id.
 
 You should now be `root` inside your container.
 
+----
+
 Now go to the Dashboard (right of the Terminal) and start it up as `8080`.
 
 Log in to Jenkins with user = admin and Password = admin
