@@ -1,9 +1,11 @@
 ## Installing Dependencies
-1\. Like we've already seen, you start by creating a simple playbook that shows that Ansible can run against your host machine. We've already created a playbook.yml file, but you need to confirm that:
+1\. Like we've already seen, you start by creating a simple playbook that shows that Ansible can run against your host machine.
+
+We've already created a playbook.yml file, but it won't show up until you add code to it. Go ahead and list the contents of your working directory to confirm:
 
 `ls`{{execute HOST1}}
 
-2\. In `playbook.yml`, we specify on which hosts the playbook should run, as well as a set of tasks to run. Just implement the `ping` module for now, like before:
+2\. Now, you'll specify which hosts the playbook should run on, as well as a set of tasks to run. For now, you'll just implement the `ping` module for now, like before:
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
 
@@ -15,7 +17,11 @@
       ping:
 </blockquote></pre>
 
-3\. At this point, you should run provision your changes to prove that you can connect to the host. We do that by running our playbook against our localhost, like this:
+3\. So, now that you've added some code to the file, confirm it's present in your working directory:
+
+`ls`{{execute HOST1}}
+
+4\. At this point, you should run ansible-playbook to prove that you can connect to the host. We do that by running our playbook against our localhost, like before:
 
 `ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
 
@@ -26,7 +32,7 @@
 1\. Now that you know Ansible will run, let’s install PHP. Add the following to your playbook in the tasks section:
 
 <pre class="file" data-filename="playbook.yml" data-target="append"><blockquote>
-# PHP
+  # PHP
   - name: Add the ondrej PHP PPA
     apt_repository: repo='ppa:ondrej/php'
 </blockquote></pre>
@@ -38,7 +44,6 @@
 <pre class="file" data-filename="playbook.yml" data-target="append"><blockquote>
   - name: Update the apt cache
     apt: update_cache=yes cache_valid_time=3600
-
   - name: Install PHP
     apt: name=php state=present
 </blockquote></pre>

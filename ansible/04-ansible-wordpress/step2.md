@@ -3,7 +3,7 @@
 1\. Once you have PHP installed (and Apache removed), you can move on to the next dependency, MySQL. Add the following to your playbook:
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
-# MySQL
+  # MySQL
   - name: Install MySQL
     apt: name={{item}} state=present
     with_items:
