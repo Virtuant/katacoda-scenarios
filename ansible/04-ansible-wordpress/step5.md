@@ -11,14 +11,17 @@ $ touch provisioning/templates/nginx/default
 
 2\. You’ll also need to copy this file onto your remote machine using the template module. Let’s add a task to your playbook to do this:
 
-```yml
+<pre class="files" data-filename="playbook.yml"><blockquote>
+
 - name: Create nginx config
   template: src=templates/nginx/default dest=/etc/nginx/sites-available/default
-```
+
+</blockquote></pre>
 
 3\. Edit `provisioning/templates/nginx/default` and make sure that it contains the following content:
 
-```txt
+<pre class="files" data-filename="playbook.yml"><blockquote>
+
 server {
         server_name book.example.com;
         root /var/www/book.example.com;
@@ -66,4 +69,4 @@ server {
 	      }
 }
 
-```
+</blockquote></pre>

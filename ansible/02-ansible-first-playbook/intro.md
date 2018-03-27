@@ -1,6 +1,6 @@
 <img style="float: left;" src="https://user-images.githubusercontent.com/21102559/37915472-9f254882-30e7-11e8-979b-aad02f818e60.png">
 
-### Introduction
+## Introduction
 Welcome to your second lab and your first glance at Ansible Playbooks!
 
 In the previous lab you learned how to connect your host, to a targeted host machine. Now, you'll start off from a host, install Ansible on it, and execute commands on the localhost. The difference is you'll be running your commands from a playbook, using the `ansible-playbook` command.
