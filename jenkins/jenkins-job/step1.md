@@ -1,6 +1,6 @@
 Go to the Jenkins console (Dashboard to right):
 
-http://localhost:8080 ----------->
+>Note: you may have to re-select the port several times waiting for the Docker build to complete.
 
 Click on the Manage Jenkins link
 
@@ -26,7 +26,6 @@ Click on Install Without Restart.
 
 ![image011](https://user-images.githubusercontent.com/558905/37422359-777bc964-2791-11e8-9d05-6eba7d4acc12.png)
 
-Click on Go back to the top page.
+When the install is complete, click on Go back to the top page.
 
-![image013](https://user-images.githubusercontent.com/558905/37422361-779acbac-2791-11e8-8825-a33ca87c01e9.png)
-
+![image](https://user-images.githubusercontent.com/558905/37976532-b573ba92-31af-11e8-9301-8bb0574d0787.png)

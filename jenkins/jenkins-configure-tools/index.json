@@ -37,7 +37,7 @@
 	},
 
 	"backend": {
-		"imageid": "ubuntu",
+		"imageid": "docker",
 		"port": 8080
 	}
 }
