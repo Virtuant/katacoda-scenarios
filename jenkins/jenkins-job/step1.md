@@ -4,6 +4,8 @@ After the Docker builds, go to the Jenkins console (Dashboard to right):
 
 >Note: you may have to re-select the port several times waiting for the Docker build to complete.
 
+Log in.
+
 Click on the Manage Jenkins link
 
 ![image001](https://user-images.githubusercontent.com/558905/37422348-76c919a4-2791-11e8-9942-cce124055f09.jpg)
