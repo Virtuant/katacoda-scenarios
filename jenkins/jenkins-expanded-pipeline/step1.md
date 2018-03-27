@@ -1,6 +1,6 @@
 In this first part, we’ll create a new worker node/agent to use to execute our pipeline. Then, we’ll add the basic node block to use it. (Note that you wouldn’t normally create a node/agent on the same machine as the master but we’ll do this here for simplicity.)
 
-Start Jenkins by clicking on the “Jenkins” shortcut on the desktop OR opening the Firefox browser and navigating to “http://localhost:8080”.
+Start Jenkins by clicking on the “Dashboard" next to Terminal.
 
 Log in to Jenkins by clicking on the “log in” link in the upper right corner. User = jenkins2 and Password =
 jenkins2
