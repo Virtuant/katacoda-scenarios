@@ -1,7 +1,7 @@
 {
     "icon":"fa-jenkins",
     "pathwayTitle": "Jenkins",
-    "title": "Build Docker Images with Jenkins",
+    "title": "Building a Job through Docker Images with Jenkins",
     "description": "Learn how to build and deploy Docker images with Jenkins",
     "difficulty": "Advanced",
     "time": "15-20 minutes",
