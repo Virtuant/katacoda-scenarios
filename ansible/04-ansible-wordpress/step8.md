@@ -10,6 +10,7 @@ After running Ansible, your new config should rollout and Nginx should be restar
 
 </blockquote></pre>
 
+# REPLACE
 2\. Now, as before, log in to the virtual machine with `vagrant ssh`.
 
 3\. Once you've successfully logged in, run the following commands to formulate the test display:

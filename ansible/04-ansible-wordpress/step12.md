@@ -17,28 +17,26 @@ exit`{{execute}}
 3\. We’re going to use a new feature we discussed in the lecture, `ignore_errors`. Like we learned, when a command fails with a non-zero exit code, Ansible throws the error back to you. Using `ignore_ errors` on a command tells Ansible that it’s OK for that command to fail:
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
-
-- name: Does the database exist?
-  command: mysql -u root wordpress -e "SELECT ID FROM wordpress.wp_users LIMIT 1;"
-  register: db_exist
-  ignore_errors: true
-
+  - name: Does the database exist?
+    command: mysql -u root wordpress -e "SELECT ID FROM wordpress.wp_users LIMIT 1;"
+    register: db_exist
+    ignore_errors: true
 </blockquote></pre>
 
 
 4\. If you need to import the database, you’ll need to copy your database to the remote environment before you import it, so you will need two tasks to perform the import:
 
 <pre class="files" data-filename="playbook.yml"><blockquote>
+  - name: Copy WordPress DB
+    copy: src=files/wp-database.sql dest=/tmp/wp-database.sql
+    when: db_exist.rc > 0
 
-- name: Copy WordPress DB
-  copy: src=files/wp-database.sql dest=/tmp/wp-database.sql
-  when: db_exist.rc > 0
-
-- name: Import WordPress DB
-  mysql_db: target=/tmp/wp-database.sql state=import name=wordpress
-  when: db_exist.rc > 0
-
+  - name: Import WordPress DB
+    mysql_db: target=/tmp/wp-database.sql state=import name=wordpress
+    when: db_exist.rc > 0
 </blockquote></pre>
 
 #REPLACE
-5\. Make sure to add the above lines of code to your playbook, but once you're done, run `vagrant provision` to finialize our changes. Pay close attention to which tasks are skipped!
+5\. Make sure to add the above lines of code to your playbook, but once you're done, run Ansible to finialize our changes. Pay close attention to which tasks are skipped!
+
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
