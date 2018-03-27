@@ -1,8 +1,7 @@
 ## Installing Dependencies
-1\. Like we've already seen, you start by creating a simple playbook that shows that Ansible can run against your host machine:
+1\. Like we've already seen, you start by creating a simple playbook that shows that Ansible can run against your host machine. We've already created a playbook.yml file, but you need to confirm that:
 
-`touch playbook.yml && \
-ls`{{execute HOST1}}
+`ls`{{execute HOST1}}
 
 2\. In `playbook.yml`, we specify on which hosts the playbook should run, as well as a set of tasks to run. Just implement the `ping` module for now, like before:
 
