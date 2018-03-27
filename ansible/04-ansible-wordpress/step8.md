@@ -4,7 +4,7 @@ After running vagrant up, your new config should rollout and nginx should be res
 
 1\. To test this, include the IP address and domain that you’ve been using to the bottom of the `/etc/hosts` file, on your host machine (not your VM):
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="files" data-filename="/etc/hosts"><blockquote>
 
 192.168.33.20 book.example.com
 
@@ -15,16 +15,13 @@ After running vagrant up, your new config should rollout and nginx should be res
 
 3\. Once you've successfully logged in, run the following commands to formulate the test display:
 
-```console
-# sudo mkdir -p /var/www/book.example.com
-# echo "<?php echo date('H:i:s'); " | sudo tee /var/www/book.example.com/index.php
-```
+`sudo mkdir -p /var/www/book.example.com`{{execute}}
+
+`echo "<?php echo date('H:i:s'); " | sudo tee /var/www/book.example.com/index.php`{{execute}}
 
 4\. Always remember to exit out of your instances, before running further commands!
 
-```
-# exit
-```
+`exit`{{execute HOST1}}
 
 5\. Finally, visit `http://book.example.com` in your browser. You should see the current time.
 

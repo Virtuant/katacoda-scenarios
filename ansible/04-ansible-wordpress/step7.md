@@ -24,4 +24,5 @@ handlers:
 
 </blockquote></pre>
 
+# REPLACE
 3\. Be sure to save it! But, this feels like a good opportunity to run `vagrant destroy`, followed by `vagrant up` to confirm that everything is installed and configured correctly.

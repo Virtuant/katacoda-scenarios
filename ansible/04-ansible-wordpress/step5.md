@@ -4,10 +4,8 @@ Pretty cool, huh? But, this isn’t what you want your users to see. You want th
 
 1\. So, you need to change the default nginx virtual host to receive requests and forward them. Run the following commands in the same directory as your Vagrantfile to create a template file that you’ll use to configure nginx:
 
-```console
-$ mkdir provisioning/templates/nginx
-$ touch provisioning/templates/nginx/default
-```
+`mkdir provisioning/templates/nginx && \
+touch provisioning/templates/nginx/default`{{execute}}
 
 2\. You’ll also need to copy this file onto your remote machine using the template module. Let’s add a task to your playbook to do this:
 
@@ -20,7 +18,7 @@ $ touch provisioning/templates/nginx/default
 
 3\. Edit `provisioning/templates/nginx/default` and make sure that it contains the following content:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="files" data-filename="provisioning/templates/nginx/default"><blockquote>
 
 server {
         server_name book.example.com;
