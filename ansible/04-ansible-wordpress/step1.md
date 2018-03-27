@@ -1,5 +1,5 @@
 ## Installing Dependencies
-1\. Like we've already seen, you start by creating a simple playbook that shows that Ansible can run against your Vagrant machine:
+1\. Like we've already seen, you start by creating a simple playbook that shows that Ansible can run against your host machine:
 
 `touch playbook.yml && \
 ls`{{execute HOST1}}

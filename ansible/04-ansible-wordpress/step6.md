@@ -15,12 +15,13 @@
 2\. [Important] Remember from the lecture, you'll need to confirm which socket your PHP-FPM pool is listening on. If the results are differ from the code sample above, you will have to update the code. Go ahead an ssh into your machine and run the following commands:
 
 #REPLACE
-`vagrant ssh && \
-ls /etc/php/ && \
+`ls /etc/php/ && \
 cat /etc/php/7.X/fpm/pool.d/www.conf  | grep "listen =" && \
 exit`{{execute HOST1}}
 
 >Note: Remember, pay close attention to whether ($) or (#) are used, because they indicate where the code is to be run.
 
 #REPLACE
-3\. Make sure that you run `vagrant provision` to bring everything up to date.
+3\. Make sure that you run Ansible, to bring everything up to date.
+
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
