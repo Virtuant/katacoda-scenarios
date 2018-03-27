@@ -1,4 +1,4 @@
-This is a fork of https://github.com/oveits/jenkins-scenarios of Ben Hall, upgraded from Jenkins 1.651.1 to 2.46.2.
+### The Initial Docker File
 
 We will prepare an environment with a Jenkins server running as a Docker Container.
 
@@ -17,12 +17,12 @@ With the next command, we clone a Jenkins Home directory into the container, bef
         && export JENKINS_HOME=$(pwd)/jenkins_home_alpine \
         && java -jar /usr/share/jenkins/jenkins.war 2>&1 1>/jenkins.log &'`{{execute}}
 
-After a minute or so, we should see that the jenkins.war is started:
+After a minute or so, we should see that the `jenkins.war` is started:
 
 `docker exec jenkins ps -ef`{{execute}}
 
 #### Load Dashboard
 
-You can load the Jenkins' dashboard via the following URL https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/  or by clicking the dashboard tab on the right.
+You can load the Jenkins' dashboard either by clicking the Dashboard tab on the right or following URL https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/ in a separate browser.
 
 In the next steps, you'll use the dashboard to configure the plugins and start building Docker Images.
