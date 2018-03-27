@@ -2,6 +2,6 @@ As a distributed version control system, Git works by moving changes between dif
 
 In this lab, we're going to start from a source tree, create a local repository in the source tree, and then clone it to a local repository. Then we'll create a Jenkins job that pulls the source files from that remote repository. Finally, we'll make some changes to the original files, commit them and push them to the repository, showing that Jenkins automatically picks up the changes.
  
-If you have Git online, follow [this](https://github.com/Virtuant/katacoda-scenarios/edit/master/jenkins/jenkins-job/step2a.md) path.
+If you have Git online, follow [this](https://github.com/Virtuant/katacoda-scenarios/blob/master/jenkins/jenkins-job/step2a.md) path.
 
-If you have a Windows version of Git, use [this](https://github.com/Virtuant/katacoda-scenarios/edit/master/jenkins/jenkins-job/step2b.md) link.
+If you have a Windows version of Git, use [this](https://github.com/Virtuant/katacoda-scenarios/blob/master/jenkins/jenkins-job/step2b.md) link.
