@@ -1,10 +1,10 @@
-DevNotes
+# DevNotes
 
 - Add Inventory File
   - possibly use from 03
 
 YOU MUST SET UP SSH IF YOU RUN (t)
-# Target Host Instructions
+## Target Host Instructions
 In our case, the target is an Ubuntu machine with no SSH server installed. Let us do that now:
 
 `apt-get update; apt-get install -y openssh-server; service ssh start`{{execute HOST1}}
@@ -14,7 +14,7 @@ Now, an ssh server is not only installed, but it's running. You can verify that 
 `service ssh status`{{execute HOST1}}
 
 
-# Ansible Host Instructions
+## Ansible Host Instructions
 On the ansible system, let us generate a SSH key pair like follows:
 `ssh-keygen -t rsa`{{execute HOST1}}
 
@@ -30,7 +30,7 @@ Let us copy the public key of the Ansible host to a shared folder, we have prepa
 
 > In situations, where no shared_volume is available, it is sufficient to copy the content of the file to the clipboard, so we can paste it to the appropriate file on the target.
 
-# Target Host Instructions
+## Target Host Instructions
 #### Append public key to target's authorized_keys file
 
 In order to inform the target about the ansible host's public SSH key, we need to connect to the target again:
