@@ -6,7 +6,11 @@ The plugin treats Docker as a cloud provider, spinning up containers as and when
 
 #### Task: Configure Security
 
-1. Jenkins uses SSH to communicate with agents. Add a new set of "Credentials". The username is **jenkins** and the password is **jenkins**.
+1. Click on Credentials (on the left side)
+
+![image](https://user-images.githubusercontent.com/558905/37984825-53a50ac6-31c5-11e8-8d88-76610aa7426e.png)
+
+2. Jenkins uses SSH to communicate with agents. Add a new set of "Credentials". The username is **jenkins** and the password is **jenkins**.
 2. Select the newly created credentials ID in the drop-down list left of the "Add" button.
 
 #### Task: Configure Plugin
