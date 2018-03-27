@@ -47,3 +47,22 @@ Choose the Gradle version we have prepared in Step 3 and add the task “jar”:
 The Gradle task “jar” will create our executable JAR file.
 
 -> Click Save at the bottom left.
+
+Step 4.5: Alternative (b): Configure Maven Build
+
+Here, we show how to build the project via Maven. If you prefer to build via Gradle, seee Step 4.5: Alternative (a): Configure Graven Build above.
+
+Here, we scroll down to “Build” -> click 2017-01-02-14_54_07-github-triggered-build-config-jenkins -> “Invoke Maven script”
+
+2017-01-03-13_52_27-github-triggered-build-config-jenkins
+
+Choose the Maven version we have prepared in Step 3 and specify the goal “package”:
+
+2017-01-03-14_00_05-github-triggered-build-config-jenkins
+
+    Note that keeping the (Default) Maven version will not work, as long as this Default has not been defined.
+
+The Maven goal “package”will build our JAR file.
+
+-> Click Save at the bottom left.
+
