@@ -1,8 +1,9 @@
 {
     "title": "Jenkins Integration with GIT",
+    "pathwayTitle": "Jenkins",
     "description": "Learn how to integrate Jenkins with GIT for CI of code",
-    "difficulty": "beginner",
-    "time": "20-25 minutes",
+    "difficulty": "advanced",
+    "time": "25-30 minutes",
     "details": {
         "steps": [
             {
