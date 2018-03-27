@@ -7,25 +7,22 @@
 
 	"details": {
 			"steps": [{
-				"title": "Step 1 - TITLE HERE",
+				"title": "Creating an Inventory",
 				"text": "step1.md"
 			}, {
-				"title": "Step 2 - TITLE HERE",
+				"title": "Running Ad-hoc Tasks",
 				"text": "step2.md"
 			}, {
-				"title": "Step 3 - TITLE HERE",
+				"title": "Running a Playbook",
 				"text": "step3.md"
 			}, {
-				"title": "Step 4 - TITLE HERE",
+				"title": "Ansible Ensures",
 				"text": "step4.md"
 			}, {
-				"title": "Step 5 - TITLE HERE",
+				"title": "Ensure a Package is Removed",
 				"text": "step5.md"
-			}, {
-	 			"title": "Step 6 - TITLE HERE",
-	 			"text": "step6.md"
-	 		   }
-		  ],
+			}
+		 ],
 
 			"intro": {
 				"text": "intro.md",

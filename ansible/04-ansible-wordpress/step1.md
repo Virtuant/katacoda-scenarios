@@ -94,6 +94,7 @@ Output:
 
 </blockquote></pre>
 
+# REPLACE
 8\. Run `vagrant provision` to check functionality.
 
 Great job!
