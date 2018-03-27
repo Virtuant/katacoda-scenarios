@@ -8,7 +8,7 @@ $ vi provisioning/playbook.yml
 
 2\. In `provisioning/playbook.yml`, we specify on which hosts the playbook should run as well as a set of tasks to run. Just implement the `ping` module for now, like before:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="files" data-filename="playbook.yml" data-target="replace"><blockquote>
 
 ---
 - hosts: all
