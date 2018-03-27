@@ -32,7 +32,6 @@ This file will contain the username and password for the root MySQL user.
     register: mysql_new_root_pass
 </blockquote></pre>
 
-
 If the file `/root/.my.cnf` does not exist, `mysql_new_root_pass.changed` will be true, and if it does exist, it'll be set to false.
 
 5\. Here’s a small set of example tasks that show the new root password if `.my.cnf` does not exist and show a message if it already exists:
@@ -55,7 +54,7 @@ If the file `/root/.my.cnf` does not exist, `mysql_new_root_pass.changed` will b
 >Note: Make sure you are able to spot the changes we are making and that you understand why they are being made.
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
-# MySQL
+  # MySQL
   - name: Install MySQL
     apt: name={{item}}
     with_items:
