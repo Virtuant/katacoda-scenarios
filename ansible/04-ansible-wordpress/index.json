@@ -58,10 +58,11 @@
                 "title": "Making It Idempotent",
                 "text": "step13.md"
             }
+
 				],
         "intro": {
-            "text": "intro.md",
-            "code": "env-init.sh"
+            "text": "intro.md"
+
         },
         "finish": {
             "text": "finish.md"
