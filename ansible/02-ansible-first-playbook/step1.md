@@ -13,6 +13,6 @@ apt-get install -y ansible`{{execute HOST1}}
 `ansible --version`{{execute HOST1}}
 
 
-3\. Verifying Ansible plugin documentation tool
+3\. Verifying Ansible plugin documentation tool, by typing the following into your terminal and entering TAB twice:
 
-`ansible-`{{execute}} # TAB twice
+`ansible-` <!-- TAB twice -->
