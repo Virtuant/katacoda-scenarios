@@ -53,7 +53,7 @@
     },
     {
       "title": "Jenkins Integration with GIT",
-      "description": "Learn how to integrate Jenkins with GIT for CI of code"
+      "description": "Learn how to integrate Jenkins with GIT for CI of code",
       "course_id": "jenkins-ci-git",
       "pathway_id": "jenkins",
       "id": "jenkins-ci-git"
