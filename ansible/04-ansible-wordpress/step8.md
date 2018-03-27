@@ -2,10 +2,10 @@
 
 After running Ansible, your new config should rollout and Nginx should be restarted.
 
-1\. To test this, include the IP address and domain that you’ve been using to the bottom of the `/etc/hosts` file, on your host machine (not your VM):
+1\. To test this, include the IP address and domain that you’ve been using to the bottom of the `/etc/hosts` file, on your host machine:
 
 <pre class="file" data-filename="/etc/hosts"><blockquote>
-192.168.33.20 book.example.com
+<IP> book.example.com
 </blockquote></pre>
 
 # REPLACE

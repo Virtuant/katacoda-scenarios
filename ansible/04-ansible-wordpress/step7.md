@@ -15,7 +15,7 @@ handlers:
 2\. You can trigger it whenever your `config` file changes, by updating the "Create nginx config" task, to look like this:
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
-    notify: restart nginx
+      notify: restart nginx
 </blockquote></pre>
 
 # REPLACE

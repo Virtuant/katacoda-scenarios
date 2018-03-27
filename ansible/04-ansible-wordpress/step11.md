@@ -3,11 +3,10 @@
 1\. You will not want to give WordPress root access to your database, so let’s create a dedicated MySQL user to use by adding the following tasks to your playbook:
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
-  - name: Create WordPress MySQL database
-    mysql_db: name=wordpress state=present
-
-  - name: Create WordPress MySQL user
-    mysql_user: name=wordpress host=localhost password=bananas priv=wordpress.\*:ALL
+    - name: Create WordPress MySQL database
+      mysql_db: name=wordpress state=present
+    - name: Create WordPress MySQL user
+      mysql_user: name=wordpress host=localhost password=bananas priv=wordpress.\*:ALL
 </blockquote></pre>
 
 Like we learned in the lecture, this will create a database called `wordpress` and a user called `wordpress`, with the password `bananas`.
@@ -21,8 +20,8 @@ Like we learned in the lecture, this will create a database called `wordpress` a
 4\. Once that’s done, add a task in your playbook to copy this file into the correct place:
 
 <pre class="file" data-filename="wp-config.php"><blockquote>
-  - name: Create wp-config
-    template: src=templates/wordpress/wp-config.php dest=/var/www/book.example.com/wp-config.php
+    - name: Create wp-config
+      template: src=templates/wordpress/wp-config.php dest=/var/www/book.example.com/wp-config.php
 </blockquote></pre>
 
 5\. After adding this task, run Ansible again in your terminal. And voilà!

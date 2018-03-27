@@ -3,8 +3,8 @@
 1\. Now, you need to create an upstream definition in the configuration file so that nginx knows where to pass the request on to. Add the following at the **top** of your template before the opening server { line }:
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
-        upstream php {
-                server unix:/run/php/php7.2-fpm.sock;
+upstream php {
+      server unix:/run/php/php7.2-fpm.sock;
 }
 </blockquote></pre>
 
@@ -13,8 +13,8 @@
 2\. [Important] Remember from the lecture, you'll need to confirm which socket your PHP-FPM pool is listening on. If the results are differ from the code sample above, you will have to update the code. Go ahead an ssh into your machine and run the following commands:
 
 #REPLACE
-`ls /etc/php/ && \
-cat /etc/php/7.X/fpm/pool.d/www.conf  | grep "listen =" && \
+`ls /etc/php/  && \
+cat /etc/php/7.X/fpm/pool.d/www.conf  | grep "listen ="  && \
 exit`{{execute HOST1}}
 
 >Note: Remember, pay close attention to whether ($) or (#) are used, because they indicate where the code is to be run.

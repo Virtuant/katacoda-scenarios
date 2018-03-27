@@ -10,8 +10,8 @@ touch templates/nginx/default`{{execute}}
 2\. You’ll also need to copy this file onto your remote machine using the template module. Let’s add a task to your playbook to do this:
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
-- name: Create nginx config
-  template: src=templates/nginx/default dest=/etc/nginx/sites-available/default
+    - name: Create nginx config
+      template: src=templates/nginx/default dest=/etc/nginx/sites-available/default
 </blockquote></pre>
 
 3\. Edit `provisioning/templates/nginx/default` and make sure that it contains the following content:
