@@ -17,7 +17,7 @@ With the next command, we clone a Jenkins Home directory into the container, bef
         && export JENKINS_HOME=$(pwd)/jenkins_home_alpine \
         && java -jar /usr/share/jenkins/jenkins.war 2>&1 1>/jenkins.log &'`{{execute}}
 
-After a minute or so, we should see that the `jenkins.war` is started:
+After maybe several minutes, we should see that the `jenkins.war` is started:
 
 `docker exec jenkins ps -ef`{{execute}}
 
