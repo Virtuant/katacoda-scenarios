@@ -4,4 +4,6 @@ In this lab, we're going to start from a source tree, create a local repository 
  
 If you have Git online, follow [this](https://github.com/Virtuant/katacoda-scenarios/blob/master/jenkins/jenkins-job/step2a.md) path.
 
+https://katacoda.com/virtuant/courses/jenkins/jenkins-job#step2a.md
+
 If you have a Windows version of Git, use [this](https://github.com/Virtuant/katacoda-scenarios/blob/master/jenkins/jenkins-job/step2b.md) link.
