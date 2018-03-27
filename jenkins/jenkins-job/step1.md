@@ -28,5 +28,4 @@ Click on Install Without Restart.
 
 Click on Go back to the top page.
 
-![image013](https://user-images.githubusercontent.com/558905/37422361-779acbac-2791-11e8-8825-a33ca87c01e9.png)
-
+![image](https://user-images.githubusercontent.com/558905/37976532-b573ba92-31af-11e8-9301-8bb0574d0787.png)
