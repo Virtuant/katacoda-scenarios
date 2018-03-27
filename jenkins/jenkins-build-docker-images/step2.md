@@ -10,6 +10,12 @@ The Jenkins build job will use this container to execute the build and create th
 4. Using the search box, search for **Docker plugin**. There are multiple Docker plugins, select **Docker plugin** using the checkbox.
 5. While on this page, install the **Git plugin** for obtaining the source code from a Git repository.
 6. Click **Install without Restart** at the bottom.
-7. The plugins will now be downloaded and installed. Once complete, click the link **Go back to the top page**.
+7. The plugins will now be downloaded and installed. 
+
+You should see something like this:
+
+![image](https://user-images.githubusercontent.com/558905/37979556-dda177aa-31b6-11e8-9dae-c40673e3d196.png)
+
+Once complete, click the link **Go back to the top page**.
 
 Your Jenkins server can now be configured to build Docker Images.
