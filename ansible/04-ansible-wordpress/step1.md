@@ -74,7 +74,7 @@ Output:
 <pre class="file" data-filename="playbook.yml" data-target="append"><blockquote>
 
 - name: Install PHP
-  apt: name={{item}} state=installed
+  apt: name={{item}} state=present
   with_items:
     - php
     - php-fpm
