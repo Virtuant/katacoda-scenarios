@@ -26,6 +26,6 @@ Click on Install Without Restart.
 
 ![image011](https://user-images.githubusercontent.com/558905/37422359-777bc964-2791-11e8-9d05-6eba7d4acc12.png)
 
-Click on Go back to the top page and wait until Maven install is complete.
+When the install is complete, click on Go back to the top page.
 
 ![image](https://user-images.githubusercontent.com/558905/37976532-b573ba92-31af-11e8-9301-8bb0574d0787.png)
