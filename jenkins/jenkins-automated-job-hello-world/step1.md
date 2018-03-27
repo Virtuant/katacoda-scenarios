@@ -2,37 +2,36 @@
 
 Either click on “Create new Jobs” or on New Item. Now enter an Item name and click on Freestyle Project and OK:
 
-![2016-12-09-11_34_55-manage-jenkins-jenkins](https://user-images.githubusercontent.com/558905/37997763-ff645992-31e9-11e8-815e-cb8f28e43f9b.png)
 ![2016-12-09-10_55_56-new-item-jenkins](https://user-images.githubusercontent.com/558905/37997764-ff732eb8-31e9-11e8-943e-9263e6e27c44.png)
 
 #### Specify GitHub Project
 
-Check “GitHub project” and add the HTTPS GitHub URL. I have used a small Apache Camel project of mine that provides a simple restful file storage:
+Check “GitHub project” and add the HTTPS GitHub URL. I have used a small Apache Camel project of mine that provides a simple restful file storage: https://github.com/oveits/simple-restful-file-storage
 
-https://github.com/oveits/simple-restful-file-storage
+![2016-12-09-11_02_22-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997765-ff827f76-31e9-11e8-9d34-a2df72fae369.png)
 
-2016-12-09-11_02_22-github-triggered-build-config-jenkins
-Step 4.3 Configure Source Code Management
+#### Configure Source Code Management
 
 Under Source Code Management, we choose “Git” and specify the GitHub repository a second time. If it is public, we do not enter the credentials for now:
 
-2016-12-09-14_53_46-github-triggered-build-config-jenkins
+![2016-12-09-11_11_47-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997766-ff8f7226-31e9-11e8-99cb-5f1bd2cc4093.png)
 
--> Click Apply
+Click Apply
 
-Note also that I have chosen a branch different from the master branch (“jenkinstest”). I have created this new branch in order to keep the master branch clean from any changes that might be needed to test Jenkins.
-Step 4.4 Configure Build Triggers (postponed to part 3 of this blog post series)
+Note also that we have chosen a branch different from the master branch (“jenkinstest”). We have created this new branch in order to keep the master branch clean from any changes that might be needed to test Jenkins.
 
-For now, we will test only manual “build now” triggers, so we do not need to specify any build triggers. Build triggers will be tested in the next blog post.
-Step 4.5: Alternative (a): Configure Gradle Build
+#### Configure Build Triggers
+
+For now, we will test only manual “build now” triggers, so we do not need to specify any build triggers. Build triggers will be tested in the next stage. You can either build with Maven or Gradle. If you prefer to build via Gradle, go to the Alternative B below.
+
+#### Alternative: Configure Gradle Build
 
 Prerequisite: For creation of an executable JAR, the file build.gradle in the project root directory must be prepared. See e.g.
 
-    this blog post of mine how to create lean JAR files using Gradle.
-    this blog post of Mkyong how to create a fat JAR file using Gradle (is easier to accomplish).
+    this blog post of mine how to create lean JAR files using Gradle
+    this blog post of Mkyong how to create a fat JAR file using Gradle (is easier to accomplish)
 
-Here, we show how to build the project via Gradle. If you prefer to build via Maven, seee Step 4.5: Alternative (b): Configure Maven Build below.
-
+Here, we show how to build the project via Gradle. 
 Here, we scroll down to “Build” -> click 2017-01-02-14_54_07-github-triggered-build-config-jenkins -> “Invoke Gradle script”
 
 2016-12-09-11_11_47-github-triggered-build-config-jenkins
@@ -65,9 +64,9 @@ The Maven goal “package”will build our JAR file.
 
 -> Click Save at the bottom left.
 
+![2016-12-09-11_34_55-manage-jenkins-jenkins](https://user-images.githubusercontent.com/558905/37997763-ff645992-31e9-11e8-815e-cb8f28e43f9b.png)
 
-![2016-12-09-11_02_22-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997765-ff827f76-31e9-11e8-9d34-a2df72fae369.png)
-![2016-12-09-11_11_47-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997766-ff8f7226-31e9-11e8-99cb-5f1bd2cc4093.png)
+
 ![2016-12-09-11_19_14-github-triggered-build-1-console-jenkins](https://user-images.githubusercontent.com/558905/37997767-ff9d55d0-31e9-11e8-9ede-9afeff756247.png)
 
 
