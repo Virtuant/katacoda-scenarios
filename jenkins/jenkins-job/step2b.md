@@ -1,4 +1,4 @@
-#### Windows
+### Windows
  
 Right click in the empty area and select Git Bash Here. The Git command prompt will open.
 
