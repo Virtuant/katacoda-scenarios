@@ -8,7 +8,7 @@ Now, you'll need to make a backup, so that if you were to destroy this instance 
 2\. Run the following commands to create a backup SQL file to be used by your playbook:
 
 `sudo su - && \
-mysqldump wordpress > /vagrant/provisioning/files/wp-database.sql && \
+mysqldump wordpress > /files/wp-database.sql && \
 exit && \
 exit`{{execute}}
 

@@ -16,7 +16,7 @@ Like we learned in the lecture, this will create a database called `wordpress` a
 
 2\. After running Ansible to create the database and user, go back to your web browser and continue the installation process from the GUI.
 
-3\. Create `provisioning/templates/wordpress/wp-config.php` and paste your config file into it.
+3\. Create `templates/wordpress/wp-config.php` and paste your config file into it.
 
 4\. Once that’s done, add a task in your playbook to copy this file into the correct place:
 

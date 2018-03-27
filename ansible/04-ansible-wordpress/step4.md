@@ -4,14 +4,11 @@
 1\. Now, let’s install `nginx` by adding the following to the end of `playbook.yml`:
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
-
 # nginx
   - name: Install nginx
     apt: name=nginx state=present
-
   - name: Start nginx
     service: name=nginx state=started
-
 </blockquote></pre>
 
 
