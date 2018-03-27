@@ -57,6 +57,13 @@
       "course_id": "jenkins-ci-git",
       "pathway_id": "jenkins",
       "id": "jenkins-ci-git"
+    },
+    {
+      "title": "Jenkins Automation of a Job",
+      "description": "Learn how to do a hello world automated by Jenkins",
+      "course_id": "jenkins-automated-job-hello-world",
+      "pathway_id": "jenkins",
+      "id": "jenkins-automated-job-hello-world"
     }
   ]
 }
