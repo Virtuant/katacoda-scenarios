@@ -1,0 +1,49 @@
+{
+
+	"title": "Ansible-Inventory",
+	"description": "Create an inventory file to tell Ansible where to run",
+	"difficulty": "Intermediate",
+	"time": "15-20 minutes",
+	"details": {
+			"steps": [{
+				"title": "Step 1 - TITLE HERE",
+				"text": "step1.md"
+			}, {
+				"title": "Step 2 - TITLE HERE",
+				"text": "step2.md"
+			}, {
+				"title": "Step 3 - TITLE HERE",
+				"text": "step3.md"
+			}, {
+				"title": "Step 4 - TITLE HERE",
+				"text": "step4.md"
+			}, {
+				"title": "Step 5 - TITLE HERE",
+				"text": "step5.md"
+			   },
+		  ],
+			"intro": {
+				"text": "intro.md",
+				"courseData": "env-init.sh"
+			},
+			"finish": {
+				"text": "finish.md"
+			},
+			"assets": {
+	      "client": [{"file": "playbook.yml", "target": "/home/scrapbook/tutorial", "chmod": "+x"}]
+			}
+		},
+		"files": [
+	    "playbook.yml",
+	    "inventory"
+	    	],
+		"environment": {
+			"showdashboard": true,
+			"dashboards": [{"name": "localhost", "port": 8080}],
+			"uilayout": "editor-terminal",
+			"uimessage1": "\u001b[32mYour Interactive Host Terminal.\u001b[m\r\n"
+		},
+		"backend": {
+			"imageid": "docker"
+		}
+	}
