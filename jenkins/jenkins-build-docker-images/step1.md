@@ -17,12 +17,12 @@ With the next command, we clone a Jenkins Home directory into the container, bef
         && export JENKINS_HOME=$(pwd)/jenkins_home_alpine \
         && java -jar /usr/share/jenkins/jenkins.war 2>&1 1>/jenkins.log &'`{{execute}}
 
-After a minute or so, we should see that the `jenkins.war` is started:
+After maybe several minutes, we should see that the `jenkins.war` is started:
 
 `docker exec jenkins ps -ef`{{execute}}
 
 #### Load Dashboard
 
-You can load the Jenkins' dashboard either by clicking the Dashboard tab on the right or following URL https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/ in a separate browser.
+You can load the Jenkins' dashboard either by clicking the Dashboard tab on the right of Terminal, or clicking the URL https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/ in a separate browser.
 
 In the next steps, you'll use the dashboard to configure the plugins and start building Docker Images.

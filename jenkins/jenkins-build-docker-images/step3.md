@@ -1,3 +1,5 @@
+### Plugins & Security
+
 Once the plugins have been installed, you can configure how they launch the Docker Containers. The configuration will tell the plugin which Docker Image to use for the agent and which Docker daemon to run the containers and builds on.
 
 The plugin treats Docker as a cloud provider, spinning up containers as and when the build requires them.
