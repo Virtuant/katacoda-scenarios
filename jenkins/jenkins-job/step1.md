@@ -1,4 +1,6 @@
-Go to the Jenkins console (Dashboard to right):
+### Manage Plugins
+
+After the Docker builds, go to the Jenkins console (Dashboard to right):
 
 >Note: you may have to re-select the port several times waiting for the Docker build to complete.
 
