@@ -67,6 +67,9 @@
             "text": "finish.md"
         }
     },
+    "files": [
+      "playbook.yml"
+    ],
     "environment": {
         "showdashboard": true,
         "dashboard": "Dashboard",
