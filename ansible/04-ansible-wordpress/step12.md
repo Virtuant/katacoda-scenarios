@@ -16,7 +16,7 @@ exit`{{execute}}
 
 3\. We’re going to use a new feature we discussed in the lecture, `ignore_errors`. Like we learned, when a command fails with a non-zero exit code, Ansible throws the error back to you. Using `ignore_ errors` on a command tells Ansible that it’s OK for that command to fail:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 
 - name: Does the database exist?
   command: mysql -u root wordpress -e "SELECT ID FROM wordpress.wp_users LIMIT 1;"

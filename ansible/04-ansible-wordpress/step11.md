@@ -2,7 +2,7 @@
 
 1\. You will not want to give WordPress root access to your database, so let’s create a dedicated MySQL user to use by adding the following tasks to your playbook:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 
 - name: Create WordPress MySQL database
   mysql_db: name=wordpress state=present
@@ -22,7 +22,7 @@ Like we learned in the lecture, this will create a database called `wordpress` a
 
 4\. Once that’s done, add a task in your playbook to copy this file into the correct place:
 
-<pre class="files" data-filename="wp-config.php"><blockquote>
+<pre class="file" data-filename="wp-config.php"><blockquote>
 
 - name: Create wp-config
   template: src=templates/wordpress/wp-config.php dest=/var/www/book.example.com/wp-config.php

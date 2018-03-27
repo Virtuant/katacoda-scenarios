@@ -8,7 +8,7 @@ $ vi provisioning/playbook.yml
 
 2\. In `provisioning/playbook.yml`, we specify on which hosts the playbook should run as well as a set of tasks to run. Just implement the `ping` module for now, like before:
 
-<pre class="files" data-filename="playbook.yml" data-target="replace"><blockquote>
+<pre class="file" data-filename="playbook.yml" data-target="append"><blockquote>
 
 ---
 - hosts: all
@@ -27,7 +27,7 @@ $ vi provisioning/playbook.yml
 
 1\. Now that you know Ansible will run, let’s install PHP. Add the following to your playbook in the tasks section:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml" data-target="append"><blockquote>
 
 # PHP
 - name: Add the ondrej PHP PPA
@@ -39,7 +39,7 @@ $ vi provisioning/playbook.yml
 
 2\. Once that’s installed, the next step is to install PHP. As you’ve added a PPA, you’ll want to update the apt package cache:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml" data-target="append"><blockquote>
 
 - name: Update the apt cache
   apt: update_cache=yes cache_valid_time=3600
@@ -71,7 +71,7 @@ Output:
 
 6\. That looks good, so let’s continue and install all of the other PHP packages that you’ll need. Let’s use `with_items` to make the playbook easier to read.
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml" data-target="append"><blockquote>
 
 - name: Install PHP
   apt: name={{item}} state=installed
@@ -87,7 +87,7 @@ Output:
 
 7\. Unfortunately, installing PHP also installs Apache2. You don’t want to use that in this exercise. There’s no way around this, but you can remove it as soon as it’s installed by adding the following task to your playbook:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml" data-target="append"><blockquote>
 
 - name: Remove apache2
   apt: name=apache2 state=absent

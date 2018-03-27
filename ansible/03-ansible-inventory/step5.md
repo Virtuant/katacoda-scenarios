@@ -3,7 +3,8 @@ The apt module allows you to specify the state you wish the package to be in.
 
 If you want a specific version, you append it to the package name, for example:
 
-```
+<pre class="file" data-filename="playbook.yml"><blockquote>
+
 ---
 - hosts: host01
   become: true
@@ -14,7 +15,9 @@ If you want a specific version, you append it to the package name, for example:
         - php5-cli
         - nginx
         - mysql-server-5.6
-```
+
+</blockquote></pre>
+
 
 If you want to ensure that the package is not installed, you can declare that with state: absent, and Ansible will ensure it.
 

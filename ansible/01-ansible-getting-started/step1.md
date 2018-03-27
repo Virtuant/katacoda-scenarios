@@ -1,14 +1,16 @@
 To make our lives easier later, let us define the commands "a" and "t" for quickly connecting from the base system to the ansible and target container:
 
-Connect to the Ansible container:
+1\. Connect to the Ansible container:
 
 `a() { docker exec -it ansible bash -c "echo 'PS1='\''ansible# '\' >> /root/.bashrc; bash"; } `{{execute HOST1}}
 
-Connect to the Target container:
+2\. Connect to the Target container:
 
 `t() {  docker exec -it target bash -c "echo 'PS1='\''target# '\' >> /root/.bashrc; bash";  } `{{execute HOST1}}
 
-In this tutorial, we already have started an ansible and a target container in the background. However, they have been started in the background, and they need some time to become available. Repeat using a docker ps command to check, whether Docker containers named 'ansible' and 'target' have been started already:
+In this tutorial, we already have started an ansible and a target container in the background. However, they have been started in the background, and they need some time to become available.
+
+3\. Repeat using a docker ps command to check, whether Docker containers named 'ansible' and 'target' have been started already:
 
 `docker ps`{{execute HOST1}}
 

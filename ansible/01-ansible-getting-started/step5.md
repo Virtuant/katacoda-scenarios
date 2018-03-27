@@ -1,4 +1,6 @@
-Let us copy the public key of the Ansible host to a shared folder, we have prepared beforehand.
+## Prepare Remote Connection: Transfer SSH public Key to Target
+
+1\. Let us copy the public key of the Ansible host to a shared folder, we have prepared beforehand.
 
 `cp ~/.ssh/id_rsa.pub /shared_volume/ansible_id_rsa.pub`{{execute HOST1}}
 
@@ -6,18 +8,19 @@ Let us copy the public key of the Ansible host to a shared folder, we have prepa
 
 #### Append public key to target's authorized_keys file
 
-In order to inform the target about the ansible host's public SSH key, we need to connect to the target again:
+2\. In order to inform the target about the ansible host's public SSH key, we need to connect to the target again:
 
 `exit`{{execute HOST1}}
 
+3\. Again, enter into the target host machine:
 
 `t`{{execute HOST1}}
 
-The public SSH key of the Ansible host needs to be appended to the list of authorized_keys:
+4\. The public SSH key of the Ansible host needs to be appended to the list of authorized_keys:
 
 `[ ! -d ~/.ssh ] && mkdir ~/.ssh; cat /shared_volume/ansible_id_rsa.pub >> ~/.ssh/authorized_keys`{{execute HOST1}}
 
-Let us review the resulting file:
+5\. Let us review the resulting file:
 
 `cat ~/.ssh/authorized_keys`{{execute HOST1}}
 

@@ -9,7 +9,7 @@ curl https://wordpress.org/latest.zip > provisioning/files/wordpress.zip`{{execu
 
 2\. You’ll copy it into the `/tmp` directory by adding the following to your playbook under the tasks section:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 
 # Wordpress
 - name: Copy wordpress.zip into tmp

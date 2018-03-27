@@ -3,7 +3,7 @@
 
 1\. Now, let’s install nginx by adding the following to the end of playbook.yml:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 
 # nginx
 - name: Install nginx

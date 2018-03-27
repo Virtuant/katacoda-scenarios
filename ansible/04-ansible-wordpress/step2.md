@@ -2,7 +2,7 @@
 ## Installing MySQL
 1\. Once you have PHP installed (and Apache removed), you can move on to the next dependency, MySQL. Add the following to your playbook:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 
 # MySQL
 - name: Install MySQL
@@ -20,7 +20,7 @@ Ansible installs MySQL with an empty root password and leaves some of the test d
 
 1\. To change the default password, you need to generate a password to use. To do this, you can use the `openssl` utility to generate a 15-character password. Add the following to your playbook:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 
 - name: Generate new root password
   command: openssl rand -hex 7
@@ -33,7 +33,7 @@ Ansible installs MySQL with an empty root password and leaves some of the test d
 
 2\. The next thing to do is to remove the anonymous users and test databases. This is very straightforward, thanks to the `mysql_db` and `mysql_user` modules. You need to do this before you change the root password so that Ansible can make the changes. Again, you need to add some tasks to your playbook:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 
 - name: Remove anonymous users
   mysql_user: name="" state=absent
@@ -46,7 +46,7 @@ Ansible installs MySQL with an empty root password and leaves some of the test d
 
 3\. To change the root password and output it to the screen, use the special `ansible_hostname` variable that evaluates to the current machine’s hostname and then set the password for the three different formats used to denote localhost:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 
 - name: Update root password
   mysql_user: name=root host={{item}} password={{mysql_new_root_pass.stdout}}

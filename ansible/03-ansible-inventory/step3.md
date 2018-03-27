@@ -6,7 +6,7 @@ A play is a set of tasks mapped to a set of hosts. Plays are organised inside a 
 Running a playbook
 This playbook runs one task, on our one host, `host01`. Note the indentation - it's important for how the file gets parsed. Blank lines are ignored, but makes the playbook more readable for humans.
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 
 ---
 - hosts: host01

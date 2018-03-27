@@ -10,7 +10,7 @@ $ vi provisioning/templates/mysql/my.cnf
 
 2\. Once you’ve created `my.cnf`, edit it and make sure that it has the following contents:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 
 [client]
 user=root
@@ -20,7 +20,7 @@ password={{ mysql_new_root_pass.stdout }}
 
 3\. You also need to tell Ansible to copy this template into your environment; this is done using the template module, as discussed in the lecture. Add the following task to your playbook:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 
 - name: Create my.cnf
   template: src=templates/mysql/my.cnf dest=/root/.my.cnf
@@ -32,7 +32,7 @@ This file will contain the username and password for the root MySQL user.
 
 4\. While it’s not a bad thing to rotate root passwords frequently, this may not be the behavior that you are seeking. To disable this behavior, you can tell Ansible not to run certain commands if a specific file exists. Ansible has a special creates option that determines if a file exists before executing a module:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 
 - name: Generate new root password
   command: openssl rand -hex 7 creates=/root/.my.cnf
@@ -45,7 +45,7 @@ If the file `/root/.my.cnf` does not exist, `mysql_new_root_pass.changed` will b
 
 5\. Here’s a small set of example tasks that show the new root password if `.my.cnf` does not exist and show a message if it already exists:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 
 - name: Generate new root password
   command: openssl rand -hex 7 creates=/root/.my.cnf
@@ -64,7 +64,7 @@ If the file `/root/.my.cnf` does not exist, `mysql_new_root_pass.changed` will b
 
 >Note: Make sure you are able to spot the changes we are making and that you understand why they are being made.
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 
 # MySQL
 - name: Install MySQL

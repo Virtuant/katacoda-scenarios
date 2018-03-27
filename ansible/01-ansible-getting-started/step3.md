@@ -1,16 +1,18 @@
-Let us exit from the ansible container:
+## Prepare Remote Target: Install SSH
+
+1\. Let us exit from the ansible container:
 
 `exit`{{execute HOST1}}
 
-Enter the target host container:
+2\. Enter the target host container:
 
 `t`{{execute HOST1}}
 
-In our case, the target is an Ubuntu machine with no SSH server installed. Let us do that now:
+3\. In our case, the target is an Ubuntu machine with no SSH server installed. Let us do that now:
 
 `apt-get update; apt-get install -y openssh-server; service ssh start`{{execute HOST1}}
 
-Now, an ssh server is not only installed, but it's running. You can verify that by running:
+4\. Now, an ssh server is not only installed, but it's running. You can verify that by running:
 
 `service ssh status`{{execute HOST1}}
 

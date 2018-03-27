@@ -2,7 +2,7 @@
 
 1\. Now, you need to create an upstream definition in the configuration file so that nginx knows where to pass the request on to. Add the following at the **top** of your template before the opening server { line }:
 
-<pre class="files" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 
         upstream php {
                 server unix:/run/php/php7.2-fpm.sock;
