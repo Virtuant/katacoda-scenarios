@@ -1,6 +1,6 @@
 Go to the Jenkins console (Dashboard to right):
 
-http://localhost:8080 ----------->
+>Note: you may have to re-select the port several times waiting for the Docker build to complete.
 
 Click on the Manage Jenkins link
 
