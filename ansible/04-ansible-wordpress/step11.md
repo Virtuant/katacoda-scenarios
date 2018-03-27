@@ -29,7 +29,6 @@ Like we learned in the lecture, this will create a database called `wordpress` a
 
 </blockquote></pre>
 
-
 5\. After adding this task, run Ansible again by running the `vagrant provision` command in your terminal. And voilà!
 
 >Note: Wait, no voilà? When you run Ansible, you may get an error message similar to the following:

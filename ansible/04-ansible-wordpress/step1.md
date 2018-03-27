@@ -49,8 +49,10 @@ $ vi provisioning/playbook.yml
 
 </blockquote></pre>
 
+# REPLACE
 3\. Run `vagrant provision` again after adding these tasks, make sure it is completed successfully.
 
+# REPLACE
 4\. To make sure that things are working correctly, you can run `vagrant ssh` and log in to the machine, like you've done before.
 
 5\. Once you’re logged in, run `which php` and make sure that it yields something similar to the following:

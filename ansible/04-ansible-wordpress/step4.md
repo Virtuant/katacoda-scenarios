@@ -1,5 +1,5 @@
 
-#### Installing Nginx
+## Installing Nginx
 
 1\. Now, let’s install nginx by adding the following to the end of playbook.yml:
 
