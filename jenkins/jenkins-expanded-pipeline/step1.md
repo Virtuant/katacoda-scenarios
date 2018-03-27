@@ -1,9 +1,20 @@
 In this first part, we’ll create a new worker node/agent to use to execute our pipeline. Then, we’ll add the basic node block to use it. (Note that you wouldn’t normally create a node/agent on the same machine as the master but we’ll do this here for simplicity.)
 
-Start Jenkins by clicking on the “Dashboard" next to Terminal.
+You probably want to check out the container. If so, do a `docker ps` and get the id of your container image:
 
-Log in to Jenkins by clicking on the “log in” link in the upper right corner. User = jenkins2 and Password =
-jenkins2
+![image](https://user-images.githubusercontent.com/558905/37946707-cfeaa10c-3154-11e8-99ba-c84bfc1a5d06.png)
+
+And then at the terminal, do a:
+
+`docker exec -it b36 /bin/bash`
+
+were `b36` is the first few letters of the container id.
+
+You should now be `root` inside your container.
+
+Now go to the Dashboard (right of the Terminal) and start it up as `8080`.
+
+Log in to Jenkins with user = admin and Password = admin
 
 >Note: If at some point during the workshop you try to do something in Jenkins and find that you can’t, check to see if you’ve been logged out. Log back in if needed.
 
