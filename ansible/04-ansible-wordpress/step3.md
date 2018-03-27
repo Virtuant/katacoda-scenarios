@@ -2,15 +2,14 @@
 ## Creating a New Config File
 This is actually quite a lot of work! At this point, your installation is secure, but you’re not quite done. Like we learned, Ansible expects to be able to run database commands without a password, which was fine when you didn’t have a root password, but will fail now that you do. You need to write out a new config file (located at `/root/.my.cnf`) containing the new root password so that the root user can run MySQL commands automatically.
 
-1\. First, you need to create a folder to hold your template and create the file that you are going to copy over. Run these commands from your terminal, in the same directory as your vagrantfile, to create the required folders and files:
+1\. First, you need to create a folder to hold your template and create the file that you are going to copy over. Run these commands from your terminal, in the same directory as your playbook, to create the required folders and files:
 
-`mkdir -p provisioning/templates/mysql
-$ vi provisioning/templates/mysql/my.cnf
-```
+`mkdir -p templates/mysql && \
+touch provisioning/templates/mysql/my.cnf`{{execute HOST1}}
 
 2\. Once you’ve created `my.cnf`, edit it and make sure that it has the following contents:
 
-<pre class="file" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="my.cnf"><blockquote>
 
 [client]
 user=root
@@ -22,11 +21,10 @@ password={{ mysql_new_root_pass.stdout }}
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
 
-- name: Create my.cnf
-  template: src=templates/mysql/my.cnf dest=/root/.my.cnf
+  - name: Create my.cnf
+    template: src=templates/mysql/my.cnf dest=/root/.my.cnf
 
 </blockquote></pre>
-
 
 This file will contain the username and password for the root MySQL user.
 
@@ -34,9 +32,9 @@ This file will contain the username and password for the root MySQL user.
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
 
-- name: Generate new root password
-  command: openssl rand -hex 7 creates=/root/.my.cnf
-  register: mysql_new_root_pass
+  - name: Generate new root password
+    command: openssl rand -hex 7 creates=/root/.my.cnf
+    register: mysql_new_root_pass
 
 </blockquote></pre>
 
@@ -47,15 +45,15 @@ If the file `/root/.my.cnf` does not exist, `mysql_new_root_pass.changed` will b
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
 
-- name: Generate new root password
-  command: openssl rand -hex 7 creates=/root/.my.cnf
-  register: mysql_new_root_pass
-# If /root/.my.cnf doesn't exist and the command is run
-- debug: msg="New root password is {{ mysql_new_root_pass.stdout }}"
-  when: mysql_new_root_pass.changed
-# If /root/.my.cnf exists and the command is not run
-- debug: msg="No change to root password"
-  when: not mysql_new_root_pass.changed
+  - name: Generate new root password
+    command: openssl rand -hex 7 creates=/root/.my.cnf
+    register: mysql_new_root_pass
+  # If /root/.my.cnf doesn't exist and the command is run
+  - debug: msg="New root password is {{ mysql_new_root_pass.stdout }}"
+    when: mysql_new_root_pass.changed
+  # If /root/.my.cnf exists and the command is not run
+  - debug: msg="No change to root password"
+    when: not mysql_new_root_pass.changed
 
 </blockquote></pre>
 
@@ -67,34 +65,34 @@ If the file `/root/.my.cnf` does not exist, `mysql_new_root_pass.changed` will b
 <pre class="file" data-filename="playbook.yml"><blockquote>
 
 # MySQL
-- name: Install MySQL
-  apt: name={{item}}
-  with_items:
-    - mysql-server
-    - python-mysqldb
-- name: Generate new root password
-  command: openssl rand -hex 7 creates=/root/.my.cnf
-  register: mysql_new_root_pass
-- name: Remove anonymous users
-  mysql_user: name="" state=absent
-  when: mysql_new_root_pass.changed
-- name: Remove test database
-  mysql_db: name=test state=absent
-  when: mysql_new_root_pass.changed
-- name: Output new root password
-  debug: msg="New root password is  {{mysql_new_root_pass.stdout}}"
-  when: mysql_new_root_pass.changed
-- name: Update root password
-  mysql_user: name=root host={{item}} password={{mysql_new_root_pass.stdout}}
-  with_items:
-    - "{{ ansible_hostname }}"
-    - 127.0.0.1
-    - ::1
-    - localhost
-  when: mysql_new_root_pass.changed
-- name: Create my.cnf
-  template: src=templates/mysql/my.cnf dest=/root/.my.cnf
-  when: mysql_new_root_pass.changed
+  - name: Install MySQL
+    apt: name={{item}}
+    with_items:
+      - mysql-server
+      - python-mysqldb
+  - name: Generate new root password
+    command: openssl rand -hex 7 creates=/root/.my.cnf
+    register: mysql_new_root_pass
+  - name: Remove anonymous users
+    mysql_user: name="" state=absent
+    when: mysql_new_root_pass.changed
+  - name: Remove test database
+    mysql_db: name=test state=absent
+    when: mysql_new_root_pass.changed
+  - name: Output new root password
+    debug: msg="New root password is  {{mysql_new_root_pass.stdout}}"
+    when: mysql_new_root_pass.changed
+  - name: Update root password
+    mysql_user: name=root host={{item}} password={{mysql_new_root_pass.stdout}}
+    with_items:
+      - "{{ ansible_hostname }}"
+      - 127.0.0.1
+      - ::1
+      - localhost
+    when: mysql_new_root_pass.changed
+  - name: Create my.cnf
+    template: src=templates/mysql/my.cnf dest=/root/.my.cnf
+    when: mysql_new_root_pass.changed
 
 </blockquote></pre>
 

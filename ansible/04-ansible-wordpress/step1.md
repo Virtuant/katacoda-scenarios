@@ -1,12 +1,10 @@
 ## Installing Dependencies
 1\. Like we've already seen, you start by creating a simple playbook that shows that Ansible can run against your Vagrant machine:
 
-```console
-$ mkdir provisioning
-$ vi provisioning/playbook.yml
-```
+`touch playbook.yml && \
+ls`{{execute HOST1}}
 
-2\. In `provisioning/playbook.yml`, we specify on which hosts the playbook should run as well as a set of tasks to run. Just implement the `ping` module for now, like before:
+2\. In `playbook.yml`, we specify on which hosts the playbook should run, as well as a set of tasks to run. Just implement the `ping` module for now, like before:
 
 <pre class="file" data-filename="playbook.yml" data-target="append"><blockquote>
 
