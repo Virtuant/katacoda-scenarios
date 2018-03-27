@@ -2,6 +2,11 @@ Once the plugins have been installed, you can configure how they launch the Dock
 
 The plugin treats Docker as a cloud provider, spinning up containers as and when the build requires them.
 
+#### Task: Configure Security
+
+1. Jenkins uses SSH to communicate with agents. Add a new set of "Credentials". The username is **jenkins** and the password is **jenkins**.
+2. Select the newly created credentials ID in the drop-down list left of the "Add" button.
+
 #### Task: Configure Plugin
 
 This step configures the plugin to communicate with a Docker host/daemon.
@@ -20,8 +25,7 @@ Our plugin can now communicate with Docker. In this step, we'll configure how to
 1. Using the Images dropdown, select **Add Docker Template** dropdown.
 2. For the Docker Image, use **benhall/dind-jenkins-agent**. This image is configured with a Docker client and available at https://hub.docker.com/r/benhall/dind-jenkins-agent/
 3. To enable builds to specify Docker as a build agent, set a label of **docker-agent**.
-4. Jenkins uses SSH to communicate with agents. Add a new set of "Credentials". The username is **jenkins** and the password is **jenkins**.
-5. Select the newly created credentials ID in the drop-down list left of the "Add" button.
+4. Select the previously created credentials ID in the drop-down list left of the "Add" button.
 6. Finally, expand the Container Settings section by clicking the button. In the "Volumes" text box enter **/var/run/docker.sock:/var/run/docker.sock**
 7. Click **Save**.
 
