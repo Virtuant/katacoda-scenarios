@@ -45,12 +45,18 @@
       "id": "jenkins-env-upgrade-id"
     },
     {
-
       "title": "Build Docker Images with Jenkins",
       "description": "Learn how to build and deploy Docker images with Jenkins",
       "course_id": "jenkins-build-docker-images",
+      "pathway_id": "jenkins",
       "external_link": "https://katacoda.com/virtuant/courses/jenkins/jenkins-build-docker-images"
-
+    },
+    {
+      "title": "Jenkins Integration with GIT",
+      "description": "Learn how to integrate Jenkins with GIT for CI of code"
+      "course_id": "jenkins-ci-git",
+      "pathway_id": "jenkins",
+      "id": "jenkins-ci-git"
     }
   ]
 }
