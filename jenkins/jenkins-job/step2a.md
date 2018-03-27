@@ -1,6 +1,5 @@
+### Linux
 
-As a distributed version control system, Git works by moving changes between different repositories. Any repository apart from the one you're currently working in is called a "remote" repository. Git doesn't differentiate between remote repositories that reside on different machines and remote repositories on the same machine. They're all remote repositories as far as Git is concerned. In this lab, we're going to start from a source tree, create a local repository in the source tree, and then clone it to a local repository. Then we'll create a Jenkins job that pulls the source files from that remote repository. Finally, we'll make some changes to the original files, commit them and push them to the repository, showing that Jenkins automatically picks up the changes.
- 
 Right click in the empty area and select Git Bash Here. The Git command prompt will open.
 
 ![image015](https://user-images.githubusercontent.com/558905/37422363-77b63ec8-2791-11e8-866f-7984ad0c658f.png)
