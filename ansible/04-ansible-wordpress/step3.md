@@ -96,10 +96,12 @@ If the file `/root/.my.cnf` does not exist, `mysql_new_root_pass.changed` will b
 
 </blockquote></pre>
 
-7\. Run vagrant provision now to generate a new root password and clean up your MySQL installation. If you run `vagrant provision` again, you should see that all of these steps are skipped:
+7\. Run vagrant provision now to generate a new root password and clean up your MySQL installation. If you run Ansible again, you should see that all of these steps are skipped:
 
 ```
+...
 TASK [Remove anonymous users]
 **************************************************
 skipping: [default]
+...
 ```
