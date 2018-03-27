@@ -6,7 +6,7 @@ ls`{{execute HOST1}}
 
 2\. In `playbook.yml`, we specify on which hosts the playbook should run, as well as a set of tasks to run. Just implement the `ping` module for now, like before:
 
-<pre class="file" data-filename="playbook.yml" data-target="append"><blockquote>
+<pre class="file" data-filename="playbook.yml"><blockquote>
 ---
 - hosts: all
   become: true
@@ -51,9 +51,7 @@ ls`{{execute HOST1}}
 
 4\. Once you’ve successfully run your playbook, run `which php` to make sure that it yields something similar to the following:
 
-```
-$ which php
-```
+`$ which php`{{execute}}
 
 Output:
 
