@@ -8,24 +8,16 @@
     "details": {
         "steps": [
             {
-                "title": "Launch Jenkins",
+                "title": "Build a Job",
                 "text": "step1.md"
             },
             {
-                "title": "Configure Docker Plugin",
+                "title": "Job",
                 "text": "step2.md"
             },
             {
-                "title": "Add Docker Agent",
+                "title": "Start",
                 "text": "step3.md"
-            },
-            {
-                "title": "Create Build Project",
-                "text": "step4.md"
-            },
-            {
-                "title": "Build Project",
-                "text": "step5.md"
             }
         ],
         "intro": {
