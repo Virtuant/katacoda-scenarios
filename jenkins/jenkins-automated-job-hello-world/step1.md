@@ -56,7 +56,7 @@ Choose the Gradle version we have prepared in Step 3 and add the task “jar”:
 
 ![2017-01-02-14_56_34-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997311-7e53bde4-31e8-11e8-87cd-eb03fbb87127.png)
 
->Note that keeping the (Default) Gradle version will not work, as long as this Default has not been defined. See Appendix A for details.
+>Note that keeping the (Default) Gradle version will not work, as long as this Default has not been defined.
 
 The Gradle task “jar” will create our executable JAR file.
 
