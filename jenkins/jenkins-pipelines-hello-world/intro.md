@@ -10,7 +10,7 @@ The popularity of the Pipeline plugin can be seen in its usage chart:
 
 ![2017-05-20-23_38_04-pipeline-plugin-jenkins-jenkins-wiki](https://user-images.githubusercontent.com/558905/38009684-8794bc2e-3223-11e8-8fa7-98c13993d5ec.png)
 
-The number one reason is that admins or developers can put the workflow under source control. Another reason is that the workflows can be organized in stages, whose results can be observed in the nice graphical interface seen above. However, the Pipeline plugin has more advantages than that (as pointed out here):
+The number one reason is that admins or developers can put the workflow under source control. Another reason is that the workflows can be organized in stages, whose results can be observed in the nice graphical interface seen above. However, the Pipeline plugin has more advantages than that:
 
 * Code: Pipeline users can put workflows under source control (e.g. git), so they can add edit, review and
 * Durable: a Task that is interrupted by a planned or unplanned restart of the server is handled gracefully by the Durable Task Plugin included in the Pipeline Plugin
