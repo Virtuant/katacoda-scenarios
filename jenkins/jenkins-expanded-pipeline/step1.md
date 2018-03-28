@@ -36,12 +36,12 @@ Click on the **Permanent Agent** radio button. Then click on “OK”.
 
 You should now be on the configuration screen for the new node.
 
-For Description, you can enter “Main pipeline worker node” (or whatever you wish).
+For **Description**, you can enter “Main pipeline worker node” (or whatever you wish).
 Set the **# of executors** to 2.
 
-In the Remote root directory field, enter `/home/jenkins2/worker_node1`. This is the working area for the node. For **Labels** enter “worker_node1 docker”. These are identifiers that can be used in the pipeline to refer to the node.
+In the **Remote root directory** field, enter `/home/jenkins2/worker_node1`. This is the working area for the node. For **Labels** enter “worker_node1 docker”. These are identifiers that can be used in the pipeline to refer to the node.
 
-For Launch method, click the down arrow at the far right, and select **Launch slave agents via SSH**. This will use SSH
+For **Launch method**, click the down arrow at the far right, and select **Launch slave agents via SSH**. This will use SSH
 keys to launch the nodes.
 
 * Under Launch method, for Host, enter “diyvb2”.
