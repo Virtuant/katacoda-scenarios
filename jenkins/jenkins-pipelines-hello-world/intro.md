@@ -4,6 +4,8 @@ Traditionally, Jenkins is administered by a graphical Web interface. Now, the Pi
 
 ![2017-05-22-22_50_50-2017-05-22-22_12_25-pipeline-hello-world](https://user-images.githubusercontent.com/558905/38009674-8702c882-3223-11e8-8eab-f0d1739ddf7c.png)
 
+----
+
 ### Whats so Cool About the Jenkins Pipeline Plugin?
 
 The popularity of the Pipeline plugin can be seen in its usage chart:
