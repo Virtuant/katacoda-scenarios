@@ -10,7 +10,7 @@ And then at the terminal, do a:
 
 `docker exec -it b36 /bin/bash`{{execute}}
 
-were `b36` is the first few letters of the container id.
+were `b36` is the first few letters of **your** container id.
 
 You should now be `root` inside your container.
 
