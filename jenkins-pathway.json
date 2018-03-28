@@ -26,9 +26,9 @@
     {
       "title": "Create a Pipelne in Jenkins",
       "description": "Learn how to create and deploy a Pipeline",
-      "course_id": "jenkins-pipeline",
+      "course_id": "jenkins-pipelines-hello-world",
       "pathway_id": "jenkins",
-      "id": "jenkins-pipeline"
+      "id": "jenkins-pipelines-hello-world"
     },
     {
       "title": "Create an Expanded Pipelne in Jenkins",
