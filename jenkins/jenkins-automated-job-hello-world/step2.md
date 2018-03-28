@@ -45,45 +45,18 @@ This may take a while (~11 min in my case with a 100Mbps Internet connection):
 
 Let us test again, whether the build is quicker the second time:
 
--> Back to Project
-
--> Configure
+Click -> Back to Project -> Configure
 
 -> Add “clean” Gradle task before “jar” Gradle task:
 
-2017-01-02-16_00_27-github-triggered-build-config-jenkins
+![2017-01-02-16_00_27-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997316-7eb44cd6-31e8-11e8-9894-9e52074144f8.png)
 
--> Save
+Click -> Save -> Build Now
 
--> Build Now
+Then click Build History -> current build
 
--> Build Histrory -> current build
-
--> Console Output
+Then -> Console Output
 
 Clean Build - Console Ouptut
 
 This is showing that a clean build takes only ~6.4 sec, if all SW is downloaded already.
-
-
-![2016-12-09-11_19_14-github-triggered-build-1-console-jenkins](https://user-images.githubusercontent.com/558905/37997767-ff9d55d0-31e9-11e8-9ede-9afeff756247.png)
-![2016-12-09-11_34_55-manage-jenkins-jenkins](https://user-images.githubusercontent.com/558905/37997763-ff645992-31e9-11e8-815e-cb8f28e43f9b.png)
-![2016-12-09-11_34_55-manage-jenkins-jenkins](https://user-images.githubusercontent.com/558905/37997253-61163144-31e8-11e8-802e-7955d541ba36.png)
-![2016-12-09-11_35_26-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997254-612332b8-31e8-11e8-8317-76bbaa291e3c.png)
-
-![2017-01-05-01_19_25-github-triggered-build-6-console-jenkins](https://user-images.githubusercontent.com/558905/37997308-7e2ca2d6-31e8-11e8-81cc-d30f146571f7.png)
-![2017-01-02-14_27_26-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997309-7e37eab0-31e8-11e8-9398-1b12e6fecffc.png)
-![2017-01-02-14_32_46-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997310-7e44e76a-31e8-11e8-8cfd-0b260a84995c.png)
-
-
-
-![2017-01-02-16_00_27-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997316-7eb44cd6-31e8-11e8-9894-9e52074144f8.png)
-![2017-01-02-16_01_49-github-triggered-build-jenkins](https://user-images.githubusercontent.com/558905/37997318-7ec3f73a-31e8-11e8-9cd4-c402f3bb4932.png)
-![2017-01-02-16_03_16-github-triggered-build-3-console-jenkins](https://user-images.githubusercontent.com/558905/37997319-7ed18eae-31e8-11e8-92af-81a197c170d0.png)
-![2017-01-03-00_17_19-ubuntu-trusty64-docker_openshift-install](https://user-images.githubusercontent.com/558905/37997320-7edddfd8-31e8-11e8-825e-b0926f897bd6.png)
-
-
-
-![2017-01-05-01_15_51-github-triggered-build-jenkins](https://user-images.githubusercontent.com/558905/37997326-7f1c72d4-31e8-11e8-9530-9bb9391bca25.png)
-![2017-01-05-01_18_33-github-triggered-build-6-console-jenkins](https://user-images.githubusercontent.com/558905/37997327-7f279088-31e8-11e8-9d8c-fdeb24124d3f.png)
-
