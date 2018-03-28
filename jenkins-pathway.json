@@ -1,14 +1,8 @@
 {
+  "icon": "fa-jenkins",
   "title": "Jenkins",
   "description": "Jenkins pathway",
   "courses": [
-    {
-      "title": "Configure Tools in Jenkins",
-      "description": "Learn how to launch tools in Jenkins",
-      "course_id": "jenkins-configure-tools",
-      "pathway_id": "jenkins",
-      "id": "jenkins-configure-tools"
-    },
     {
       "title": "Create a Job in Jenkins",
       "description": "Learn how to deploy a Job with Jenkins",
@@ -50,13 +44,6 @@
       "course_id": "jenkins-build-docker-images",
       "pathway_id": "jenkins",
       "external_link": "https://katacoda.com/virtuant/courses/jenkins/jenkins-build-docker-images"
-    },
-    {
-      "title": "Jenkins Integration with GIT",
-      "description": "Learn how to integrate Jenkins with GIT for CI of code",
-      "course_id": "jenkins-ci-git",
-      "pathway_id": "jenkins",
-      "id": "jenkins-ci-git"
     },
     {
       "title": "Jenkins Automation of a Job",
