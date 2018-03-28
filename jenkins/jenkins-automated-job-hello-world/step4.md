@@ -20,7 +20,8 @@ Finished: SUCCESS
 
 Let us test the executable JAR:
 
-`docker exec -it jenkins bash'{{execute}}
+`docker exec -it jenkins bash
+java jar "/jenkins_home_alpine/workspace/Github Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar"'{{execute}}
 
 ![image](https://user-images.githubusercontent.com/558905/38008731-4100dd88-321e-11e8-8559-8cb42c6b4fb4.png)
 
