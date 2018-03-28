@@ -78,13 +78,7 @@ $ git commit -m "Maven creates fat executable JAR file now"
 $ git push
 ```
 
-Now again, let us build the project:
-
--> Build Now
-
--> 2017-01-05-01_15_51-github-triggered-build-jenkins
-
--> Console Output
+Now again, let us build the project: click on the Build Now, then check the Console Output.
 
 Now there are many downloads, and it takes a while:
 
