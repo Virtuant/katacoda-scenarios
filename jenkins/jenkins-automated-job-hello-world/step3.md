@@ -25,7 +25,7 @@ This may take a while (~8 min in my case with a 100Mbps Internet connection):
 
 We can see in the output, that the JAR file was placed to
 
-/var/jenkins_home_local/workspace/GitHub Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar
+```/jenkins_home_alpine/workspace/Github Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar```
 
 >Note: Yayy! This was the first successful Jenkins triggered Git download and Maven build.
 
