@@ -1,6 +1,6 @@
 ### Test Manually Triggered Build
 
-We can trigger a build manually via Jenkins -> drop-down right of “GitHub Triggered Build” -> Build Now.
+Choose `Build Now` from the menu. We also can trigger a build manually via Jenkins -> drop-down right of “GitHub Triggered Build” -> Build Now.
 
 ![2016-12-09-11_46_03-dashboard-jenkins](https://user-images.githubusercontent.com/558905/37997255-612f5cb4-31e8-11e8-9b68-33a69cef4ee2.png)
 
