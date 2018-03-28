@@ -155,13 +155,10 @@ To get the Checkstyle warnings back, we need to rebuild the project:
 
 Project -> Build Project
 
-
 ![2017-01-18-03_02_56](https://user-images.githubusercontent.com/558905/38052820-522e174c-32a0-11e8-9c99-7ac0b68abba9.png)
-2017-01-18-03_02_56
 
 Now we can see that some of the Checkstyle warnings are gone:
 
 ![2017-01-18-03_04_05-java-ee-simple-restful-file-storage_src_](https://user-images.githubusercontent.com/558905/38052821-523b1b5e-32a0-11e8-8887-921ae9a215dd.png)
 
 Next time, you check in the code to the Gir repository, you will see that the number of Checkstyle warnings we get from Jenkins via Gradle will decrease…
-
