@@ -7,7 +7,7 @@
 `mkdir files  && \
 curl https://wordpress.org/latest.zip > files/wordpress.zip`{{execute}}
 
-2\. You’ll copy it into the `/tmp` directory by adding the following to your playbook under the tasks section:
+2\. You’ll copy it into the `/tmp` directory by copying and pasting the following to your playbook under the tasks section, above the `hanlder` section:
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
     # Wordpress

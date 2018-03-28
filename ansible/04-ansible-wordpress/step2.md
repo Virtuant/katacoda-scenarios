@@ -55,8 +55,6 @@ Ansible installs MySQL with an empty root password and leaves some of the test d
         - localhost
     - name: Output new root password
       debug: msg="New root password is {{mysql_new_root_pass.stdout}}"
-
-
 </blockquote></pre>
 
 Great job! You're halfway there.

@@ -58,7 +58,7 @@ We've already created a playbook.yml file, but it won't show up until you add co
 
 4\. Once you’ve successfully run your playbook, run `which php` to make sure that it yields something similar to the following:
 
-`$ which php`{{execute}}
+`which php`{{execute}}
 
 Output:
 

@@ -17,9 +17,6 @@ touch templates/nginx/default`{{execute}}
 3\. Edit `templates/nginx/default` and make sure that it contains the following content:
 
 <pre class="file" data-filename="provisioning/templates/nginx/default"><blockquote>
-upstream php {
-                server unix:/run/php/php7.2-fpm.sock;
-}
 
 server {
         server_name book.example.com;

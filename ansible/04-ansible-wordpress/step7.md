@@ -4,24 +4,21 @@ We learned in the lecture that we face a unquie challenge here. Nginx needs to b
 
 #### Handler Configuration
 
-1/. Copy and paste the following lines of code to the top of playbook, putting them on the same level and indentation as `tasks`, directly below `become: true`:
+1/. Add the following lines of code to the bottom of your playbook, putting `handler` on the same indentation line as `tasks`:
 
-<pre>
+<pre class="file" data-filename="playbook.yml"><blockquote>
   handlers:
     - name: restart nginx
       service: name=nginx state=restarted
 </blockquote></pre>
 
-2\. You can trigger it whenever your `config` file changes, by updating the "Create nginx config" task, to look like this:
+2\. You can trigger it whenever your `config` file changes, by updating the "Create nginx config" task. Just copy and paste the following code in it's place:
 
-<pre>
+```
     - name: Create nginx config
       template: src=templates/nginx/default dest=/etc/nginx/sites-available/default
       notify: restart nginx
-</blockquote></pre>
-
->Note: Carefully, copy and paste the latter in-place of previously established code.
-
+```
 
 3\. Be sure to save it! Go ahead and run Ansible again to ensure our playbook is fully functional.
 

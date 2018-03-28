@@ -9,16 +9,15 @@
 </blockquote></pre>
 
 
-2\. Remember from the lecture, unzip doesn't come installed, so add this to your playbook (before you install PHP) to make sure it is:
+2\. Remember from the lecture, unzip doesn't come installed, so copy and paste this to your playbook **before you install PHP** to make sure it is installed, before it's needed:
 
 
-<pre class="file" data-filename="playbook.yml"><blockquote>
+```
     - name: Install required tools
       apt: name={{item}} state=present
       with_items:
         - unzip
-</blockquote></pre>
-
+```
 
 3\. You will also need to add a `creates` argument so that the command is idempotent:
 
