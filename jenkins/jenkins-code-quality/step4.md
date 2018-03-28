@@ -1,54 +1,17 @@
-We now will start a pre-configured Jenkins. You can skip this step, if you have accomplished steps 1-3 successfully.
+### Verify Jenkins Results
 
-#### Task: Start pre-configured Jenkins
+Since we have improved the source code, we expect the Jenkins Checkstyle warnings to decrease. We can verify this by doing the following:
 
-If you have performed step 1 to 3 already, you can skip this step and go to the next step immediately. If you have skipped setps 1-3, or if they were not successful, follow the following instructions to download a clean pre-configured Jenkins installation:
+-> save, commit and push the improved code -> log into Jenkins -> check out the build process that is triggered by the code push (or we can manually trigger the build process by clicking project -> Build now)
 
-1. Stop and remove any containers named "jenkins", if required:
+On the dashboard, we will see, that the Checkstyle statistics have (very) slightly improved:
 
-`docker stop jenkins; docker rm jenkins`{{execute}}
+2017-01-18-04_37_06-github-triggered-build-jenkins-v2
 
-2. Download and start a pre-configured Jenkins container.
+On the upper right edge of the figure, the number of warnings is slightly lower. The code quality is far from being perfect, but we now have all tools and plugins needed to improve the situation.
 
-`docker run -d --rm --name jenkins \
-    -p 8080:8080 -p 50000:50000 \
-    oveits/jenkins:2.46.2-alpine-nologin-with-maven-git-pipelines`{{execute}}
-    
-You can load the Jenkins' dashboard via the following URL https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/ or by clicking the dashboard tab on the right.
+After changing all tabs by 4 spaces each, the number of Checkstyle violations goes down by ~50%. That is a good start.
 
-> Note: the image has been created like follows: 
+2017-01-19-22_51_58-github-triggered-build-jenkins-v2
 
-`docker run -d -u root --name jenkins \
- -p 8080:8080 -p 50000:50000 \
- --entrypoint bash \
- jenkins:2.46.2-alpine \
- -c "tail -F /jenkins.log"`{{execute}}
-
-`docker exec -d jenkins \
- bash -c 'git clone https://github.com/oveits/jenkins_home_alpine \
- && export JENKINS_HOME=$(pwd)/jenkins_home_alpine \
- && java -jar /usr/share/jenkins/jenkins.war 2>&1 1>/jenkins.log &'`{{execute}}
-
-Perform the manual steps 1 to 3.
-
-`docker stop jenkins
-docker commit jenkins newjenkinsimage`{{execute}}
-
-Create a new container with the correct entrypoint and CMD:
-`docker run -d --entrypoint "bash" -p 8080:8080 -p 50000:50000 --name jenkins2 newjenkinsimage -c "JENKINS_HOME=/jenkins_home_alpine java -jar /usr/share/jenkins/jenkins.war"`
-
-For commiting the 
-
-`docker stop jenkins2
-docker login`{{execute}}
-
-Add your user credentials of [Docker Hub](https://hub.docker.com/) here... 
-
-Then: 
-
-`docker commit jenkins2 oveits/jenkins:2.46.2-alpine-nologin-with-maven-git-pipelines
-docker push oveits/jenkins:2.46.2-alpine-nologin-with-maven-git-pipelines`{{execute}}
-
-Here you need to exchange `oveits` by your own [Docker Hub](https://hub.docker.com/) user name.
-
-Now the image can be used by commands like e.g. `docker run <options> <image> <CMD>`
+Perfect, we have learned how to use the Checkstyle plugin for Eclipse in order to produce better code. And the Jenkins Checkstyle plugin allows us to admire the progress we make.
