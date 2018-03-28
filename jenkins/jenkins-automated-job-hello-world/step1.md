@@ -1,13 +1,10 @@
-### Setup Maven or Gradle
+You may have to wait a few minutes until your container is set up. Go to the Dashboard and Jenkins will be up in a few. No login needed.
 
 If you later prefer to use Maven instead of (or in addition to) Gradle, you need to prepare its first usage. For Gradle preparation, after going to the menu pic, see the Gradle Alternative below.
 
 First, go to Jenkins -> Manage Jenkins -> Global Tool Configuration (available for Jenkins >2.0):
 
 ![2016-12-09-11_34_55-manage-jenkins-jenkins](https://user-images.githubusercontent.com/558905/37997763-ff645992-31e9-11e8-815e-cb8f28e43f9b.png)
-
-
-
 
 #### Alternative: Prepare Maven Usage
 
@@ -26,7 +23,6 @@ Since we have checked “Install automatically” above, I expect that it will b
 ----
 
 #### Alternative: Prepare Gradle Usage
-
 
 Scroll down to Gradle -> Add Gradle
 
