@@ -33,7 +33,7 @@ Here, we scroll down to “Build” -> click -> “Invoke top-level Maven Target
 
 ![2017-01-03-13_52_27-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997322-7ee9d3ce-31e8-11e8-8723-0860b435c463.png)
 
-Choose the Maven version we have prepared in Step 3 and specify the goal “package”:
+Choose the Maven version you previously did and specify the goal “package”:
 
 ![2017-01-03-14_00_05-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997323-7ef84c38-31e8-11e8-97c1-062f7b538e79.png)
 
