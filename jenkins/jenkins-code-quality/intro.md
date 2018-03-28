@@ -2,4 +2,6 @@ This exercise show how to use Checkstyle for improving the style of Java code. F
 
 ![2017-02-01-04_43_16-github-triggered-build-jenkins](https://user-images.githubusercontent.com/558905/38051154-7241f828-329b-11e8-9732-48d15d74027d.png)
 
-A typical workflow is visualized above: a developer checks in the code changes into the repository. Jenkins will detect the change, build (compile) the software, test it and prepare to deploy it on a system. Depending on the configuration, the deployment is triggered by a human person, or automatically performed by Jenkins.
+A typical workflow is visualized above: a developer checks in the code changes into the repository. Jenkins will detect the change, build (compile) the software, test it and prepare to deploy it on a system. 
+
+Depending on the configuration, the deployment is triggered by a human person, or automatically performed by Jenkins.
