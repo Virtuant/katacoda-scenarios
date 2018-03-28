@@ -23,7 +23,7 @@ Finished: SUCCESS
 Let us test the executable JAR:
 
 `docker exec -it jenkins bash
-java jar "/jenkins_home_alpine/workspace/Github Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar"'{{execute}}
+java jar "/jenkins_home_alpine/workspace/Github Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar"`{{execute}}
 
 ![image](https://user-images.githubusercontent.com/558905/38008731-4100dd88-321e-11e8-8559-8cb42c6b4fb4.png)
 
@@ -91,9 +91,10 @@ After ~2.5 minutes, it is ready:
 
 And we can find and run the new fat JAR file on the Docker container:
 
+`docker exec -it jenkins bash
+ls -ltr "/var/jenkins_home_local/workspace/GitHub Triggered Build/target"`{{execute}}
+
 ```
-(dockerhost)$ docker exec -it jenkins bash
-(container) $ ls -ltr '/var/jenkins_home_local/workspace/GitHub Triggered Build/target'
 total 57680
 drwxr-xr-x 3 jenkins jenkins     4096 Jan  3 13:12 generated-sources
 drwxr-xr-x 6 jenkins jenkins     4096 Jan  3 13:12 classes
@@ -107,8 +108,10 @@ drwxr-xr-x 2 jenkins jenkins     4096 Jan  5 00:00 archive-tmp
 
 Here, we can see, that a large JAR file with all dependencies has been created. Now let us try to execute it:
 
+`docker exec -it jenkins bash
+java jar "/jenkins_home_alpine/workspace/Github Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar"`{{execute}}
+
 ```
-(container) $ java -jar '/var/jenkins_home_local/workspace/GitHub Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT-jar-with-dependencies.jar'
 17/01/05 00:07:50 INFO main.MainSupport: Apache Camel 2.16.0 starting
 0 [main] INFO org.apache.camel.main.MainSupport  - Apache Camel 2.16.0 starting
 ...
@@ -129,41 +132,35 @@ Let us see, where the executable jar file can be found:
 
 For that, let us enter a bash session on the same Docker container:
 
-```
-(dockerhost)$ docker exec -it jenkins bash
-jenkins@(container):/$ cd /var/jenkins_home_local/workspace/GitHub\ Triggered\ Build/build/libs/
-```
+`docker exec -it jenkins bash
+java jar "/jenkins_home_alpine/workspace/Github Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar"`{{execute}}
 
 In case you have started Jenkins with the jenkins image (Step 1.2, alternative (A)), the project will be found on
 
-```
-(container):$ cd /var/jenkins_home
-```
+`cd /var/jenkins_home`{{execute}}
 
-In case you have started Jenkins with the oveits/jenkins_tutorial image (Step 1.2, alternative (B)), the project will be found on
+In case you have started Jenkins with the oveits/jenkins_tutorial image the project will be found on:
 
-```
-(container):$ cd /var/jenkins_home_local
-```
+`cd /var/jenkins_home_local`{{execute}}
 
 Then enter the Project. In my case “GitHub Triggered Build”
 
-```
-(container)$ cd 'GitHub Triggered Build'
-```
+`cd 'GitHub Triggered Build'`{{execute}}
 
 The jar is found on the path defined in build.gradle file (default: build/libs).
 
+`cd build/libs
+ls`{{execute}}
+
 ```
-(container)$ cd build/libs
-(container)$ ls
 GitHub Triggered Build-0.0.1-SNAPSHOT.jar   META-INF   lib   log4j.properties   properties   templates
 ```
 
 Now let us start the executable file:
 
+`java -jar "GitHub Triggered Build-0.0.1-SNAPSHOT.jar"`{{execute}}
+
 ```
-$ java -jar 'GitHub Triggered Build-0.0.1-SNAPSHOT.jar'
 [main] MainSupport  INFO  Apache Camel 2.16.0 starting
 0 [main] INFO org.apache.camel.main.MainSupport  - Apache Camel 2.16.0 starting
 [main] DefaultTypeConverter INFO  Loaded 196 type converters
