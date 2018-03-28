@@ -1,5 +1,5 @@
 
-#### WordPress Install Configuration
+## WordPress Install Configuration
 
 1\. The first thing that you’ll need to do is to extract `wordpress.zip`. Ansible ships with a module named unarchive that knows how to extract several different archive formats:
 

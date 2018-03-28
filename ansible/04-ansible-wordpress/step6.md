@@ -1,4 +1,4 @@
-#### Adding Nginx Upstream
+## Adding Nginx Upstream
 
 1\. Now, you need to create an upstream definition in the configuration file so that nginx knows where to pass the request on to. Add the following at the **top** of your template before the opening server { line }:
 

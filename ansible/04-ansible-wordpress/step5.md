@@ -1,4 +1,4 @@
-#### Nginx Forwarding Fixes
+## Nginx Forwarding Fixes
 
 Pretty cool, huh? But, this isn’t what you want your users to see. You want them to see WordPress!
 
@@ -68,4 +68,4 @@ server {
 
 </blockquote></pre>
 
->Note: The following configuration example is taken from the WordPress codex located at https://codex.wordpress.org/Nginx. This file is tricky! You may find that you'll need to alter it after copying and pasting it. 
+>Note: The following configuration example is taken from the WordPress codex located at https://codex.wordpress.org/Nginx. This file is tricky! You may find that you'll need to alter it after copying and pasting it.

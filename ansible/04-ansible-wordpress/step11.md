@@ -1,4 +1,4 @@
-#### Create MySQL User Credentials
+## Create MySQL User Credentials
 
 1\. You will not want to give WordPress root access to your database, so let’s create a dedicated MySQL user to use by adding the following tasks to your playbook:
 

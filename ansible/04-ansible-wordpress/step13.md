@@ -1,4 +1,4 @@
-#### Making It Idempotent
+## Making It Idempotent
 
 # REPLACE
 1\. Go ahead and run Ansible again, but for the last time in this lab:

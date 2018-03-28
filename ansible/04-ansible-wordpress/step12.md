@@ -1,4 +1,4 @@
-#### Making a Backup
+## Making a Backup
 
 Now, you'll need to make a backup, so that if you were to destroy this instance you could bring it back up at 100%. As it is right now, you would be 90 percent of the way to a WordPress install. You would end up at that final screen where you need to provide details about your website. All of that information is stored in the database, so let’s make a backup and have Ansible automatically import it.
 
