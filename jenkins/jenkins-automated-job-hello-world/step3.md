@@ -59,3 +59,10 @@ Then -> Console Output
 Clean Build - Console Ouptut
 
 This is showing that a clean build takes only ~6.4 sec, if all SW is downloaded already.
+
+### Check on History
+
+Check on the lifecycle of your build:
+
+![image](https://user-images.githubusercontent.com/558905/38007181-2025b5aa-3216-11e8-8bba-f9e84e7ab690.png)
+
