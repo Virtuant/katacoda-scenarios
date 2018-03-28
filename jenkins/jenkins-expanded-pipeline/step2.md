@@ -1,7 +1,6 @@
 In this section, we’ll start to fill out our pipeline by adding stages to retrieve the source code and do the builds.
 We’ll see how to add shared libraries to our pipeline to encapsulate functionality.
 
-
 For each of the major parts of our pipeline, we are going to create a stage for the code related to that part.
 First, we’ll create a stage to retrieve the source. In your Jenkins session, you should still be on the page from the first lab where we added the code for the node definition. Within the node definition, we’ll add our first stage.
 
@@ -18,7 +17,7 @@ Add the following code (in bold) inside the node definition:
 
 The source code to pull down is located on our local system in `/home/git/repositories/workshop.git` in the default branch master.
 
-Now, with our first stage complete, let’s move on to the next one – the Compile stage to build our code. Go ahead and add the framework for the stage under the Source stage. We’ll fill in the command next.
+Now, with our first stage complete, let’s move on to the next one – the Compile stage to build our code. Go ahead and add the framework for the stage under the **Source** stage. We’ll fill in the command next.
 
 Add the lines in bold into your code as shown.
 
@@ -46,7 +45,7 @@ Scroll down and find the **Gradle** section.
 
 ![image021](https://user-images.githubusercontent.com/558905/37634640-e24009fa-2bcd-11e8-9561-10f2d663548f.jpg)
 
-Click the Add Gradle button. A new section pops up on the screen. Uncheck the Install automatically box since we don’t want Jenkins to install Gradle for us. (We already have it installed.) Then, for name, enter `gradle3`.
+Click the Add Gradle button. A new section pops up on the screen. Uncheck the **Install automatically** box since we don’t want Jenkins to install Gradle for us. (We already have it installed.) Then, for name, enter `gradle3`.
 
 This is so we can refer to it by this label. For the `GRADLE_HOME` value, fill in where Gradle is installed -
 `/usr/share/gradle`.
@@ -58,7 +57,7 @@ Your screen should look like the one below - click the Save button to save your 
 Now that we have Gradle installed and configured for use in Jenkins, we’re ready to call it in our pipeline.
 We’re going to do this using a shared library so we can see how those work. We already have a simple shared library routine that does this.
 
-To see the routine, first open up a terminal window by going to the VM’s desktop and clicking the Terminal Emulator icon.
+To see the routine, first open up a terminal window by going to the VM’s desktop and clicking the **Terminal Emulator** icon.
 
 ![image026](https://user-images.githubusercontent.com/558905/37634642-e2601092-2bcd-11e8-942a-7d549687e766.jpg)
 
@@ -86,7 +85,7 @@ Go back to the Jenkins `homepage/dashboard` (http://localhost:8080).
 
 Click on **Manage Jenkins/Configure System**.
  
-Scroll down on this page until you find the Global Pipeline Libraries section. This is where we load in the library from Git that we were just looking at. There is nothing to change here, but look at the different fields – particularly the Project Repository field. Notice that the location in here is the same location on the Git remote where we have our shared pipeline library.
+Scroll down on this page until you find the **Global Pipeline Libraries** section. This is where we load in the library from Git that we were just looking at. There is nothing to change here, but look at the different fields – particularly the Project Repository field. Notice that the location in here is the same location on the Git remote where we have our shared pipeline library.
 
 ![image034](https://user-images.githubusercontent.com/558905/37634645-e28fccba-2bcd-11e8-8437-e7f25d3f3144.jpg)
 
@@ -112,11 +111,15 @@ node('worker_node1') {
 
 Before we leave this page, let’s setup our job in Jenkins to poll the SCM to watch for changes in source control and then trigger a build.
 
-Switch to the Build Triggers tab (or scroll up to the Build Triggers section of the page). Click the box for Poll SCM. Type a string of five asterisks separated by spaces (“* * * * *”) in the text box next to Poll SCM. You’ll see a warning message and can ignore it.
+Switch to the Build Triggers tab (or scroll up to the Build Triggers section of the page). Click the box for **Poll SCM**. Type a string of five asterisks separated by spaces `* * * * *` in the text box next to **Poll SCM**. You’ll see a warning message and can ignore it.
 
 ![image038](https://user-images.githubusercontent.com/558905/37634647-e2b13d6e-2bcd-11e8-88e5-d6c5801db480.png)
 
-Click on Save. After a minute or so, Jenkins should automatically detect that there is “new” code it hasn’t built and start a build running. After the build completes, you will be able to see the results in the Staging View. Notice the matrix here with rows for each build (we only have 1 so far) and columns corresponding to the stages that we have defined so far (Source and Build). Hover over each box and look at the logs from each byclicking on the Logs link in the pop up window.
+Click on Save. 
+
+After a minute or so, Jenkins should automatically detect that there is “new” code it hasn’t built and start a build running. 
+
+After the build completes, you will be able to see the results in the Staging View. Notice the matrix here with rows for each build (we only have 1 so far) and columns corresponding to the stages that we have defined so far (Source and Build). Hover over each box and look at the logs from each byclicking on the Logs link in the pop up window.
 
 >Note: You may need to **Disable Auto Refresh** in the upper right corner to keep the pop ups on the screen.
 
