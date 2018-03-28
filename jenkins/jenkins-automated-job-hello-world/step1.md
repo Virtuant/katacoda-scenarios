@@ -6,18 +6,14 @@ First, go to Jenkins -> Manage Jenkins -> Global Tool Configuration (available f
 
 ![2016-12-09-11_34_55-manage-jenkins-jenkins](https://user-images.githubusercontent.com/558905/37997763-ff645992-31e9-11e8-815e-cb8f28e43f9b.png)
 
-![2016-12-09-11_35_26-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997254-612332b8-31e8-11e8-8317-76bbaa291e3c.png)
 
-
-![2017-01-02-14_27_26-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997309-7e37eab0-31e8-11e8-9398-1b12e6fecffc.png)
-![2017-01-02-14_32_46-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997310-7e44e76a-31e8-11e8-8cfd-0b260a84995c.png)
 
 
 #### Alternative: Prepare Maven Usage
 
 Scroll down to Maven -> Add Maven
 
-2017-01-02-14_32_46-global-tool-configuration-jenkins
+![2017-01-02-14_32_46-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997310-7e44e76a-31e8-11e8-8cfd-0b260a84995c.png)
 
 -> choose Version (3.3.9 in my case)
 
@@ -37,7 +33,11 @@ On this wiki page about the Gradle plugin we find that we need to configure Grad
 
 Goto Jenkins -> Manage Jenkins -> Global Tool Configuration (available for Jenkins >2.0)
 
-2016-12-09-11_34_55-manage-jenkins-jenkins
+
+![2016-12-09-11_35_26-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997254-612332b8-31e8-11e8-8317-76bbaa291e3c.png)
+
+
+![2017-01-02-14_27_26-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997309-7e37eab0-31e8-11e8-9398-1b12e6fecffc.png)
 
 2016-12-09-11_35_26-global-tool-configuration-jenkins
 
