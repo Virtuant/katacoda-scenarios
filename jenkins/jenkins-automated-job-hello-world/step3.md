@@ -27,6 +27,8 @@ We can see in the output, that the JAR file was placed to
 
 ```/jenkins_home_alpine/workspace/Github Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar```
 
+Copy the path and file from the above screen. We'll use it on the next page.
+
 >Note: Yayy! This was the first successful Jenkins triggered Git download and Maven build.
 
 #### Alternative Gradle
