@@ -21,8 +21,6 @@ Under Source Code Management, we choose “Git” and specify the GitHub reposit
 
 Click Apply
 
-Note also that we have chosen a branch different from the master branch (“jenkinstest”). We have created this new branch in order to keep the master branch clean from any changes that might be needed to test Jenkins.
-
 #### Configure Build Triggers
 
 For now, we will test only manual “build now” triggers, so we do not need to specify any build triggers. Build triggers will be tested in the next stage. You can either build with Maven or Gradle. If you prefer to build via Gradle, go to the Alternative below.
