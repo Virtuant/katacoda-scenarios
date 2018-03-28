@@ -22,7 +22,7 @@ We learned in the lecture that we face a unquie challenge here. Nginx needs to b
 
 >Note: Carefully, copy and paste the latter in-place of previously established code.
 
-# REPLACE
-3\. Be sure to save it! But, this feels like a good opportunity to run `vagrant destroy`, followed by `vagrant up` to confirm that everything is installed and configured correctly.
+
+3\. Be sure to save it! Go ahead and run Ansible again to ensure our playbook is fully functional.
 
 `ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
