@@ -1,4 +1,6 @@
-### Retrieve and Start Executable JAR File
+### Optional
+
+We can retrieve and start the executable JAR file.
 
 For Gradle, scroll down for that section.
 
