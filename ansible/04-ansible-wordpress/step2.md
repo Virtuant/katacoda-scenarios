@@ -15,7 +15,7 @@
 
 `ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
 
->Note: Don't be discouraged if it doesn't run successfully the first time. Gi back, check your code, run it again, and if you still can't get it, alert your instructor.
+>Note: Don't be discouraged if it doesn't run successfully the first time. Go back, check your code, run it again, and if you still can't get it, alert your instructor.
 
 #### [Optional] MySQL Security  
 Ansible installs MySQL with an empty root password and leaves some of the test databases accessible to anonymous users.
@@ -55,6 +55,7 @@ Ansible installs MySQL with an empty root password and leaves some of the test d
         - localhost
     - name: Output new root password
       debug: msg="New root password is {{mysql_new_root_pass.stdout}}"
+
 
 </blockquote></pre>
 

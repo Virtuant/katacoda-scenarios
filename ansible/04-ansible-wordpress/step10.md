@@ -11,15 +11,17 @@
 
 2\. Remember from the lecture, unzip doesn't come installed, so add this to your playbook (before you install PHP) to make sure it is:
 
+
 <pre class="file" data-filename="playbook.yml"><blockquote>
     - name: Install required tools
       apt: name={{item}} state=present
       with_items:
         - unzip
-</blockquote><pre>
+</blockquote></pre>
 
 
 3\. You will also need to add a `creates` argument so that the command is idempotent:
+
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
     - name: Create project folder

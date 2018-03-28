@@ -37,7 +37,7 @@ We've already created a playbook.yml file, but it won't show up until you add co
       apt_repository: repo='ppa:ondrej/php'
 </blockquote></pre>
 
->Note: Remmeber, PPA stands for Personal Package Archive and it's what's used to assist the installation process.
+>Note: Remember, PPA stands for Personal Package Archive and it's what's used to assist the installation process.
 
 2\. Once that’s installed, the next step is to install PHP. As you’ve added a PPA, you’ll want to update the apt package cache:
 
@@ -63,8 +63,6 @@ Output:
 ```
 /usr/bin/php
 ```
-
->Note: Once that runs, go ahead and exit out of the VM.
 
 5\. If that looks good, continue by installing all of the other PHP packages that you’ll need. Let’s use `with_items` to make the playbook easier to read though. So, delete the previous task "Install PHP", then copy and paste the following into its place in the playbook:
 

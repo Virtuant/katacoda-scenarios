@@ -7,7 +7,7 @@ We learned in the lecture that we face a unquie challenge here. Nginx needs to b
 1/. Add the following lines of code to your playbook, putting them on the same level and indentation as `tasks`:
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
-handlers:
+  handlers:
     - name: restart nginx
       service: name=nginx state=restarted
 </blockquote></pre>

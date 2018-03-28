@@ -4,7 +4,7 @@ Pretty cool, huh? But, this isn’t what you want your users to see. You want th
 
 1\. So, you need to change the default nginx virtual host to receive requests and forward them. Run the following commands in the same directory as your playbook, to create a template file that you’ll use to configure nginx:
 
-`mkdir templates/nginx && \
+`mkdir -p templates/nginx && \
 touch templates/nginx/default`{{execute}}
 
 2\. You’ll also need to copy this file onto your remote machine using the template module. Let’s add a task to your playbook to do this:

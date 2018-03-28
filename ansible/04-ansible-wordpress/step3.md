@@ -4,7 +4,7 @@ This is actually quite a lot of work! At this point, your installation is secure
 1\. First, you need to create a folder to hold your template and create the file that you are going to copy over. Run these commands from your terminal, in the same directory as your playbook, to create the required folders and files:
 
 `mkdir -p templates/mysql && \
-touch provisioning/templates/mysql/my.cnf`{{execute HOST1}}
+touch templates/mysql/my.cnf`{{execute HOST1}}
 
 2\. Once you’ve created `my.cnf`, edit it and make sure that it has the following contents:
 
@@ -36,29 +36,28 @@ If the file `/root/.my.cnf` does not exist, `mysql_new_root_pass.changed` will b
 5\. Here’s a small set of example tasks that show the new root password if `.my.cnf` does not exist and show a message if it already exists:
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
-    - name: Generate new root password
-      command: openssl rand -hex 7 creates=/root/.my.cnf
-      register: mysql_new_root_pass
-  # If /root/.my.cnf doesn't exist and the command is run
+    # If `/root/.my.cnf` doesn't exist and the command is run
     - debug: msg="New root password is {{ mysql_new_root_pass.stdout }}"
       when: mysql_new_root_pass.changed
-  # If /root/.my.cnf exists and the command is not run
+    # If `/root/.my.cnf` exists and the command is not run
     - debug: msg="No change to root password"
       when: not mysql_new_root_pass.changed
 </blockquote></pre>
 
 
-6\. Once you make the change to add `creates=/root/.my.cnf`, you should add a `when` argument to all of the relevant operations. After making these changes, the MySQL section of your playbook should look like this:
+6\. Once you make the change to add `creates=/root/.my.cnf`, you should add a `when` argument to all of the relevant operations. After making these changes, the MySQL section of your playbook should look the one given below. Rather than copying and pasting the whole thing, compare your code to the following and append manually:
 
->Note: Make sure you are able to spot the changes we are making and that you understand why they are being made.
+>Note: Make sure you are able to spot the changes we are making and that you understand why they are being made. If you are have been instructed not to do the MySQL Security portion, realize you only need to append one line.
 
-<pre class="file" data-filename="playbook.yml"><blockquote>
+<pre><blockquote>
   # MySQL
     - name: Install MySQL
       apt: name={{item}}
       with_items:
         - mysql-server
         - python-mysqldb
+
+  # [OPTIONAL] MySQL Security - Start
     - name: Generate new root password
       command: openssl rand -hex 7 creates=/root/.my.cnf
       register: mysql_new_root_pass
@@ -82,6 +81,7 @@ If the file `/root/.my.cnf` does not exist, `mysql_new_root_pass.changed` will b
     - name: Create my.cnf
       template: src=templates/mysql/my.cnf dest=/root/.my.cnf
       when: mysql_new_root_pass.changed
+  # [OPTIONAL] MySQL Security - End
 </blockquote></pre>
 
 7\. Run Ansible now to generate a new root password and clean up the MySQL installation:
