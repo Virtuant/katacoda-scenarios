@@ -44,9 +44,9 @@ In the **Remote root directory** field, enter `/home/jenkins2/worker_node1`. Thi
 For **Launch method**, click the down arrow at the far right, and select **Launch slave agents via SSH**. This will use SSH
 keys to launch the nodes.
 
-* Under Launch method, for Host, enter “diyvb2”.
-* Under Launch method, for Credentials, click the drop-down arrow, and select “jenkins 2 (Jenkins 2 SSH)”. These are SSH credentials that have already been setup on the system.
-* Under Launch method, for Host Key Verification Strategy, click the drop-down arrow, and select “Non verifying Verification Strategy”. We’re using this less secure strategy here to keep things simple.
+* Under Launch method, for **Host**, enter “diyvb2”.
+* Under Launch method, for **Credentials**, click the drop-down arrow, and select **jenkins 2 (Jenkins 2 SSH)**. These are SSH credentials that have already been setup on the system.
+* Under Launch method, for **Host Key Verification Strategy**, click the drop-down arrow, and select **Non verifying Verification Strategy**. We’re using this less secure strategy here to keep things simple.
 
 ![image007](https://user-images.githubusercontent.com/558905/37634632-e1c1987c-2bcd-11e8-91ca-b74fa99d387e.png)
 
