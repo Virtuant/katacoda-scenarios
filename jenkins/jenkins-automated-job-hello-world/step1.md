@@ -1,8 +1,8 @@
 ### Setup Maven or Gradle
 
-If you later prefer to use Maven instead of (or in addition to) Gradle, you need to prepare its first usage. For Gradle preparation, see the Gradle Alternative below.
+If you later prefer to use Maven instead of (or in addition to) Gradle, you need to prepare its first usage. For Gradle preparation, after going to the menu pic, see the Gradle Alternative below.
 
-Goto Jenkins -> Manage Jenkins -> Global Tool Configuration (available for Jenkins >2.0)
+Goto Jenkins -> Manage Jenkins -> Global Tool Configuration (available for Jenkins >2.0):
 
 ![2016-12-09-11_34_55-manage-jenkins-jenkins](https://user-images.githubusercontent.com/558905/37997763-ff645992-31e9-11e8-815e-cb8f28e43f9b.png)
 
