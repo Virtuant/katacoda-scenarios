@@ -25,6 +25,6 @@ After running Ansible, your new config should rollout and Nginx should be restar
 
 `curl http://book.example.com`{{execute}}
 
-Now, that is pretty cool, huh? I hope you're proud of yourself.
+Now, that is pretty cool, huh?
 
 >Note: If you've come to this point and you've been unable to render the appropriate results, don't worry! It happens to the best of us. Go back to your `default` Nginx folder and check for syntax errors. Also, check the indentation of code in your playbook. You'll get it!
