@@ -1,7 +1,9 @@
 ## Installing Dependencies
-1\. Like we've already seen, you start by creating a simple playbook that shows that Ansible can run against your host machine.
+Like we've already seen, you start by creating a simple playbook that shows that Ansible can run against your host machine.
 
-We've already created a playbook.yml file, but it won't show up until you add code to it. Go ahead and list the contents of your working directory to confirm:
+We've already created a playbook.yml file, but it won't show up until you add code to it.
+
+1\. Go ahead and list the contents of your working directory to confirm:
 
 `ls`{{execute HOST1}}
 
