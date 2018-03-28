@@ -1,6 +1,6 @@
 ## Handler and Configuration Testing
 
-After running Ansible, your new config should rollout and Nginx should be restarted.
+After running Ansible, your new config should rollout and nginx should be restarted.
 
 1\. To test this, `cd` into your `/etc/hosts` file, and add `book.example.com`, such that the first line in your `hosts` file should resemble the following:
 
