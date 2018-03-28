@@ -12,9 +12,9 @@ Scroll down to Maven -> Add Maven
 
 ![2017-01-02-14_32_46-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997310-7e44e76a-31e8-11e8-8cfd-0b260a84995c.png)
 
--> choose Version (3.3.9 in this case)
+-> choose latest version (3.5.0 in this case)
 
--> Add a name (“Maven 3.3.9” in this case)
+-> Add a name (“Maven 3.5.0” in this case)
 
 -> Save
 
