@@ -20,11 +20,9 @@ Finished: SUCCESS
 
 Let us test the executable JAR:
 
-```
-(dockerhost)$ docker exec -it jenkins bash
-jenkins@(container):/$ java -jar '/var/jenkins_home_local/workspace/GitHub Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar'
-no main manifest attribute, in /var/jenkins_home_local/workspace/GitHub Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar
-```
+`docker exec -it jenkins bash'{{execute}}
+
+![image](https://user-images.githubusercontent.com/558905/38008731-4100dd88-321e-11e8-8559-8cb42c6b4fb4.png)
 
 Okay, the jar is not executable yet. Let us change the POM file to create an executable fat JAR as described on Mkyong’s page:
 
