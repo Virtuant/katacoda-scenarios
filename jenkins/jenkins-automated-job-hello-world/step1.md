@@ -24,31 +24,9 @@ Note also that we have chosen a branch different from the master branch (“jenk
 
 For now, we will test only manual “build now” triggers, so we do not need to specify any build triggers. Build triggers will be tested in the next stage. You can either build with Maven or Gradle. If you prefer to build via Gradle, go to the Alternative B below.
 
-#### Alternative: Configure Gradle Build
+#### Alternative: Configure Maven Build
 
-Prerequisite: For creation of an executable JAR, the file build.gradle in the project root directory must be prepared. See e.g.
-
-    this blog post of mine how to create lean JAR files using Gradle
-    this blog post of Mkyong how to create a fat JAR file using Gradle (is easier to accomplish)
-
-Here, we show how to build the project via Gradle. 
-Here, we scroll down to “Build” -> click 2017-01-02-14_54_07-github-triggered-build-config-jenkins -> “Invoke Gradle script”
-
-2016-12-09-11_11_47-github-triggered-build-config-jenkins
-
-Choose the Gradle version we have prepared in Step 3 and add the task “jar”:
-
-2017-01-02-14_56_34-github-triggered-build-config-jenkins
-
-    Note that keeping the (Default) Gradle version will not work, as long as this Default has not been defined. See Appendix A for details.
-
-The Gradle task “jar” will create our executable JAR file.
-
--> Click Save at the bottom left.
-
-Step 4.5: Alternative (b): Configure Maven Build
-
-Here, we show how to build the project via Maven. If you prefer to build via Gradle, seee Step 4.5: Alternative (a): Configure Graven Build above.
+Here, we show how to build the project via Maven. If you prefer to build via Gradle, see the next section.
 
 Here, we scroll down to “Build” -> click 2017-01-02-14_54_07-github-triggered-build-config-jenkins -> “Invoke Maven script”
 
@@ -64,14 +42,29 @@ The Maven goal “package”will build our JAR file.
 
 -> Click Save at the bottom left.
 
-![2016-12-09-11_34_55-manage-jenkins-jenkins](https://user-images.githubusercontent.com/558905/37997763-ff645992-31e9-11e8-815e-cb8f28e43f9b.png)
+#### Alternative: Configure Gradle Build
 
+Prerequisite: For creation of an executable JAR, the file build.gradle in the project root directory must be prepared. See e.g.
+
+    this blog post of mine how to create lean JAR files using Gradle
+    this blog post of Mkyong how to create a fat JAR file using Gradle (is easier to accomplish)
+
+Here, we show how to build the project via Gradle. 
+Here, we scroll down to “Build” -> click 2017-01-02-14_54_07-github-triggered-build-config-jenkins -> “Invoke Gradle script”
 
 ![2016-12-09-11_19_14-github-triggered-build-1-console-jenkins](https://user-images.githubusercontent.com/558905/37997767-ff9d55d0-31e9-11e8-9ede-9afeff756247.png)
 
-
-
 ![2016-12-09-14_53_46-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997252-61087310-31e8-11e8-8429-203e9eba9a46.png)
+
+Choose the Gradle version we have prepared in Step 3 and add the task “jar”:
+
+    Note that keeping the (Default) Gradle version will not work, as long as this Default has not been defined. See Appendix A for details.
+
+The Gradle task “jar” will create our executable JAR file.
+
+-> Click Save at the bottom left.
+
+![2016-12-09-11_34_55-manage-jenkins-jenkins](https://user-images.githubusercontent.com/558905/37997763-ff645992-31e9-11e8-815e-cb8f28e43f9b.png)
 ![2016-12-09-11_34_55-manage-jenkins-jenkins](https://user-images.githubusercontent.com/558905/37997253-61163144-31e8-11e8-802e-7955d541ba36.png)
 ![2016-12-09-11_35_26-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997254-612332b8-31e8-11e8-8317-76bbaa291e3c.png)
 ![2016-12-09-11_46_03-dashboard-jenkins](https://user-images.githubusercontent.com/558905/37997255-612f5cb4-31e8-11e8-9b68-33a69cef4ee2.png)
