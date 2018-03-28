@@ -88,11 +88,11 @@ Now again, let us build the project:
 
 Now there are many downloads, and it takes a while:
 
-2017-01-05-01_18_33-github-triggered-build-6-console-jenkins
+![2017-01-05-01_19_25-github-triggered-build-6-console-jenkins](https://user-images.githubusercontent.com/558905/37997308-7e2ca2d6-31e8-11e8-81cc-d30f146571f7.png)
 
 After ~2.5 minutes, it is ready:
 
-2017-01-05-01_19_25-github-triggered-build-6-console-jenkins
+![2017-01-05-01_18_33-github-triggered-build-6-console-jenkins](https://user-images.githubusercontent.com/558905/37997327-7f279088-31e8-11e8-9d8c-fdeb24124d3f.png)
 
 And we can find and run the new fat JAR file on the Docker container:
 
@@ -169,13 +169,13 @@ Now let us start the executable file:
 
 ```
 $ java -jar 'GitHub Triggered Build-0.0.1-SNAPSHOT.jar'
-[                          main] MainSupport                    INFO  Apache Camel 2.16.0 starting
+[main] MainSupport  INFO  Apache Camel 2.16.0 starting
 0 [main] INFO org.apache.camel.main.MainSupport  - Apache Camel 2.16.0 starting
-[                          main] DefaultTypeConverter           INFO  Loaded 196 type converters
+[main] DefaultTypeConverter INFO  Loaded 196 type converters
 1706 [main] INFO org.apache.camel.impl.converter.DefaultTypeConverter  - Loaded 196 type converters
 ...
 2762 [main] INFO org.apache.camel.spring.SpringCamelContext  - Total 15 routes, of which 15 is started.
-[                          main] SpringCamelContext             INFO  Apache Camel 2.16.0 (CamelContext: camel-1) started in 1.046 seconds
+[main] SpringCamelContext   INFO  Apache Camel 2.16.0 (CamelContext: camel-1) started in 1.046 seconds
 2765 [main] INFO org.apache.camel.spring.SpringCamelContext  - Apache Camel 2.16.0 (CamelContext: camel-1) started in 1.046 seconds
 ```
 
