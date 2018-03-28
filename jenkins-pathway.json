@@ -4,13 +4,6 @@
   "description": "Jenkins pathway",
   "courses": [
     {
-      "title": "Configure Tools in Jenkins",
-      "description": "Learn how to launch tools in Jenkins",
-      "course_id": "jenkins-configure-tools",
-      "pathway_id": "jenkins",
-      "id": "jenkins-configure-tools"
-    },
-    {
       "title": "Create a Job in Jenkins",
       "description": "Learn how to deploy a Job with Jenkins",
       "course_id": "jenkins-job",
