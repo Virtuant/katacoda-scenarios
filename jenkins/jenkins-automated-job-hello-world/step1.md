@@ -44,10 +44,7 @@ The Maven goal “package” will build our JAR file.
 
 #### Alternative: Configure Gradle Build
 
-Prerequisite: For creation of an executable JAR, the file build.gradle in the project root directory must be prepared. See e.g.
-
-    this blog post of mine how to create lean JAR files using Gradle
-    this blog post of Mkyong how to create a fat JAR file using Gradle (is easier to accomplish)
+Prerequisite: For creation of an executable JAR, the file `build.gradle` in the project root directory must be prepared.
 
 Here, we show how to build the project via Gradle. 
 
@@ -59,7 +56,7 @@ Choose the Gradle version we have prepared in Step 3 and add the task “jar”:
 
 ![2017-01-02-14_56_34-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997311-7e53bde4-31e8-11e8-87cd-eb03fbb87127.png)
 
-    Note that keeping the (Default) Gradle version will not work, as long as this Default has not been defined. See Appendix A for details.
+>Note that keeping the (Default) Gradle version will not work, as long as this Default has not been defined. See Appendix A for details.
 
 The Gradle task “jar” will create our executable JAR file.
 
