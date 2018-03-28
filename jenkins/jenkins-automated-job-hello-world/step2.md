@@ -13,35 +13,35 @@ then on Console Output:
 ![2017-01-02-15_02_46-github-triggered-build-1-jenkins-v2](https://user-images.githubusercontent.com/558905/37997313-7e84dc76-31e8-11e8-9663-fbded1ae4aa4.png)
 
  
-
 We can observe the console output e.g. by clicking on the build link in the build history, then clicking Console:
-Output for step 5 in case of Gradle:
 
-2017-01-02-15_04_25-github-triggered-build-1-console-jenkins
+#### Alternative Maven:
 
-This may take a while (~11 min in my case with a 100Mbps Internet connection):
-
-2017-01-02-15_48_17-github-triggered-build-1-console-jenkins
-
-thumps_up_3
-
-This was the first successful Jenkins triggered Git download and Gradle build.
-Output for step 5 in case of Maven:
-
-2017-01-03-14_05_03-github-triggered-build-4-console-jenkins
+![2017-01-03-14_05_03-github-triggered-build-4-console-jenkins](https://user-images.githubusercontent.com/558905/37997324-7f03fca4-31e8-11e8-9708-7229e7f6a322.png)
 
 This may take a while (~8 min in my case with a 100Mbps Internet connection):
 
-2017-01-03-14_42_22-github-triggered-build-4-console-jenkins
+![2017-01-03-14_42_22-github-triggered-build-4-console-jenkins](https://user-images.githubusercontent.com/558905/37997325-7f110e9e-31e8-11e8-96b5-a2dab68f1e2b.png)
 
 We can see in the output, that the JAR file was placed to
 
 /var/jenkins_home_local/workspace/GitHub Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar
 
-thumps_up_3
+>Note: Yayy! This was the first successful Jenkins triggered Git download and Maven build.
 
-This was the first successful Jenkins triggered Git download and Maven build.
-Step 5.2 (Optional): Measure Time Consumption for Gradle clean Build
+#### Alternative Gradle
+
+![2017-01-02-15_04_25-github-triggered-build-1-console-jenkins](https://user-images.githubusercontent.com/558905/37997314-7e955236-31e8-11e8-8f25-6bb3c793d86d.png)
+
+This may take a while (~11 min in my case with a 100Mbps Internet connection):
+
+![2017-01-02-15_48_17-github-triggered-build-1-console-jenkins](https://user-images.githubusercontent.com/558905/37997315-7ea48620-31e8-11e8-95e5-b0b7204e78c4.png)
+
+>Note: Yayy! This was the first successful Jenkins triggered Git download and Gradle build.
+
+
+
+#### Optional: Measure Time Consumption for Gradle clean Build
 
 Let us test again, whether the build is quicker the second time:
 
@@ -76,16 +76,14 @@ This is showing that a clean build takes only ~6.4 sec, if all SW is downloaded 
 ![2017-01-02-14_32_46-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997310-7e44e76a-31e8-11e8-8cfd-0b260a84995c.png)
 
 
-![2017-01-02-15_04_25-github-triggered-build-1-console-jenkins](https://user-images.githubusercontent.com/558905/37997314-7e955236-31e8-11e8-8f25-6bb3c793d86d.png)
-![2017-01-02-15_48_17-github-triggered-build-1-console-jenkins](https://user-images.githubusercontent.com/558905/37997315-7ea48620-31e8-11e8-95e5-b0b7204e78c4.png)
+
 ![2017-01-02-16_00_27-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997316-7eb44cd6-31e8-11e8-9894-9e52074144f8.png)
 ![2017-01-02-16_01_49-github-triggered-build-jenkins](https://user-images.githubusercontent.com/558905/37997318-7ec3f73a-31e8-11e8-9cd4-c402f3bb4932.png)
 ![2017-01-02-16_03_16-github-triggered-build-3-console-jenkins](https://user-images.githubusercontent.com/558905/37997319-7ed18eae-31e8-11e8-92af-81a197c170d0.png)
 ![2017-01-03-00_17_19-ubuntu-trusty64-docker_openshift-install](https://user-images.githubusercontent.com/558905/37997320-7edddfd8-31e8-11e8-825e-b0926f897bd6.png)
 
 
-![2017-01-03-14_05_03-github-triggered-build-4-console-jenkins](https://user-images.githubusercontent.com/558905/37997324-7f03fca4-31e8-11e8-9708-7229e7f6a322.png)
-![2017-01-03-14_42_22-github-triggered-build-4-console-jenkins](https://user-images.githubusercontent.com/558905/37997325-7f110e9e-31e8-11e8-96b5-a2dab68f1e2b.png)
+
 ![2017-01-05-01_15_51-github-triggered-build-jenkins](https://user-images.githubusercontent.com/558905/37997326-7f1c72d4-31e8-11e8-9530-9bb9391bca25.png)
 ![2017-01-05-01_18_33-github-triggered-build-6-console-jenkins](https://user-images.githubusercontent.com/558905/37997327-7f279088-31e8-11e8-9d8c-fdeb24124d3f.png)
 
