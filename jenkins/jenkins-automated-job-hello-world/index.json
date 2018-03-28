@@ -2,7 +2,7 @@
     "icon":"fa-jenkins",
     "pathwayTitle": "Jenkins",
     "title": "Building an Automated Job with Jenkins",
-    "description": "Learn how to build and deploy jobs with Jenkins",
+    "description": "Learn how to build and deploy automated jobs with Jenkins",
     "difficulty": "Advanced",
     "time": "15-20 minutes",
     "details": {
