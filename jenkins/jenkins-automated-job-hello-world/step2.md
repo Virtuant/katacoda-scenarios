@@ -29,7 +29,7 @@ For now, we will test only manual “build now” triggers, so we do not need to
 
 Here, we show how to build the project via Maven. If you prefer to build via Gradle, see the next section.
 
-Here, we scroll down to “Build” -> click -> “Invoke Maven script”
+Here, we scroll down to “Build” -> click -> “Invoke top-level Maven Targets”
 
 ![2017-01-03-13_52_27-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997322-7ee9d3ce-31e8-11e8-8723-0860b435c463.png)
 
