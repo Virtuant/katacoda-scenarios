@@ -15,9 +15,9 @@ Scroll down to Maven -> Add Maven
 
 ![2017-01-02-14_32_46-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997310-7e44e76a-31e8-11e8-8cfd-0b260a84995c.png)
 
--> choose Version (3.3.9 in my case)
+-> choose Version (3.3.9 in this case)
 
--> Add a name (“Maven 3.3.9” in my case)
+-> Add a name (“Maven 3.3.9” in this case)
 
 -> Save
 
@@ -30,9 +30,6 @@ Since we have checked “Install automatically” above, I expect that it will b
 If you later prefer to use Gradle instead of (or in addition to) Maven, you need to prepare its first usage. For Maven preparation, see Step 3, Alternative (b) below.
 
 On this wiki page about the Gradle plugin we find that we need to configure Gradle first:
-
-Goto Jenkins -> Manage Jenkins -> Global Tool Configuration (available for Jenkins >2.0)
-
 
 ![2016-12-09-11_35_26-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997254-612332b8-31e8-11e8-8317-76bbaa291e3c.png)
 
