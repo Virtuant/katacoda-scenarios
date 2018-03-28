@@ -8,6 +8,6 @@ The first step is to install the [Github](https://wiki.jenkins-ci.org/display/JE
 4. Using the search box, search for **Github plugin** and choose the plugin via checkbox.
 5. While on this page, search for **Pipeline** and choose the plugin via checkbox.
 6. Click **Install without Restart** at the bottom.
-7. The plugins will now be downloaded and installed. Once complete, click the link **Go back to the top page**.
+7. About 40 plugins will now be downloaded and installed. Once complete, click the link **Go back to the top page**.
 
 Your Jenkins server can now be configured to build a `hello world` application using pipelines.
