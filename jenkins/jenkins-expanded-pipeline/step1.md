@@ -14,11 +14,7 @@ You should now be `root` inside your container.
 
 ----
 
-Now go to the Dashboard (right of the Terminal) and start it up as `8080`.
-
-Log in to Jenkins with User = `admin` and Password = `admin`
-
->Note: If at some point during the lab you try to do something in Jenkins and find that you can’t, check to see if you’ve been logged out. Log back in if needed.
+Now go to the Dashboard (right of the Terminal) and start it up as `8080`. It may take a little before you are able to login.
 
 Click on the “Manage Jenkins” link in the menu on the left-hand side. Next, look in the list of selections in
 the middle of the screen, and find and click on “Manage Nodes”. (You may need to scroll down.)
@@ -41,7 +37,8 @@ You should now be on the configuration screen for the new node.
 For Description, you can enter “Main pipeline worker node” (or whatever you wish).
 Set the “# of executors” to 2.
 
-In the Remote root directory field, enter “/home/jenkins2/worker_node1”. This is the working area for the node. For Labels enter “worker_node1 docker”. These are identifiers that can be used in the pipeline to refer to the node.
+In the Remote root directory field, enter `/home/jenkins2/worker_node1`. This is the working area for the node. For Labels enter “worker_node1 docker”. These are identifiers that can be used in the pipeline to refer to the node.
+
 For Launch method, click the down arrow at the far right, and select “Launch slave agents via SSH”. This will use SSH
 keys to launch the nodes.
 
