@@ -14,7 +14,7 @@ Check “GitHub project” and add the HTTPS GitHub URL. I have used a small Apa
 
 Under Source Code Management, we choose “Git” and specify the GitHub repository a second time. If it is public, we do not enter the credentials for now:
 
-![2016-12-09-11_11_47-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997766-ff8f7226-31e9-11e8-99cb-5f1bd2cc4093.png)
+![2016-12-09-14_53_46-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997252-61087310-31e8-11e8-8429-203e9eba9a46.png)
 
 Click Apply
 
@@ -54,7 +54,7 @@ Here, we scroll down to “Build” -> click 2017-01-02-14_54_07-github-triggere
 
 ![2016-12-09-11_19_14-github-triggered-build-1-console-jenkins](https://user-images.githubusercontent.com/558905/37997767-ff9d55d0-31e9-11e8-9ede-9afeff756247.png)
 
-![2016-12-09-14_53_46-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997252-61087310-31e8-11e8-8429-203e9eba9a46.png)
+
 
 Choose the Gradle version we have prepared in Step 3 and add the task “jar”:
 
@@ -64,6 +64,7 @@ The Gradle task “jar” will create our executable JAR file.
 
 -> Click Save at the bottom left.
 
+![2016-12-09-11_11_47-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997766-ff8f7226-31e9-11e8-99cb-5f1bd2cc4093.png)
 ![2016-12-09-11_34_55-manage-jenkins-jenkins](https://user-images.githubusercontent.com/558905/37997763-ff645992-31e9-11e8-815e-cb8f28e43f9b.png)
 ![2016-12-09-11_34_55-manage-jenkins-jenkins](https://user-images.githubusercontent.com/558905/37997253-61163144-31e8-11e8-802e-7955d541ba36.png)
 ![2016-12-09-11_35_26-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997254-612332b8-31e8-11e8-8317-76bbaa291e3c.png)
