@@ -3,7 +3,7 @@
 
 >Note: you may need to first go to the Manage Plugins and add the Github plugin as before.
 
-Now, either click on “Create new Jobs” or on New Item. Now enter an Item name and click on Freestyle Project and OK:
+Now, either click on “Create new Jobs” or on New Item. Now enter an Item name (such as "Github Triggered Build") and click on Freestyle Project and OK:
 
 ![2016-12-09-10_55_56-new-item-jenkins](https://user-images.githubusercontent.com/558905/37997764-ff732eb8-31e9-11e8-943e-9263e6e27c44.png)
 
