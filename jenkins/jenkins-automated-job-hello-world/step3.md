@@ -68,7 +68,7 @@ Add the following text to the plugins-part of `pom.xml`: cloning the git reposit
       </plugin>
 ```
 
-For other projects, you will need to adapt the blue part above.
+For other projects, you will need to adapt the part in <mainClass> above.
 
 Then:
 
