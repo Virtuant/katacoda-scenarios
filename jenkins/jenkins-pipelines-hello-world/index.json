@@ -1,32 +1,45 @@
 {
-    "icon":"fa-jenkins",
+    "icon": "fa-jenkins",
     "pathwayTitle": "Jenkins",
-    "title": "Building an Automated Job with Jenkins",
-    "description": "Learn how to build and deploy automated jobs with Jenkins",
+    "title": "Jenkins Pipelines",
+    "description": "Learn how to use Jenkins Pipelines with Git and Maven",
     "difficulty": "Advanced",
     "time": "25-40 minutes",
     "details": {
         "steps": [
             {
-                "title": "Setup Maven or Gradle",
+                "title": "Launch Jenkins",
                 "text": "step1.md"
             },
             {
-                "title": "Create a Job",
+                "title": "Install Github and Pipeline Plugins",
                 "text": "step2.md"
             },
             {
-                "title": "Test Manually Triggered Build",
+                "title": "Configure Maven Plugin",
                 "text": "step3.md"
             },
             {
-                "title": "Retrieve and Start an Executable JAR File",
+                "title": "Configure Git Plugin",
                 "text": "step4.md"
+            },
+            {
+                "title": "Start a pre-configured Jenkins Installation",
+                "text": "step5.md"
+            },
+            {
+                "title": "Create Pipeline Build Project",
+                "text": "step6.md"
+            },
+            {
+                "title": "Build Project and review Results",
+                "text": "step7.md"
             }
         ],
         "intro": {
             "text": "intro.md",
-            "code": "env-init.sh"
+            "code": "env-init.sh",
+            "credits": ""
         },
         "finish": {
             "text": "finish.md"

@@ -1,161 +1,72 @@
-Step 6 (Gradle): Retrieve and start executable JAR File
+### Test Manually Triggered Build
 
-For Maven, scroll down to Step 6 (Maven).
+Choose `Build Now` from the menu. We also can trigger a build manually via Jenkins -> drop-down right of “GitHub Triggered Build” -> Build Now.
 
-Let us see, where the executable jar file can be found:
+![2016-12-09-11_46_03-dashboard-jenkins](https://user-images.githubusercontent.com/558905/37997255-612f5cb4-31e8-11e8-9b68-33a69cef4ee2.png)
 
-For that, let us enter a bash session on the same Docker container:
+Click on #1 of the build history:
 
-(dockerhost)$ docker exec -it jenkins bash
-jenkins@(container):/$ cd /var/jenkins_home_local/workspace/GitHub\ Triggered\ Build/build/libs/
+![2017-01-02-14_59_15-github-triggered-build-jenkins-v2](https://user-images.githubusercontent.com/558905/37997312-7e763054-31e8-11e8-8c91-8badaba0e606.png)
 
-In case you have started Jenkins with the jenkins image (Step 1.2, alternative (A)), the project will be found on
+then on Console Output:
 
-(container):$ cd /var/jenkins_home
+![2017-01-02-15_02_46-github-triggered-build-1-jenkins-v2](https://user-images.githubusercontent.com/558905/37997313-7e84dc76-31e8-11e8-9663-fbded1ae4aa4.png)
 
-In case you have started Jenkins with the oveits/jenkins_tutorial image (Step 1.2, alternative (B)), the project will be found on
+ 
+We can observe the console output e.g. by clicking on the build link in the build history, then clicking Console:
 
-(container):$ cd /var/jenkins_home_local
+#### Alternative Maven:
 
-Then enter the Project. In my case “GitHub Triggered Build”
+![2017-01-03-14_05_03-github-triggered-build-4-console-jenkins](https://user-images.githubusercontent.com/558905/37997324-7f03fca4-31e8-11e8-9708-7229e7f6a322.png)
 
-(container)$ cd 'GitHub Triggered Build'
+This may take a while (~8 min in my case with a 100Mbps Internet connection):
 
-The jar is found on the path defined in build.gradle file (default: build/libs).
+![2017-01-03-14_42_22-github-triggered-build-4-console-jenkins](https://user-images.githubusercontent.com/558905/37997325-7f110e9e-31e8-11e8-96b5-a2dab68f1e2b.png)
 
-(container)$ cd build/libs
-(container)$ ls
-GitHub Triggered Build-0.0.1-SNAPSHOT.jar   META-INF   lib   log4j.properties   properties   templates
+We can see in the output, that the JAR file was placed to
 
-Now let us start the executable file:
+```/jenkins_home_alpine/workspace/Github Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar```
 
-$ java -jar 'GitHub Triggered Build-0.0.1-SNAPSHOT.jar'
-[                          main] MainSupport                    INFO  Apache Camel 2.16.0 starting
-0 [main] INFO org.apache.camel.main.MainSupport  - Apache Camel 2.16.0 starting
-[                          main] DefaultTypeConverter           INFO  Loaded 196 type converters
-1706 [main] INFO org.apache.camel.impl.converter.DefaultTypeConverter  - Loaded 196 type converters
-...
-2762 [main] INFO org.apache.camel.spring.SpringCamelContext  - Total 15 routes, of which 15 is started.
-[                          main] SpringCamelContext             INFO  Apache Camel 2.16.0 (CamelContext: camel-1) started in 1.046 seconds
-2765 [main] INFO org.apache.camel.spring.SpringCamelContext  - Apache Camel 2.16.0 (CamelContext: camel-1) started in 1.046 seconds
+Copy the path and file from the above screen. We'll use it on the next page.
 
-Yes. perfect, it seems to work.
-thumps_up_3
+>Note: Yayy! This was the first successful Jenkins triggered Git download and Maven build.
 
-You can stop the Apache Camel process by pressing <CTRL>-C in the console.
-Step 6 (Maven): Retrieve and start executable JAR File
+#### Alternative Gradle
 
-For Gradle, scroll up to Step 6 (Gradle).
+![2017-01-02-15_04_25-github-triggered-build-1-console-jenkins](https://user-images.githubusercontent.com/558905/37997314-7e955236-31e8-11e8-8f25-6bb3c793d86d.png)
 
-In case of Maven, the location of the created JAR file can be seen at the end of the build console output:
+This may take a while (~11 min in my case with a 100Mbps Internet connection):
 
-[INFO] Building jar: /var/jenkins_home_local/workspace/GitHub Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 08:15 min
-[INFO] Finished at: 2017-01-03T13:13:06+00:00
-[INFO] Final Memory: 37M/263M
-[INFO] ------------------------------------------------------------------------
-Finished: SUCCESS
+![2017-01-02-15_48_17-github-triggered-build-1-console-jenkins](https://user-images.githubusercontent.com/558905/37997315-7ea48620-31e8-11e8-95e5-b0b7204e78c4.png)
 
-Let us test the executable JAR:
+>Note: Yayy! This was the first successful Jenkins triggered Git download and Gradle build.
 
-(dockerhost)$ docker exec -it jenkins bash
-jenkins@(container):/$ java -jar '/var/jenkins_home_local/workspace/GitHub Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar'
-no main manifest attribute, in /var/jenkins_home_local/workspace/GitHub Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar
 
-Okay, the jar is not executable yet. Let us change the POM file to create an executable fat JAR as described on Mkyong’s page:
+#### Optional: Measure Time Consumption for Gradle clean Build
 
-$ git clone <repository-URL>
-$ cd <repository-Dir>
-$ vi pom.xml
+Let us test again, whether the build is quicker the second time:
 
-Add the following text to the plugins-part of pom.xml:
+Click -> Back to Project -> Configure
 
-cloning the git repository, adding the text below to the plugins part, adding pom.xml to git, commit the git change and push the change:
+-> Add “clean” Gradle task before “jar” Gradle task:
 
-      <!-- Maven Assembly Plugin -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>2.4.1</version>
-        <configuration>
-          <!-- get all project dependencies -->
-          <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-          </descriptorRefs>
-          <!-- MainClass in mainfest make a executable jar -->
-          <archive>
-            <manifest>
-            <mainClass>de.oveits.simplerestfulfilestorage.MainApp</mainClass>
-            </manifest>
-          </archive>
+![2017-01-02-16_00_27-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997316-7eb44cd6-31e8-11e8-9894-9e52074144f8.png)
 
-        </configuration>
-        <executions>
-          <execution>
-          <id>make-assembly</id>
-          <!-- bind to the packaging phase -->
-          <phase>package</phase>
-          <goals>
-            <goal>single</goal>
-          </goals>
-          </execution>
-        </executions>
-      </plugin>
+Click -> Save -> Build Now
 
-For other projects, you will need to adapt the blue part above.
+Then click Build History -> current build
 
-Then:
+Then -> Console Output
 
-$ git add pom.xml
-$ git commit -m "Maven creates fat executable JAR file now"
-$ git push
+Clean Build - Console Ouptut
 
-Now again, let us build the project:
+This is showing that a clean build takes only ~6.4 sec, if all SW is downloaded already.
 
--> Build Now
+----
 
--> 2017-01-05-01_15_51-github-triggered-build-jenkins
+### Check on History
 
--> Console Output
+Go back up to the top-level Jenkins menu. Check on the lifecycle of your build:
 
-Now there are many downloads, and it takes a while:
+![image](https://user-images.githubusercontent.com/558905/38007181-2025b5aa-3216-11e8-8bba-f9e84e7ab690.png)
 
-2017-01-05-01_18_33-github-triggered-build-6-console-jenkins
-
-After ~2.5 minutes, it is ready:
-
-2017-01-05-01_19_25-github-triggered-build-6-console-jenkins
-
-And we can find and run the new fat JAR file on the Docker container:
-
-(dockerhost)$ docker exec -it jenkins bash
-(container) $ ls -ltr '/var/jenkins_home_local/workspace/GitHub Triggered Build/target'
-total 57680
-drwxr-xr-x 3 jenkins jenkins     4096 Jan  3 13:12 generated-sources
-drwxr-xr-x 6 jenkins jenkins     4096 Jan  3 13:12 classes
-drwxr-xr-x 3 jenkins jenkins     4096 Jan  3 13:12 generated-test-sources
-drwxr-xr-x 3 jenkins jenkins     4096 Jan  3 13:12 test-classes
-drwxr-xr-x 2 jenkins jenkins     4096 Jan  3 13:13 maven-archiver
--rw-r--r-- 1 jenkins jenkins    44657 Jan  4 23:58 camel-spring4-0.0.1-SNAPSHOT.jar
-drwxr-xr-x 2 jenkins jenkins     4096 Jan  5 00:00 archive-tmp
--rw-r--r-- 1 jenkins jenkins 58988354 Jan  5 00:00 camel-spring4-0.0.1-SNAPSHOT-jar-with-dependencies.jar
-
-Here, we can see, that a large JAR file with all dependencies has been created. Now let us try to execute it:
-
-(container) $ java -jar '/var/jenkins_home_local/workspace/GitHub Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT-jar-with-dependencies.jar'
-17/01/05 00:07:50 INFO main.MainSupport: Apache Camel 2.16.0 starting
-0 [main] INFO org.apache.camel.main.MainSupport  - Apache Camel 2.16.0 starting
-...
-17/01/05 00:07:52 INFO spring.SpringCamelContext: Total 15 routes, of which 15 is started.
-2420 [main] INFO org.apache.camel.spring.SpringCamelContext  - Total 15 routes, of which 15 is started.
-17/01/05 00:07:52 INFO spring.SpringCamelContext: Apache Camel 2.16.0 (CamelContext: camel-1) started in 0.876 seconds
-2422 [main] INFO org.apache.camel.spring.SpringCamelContext  - Apache Camel 2.16.0 (CamelContext: camel-1) started in 0.876 seconds
-
-Yes. perfect, it seems to work.
-
-thumps_up_3
-
-You can stop the Apache Camel process by pressing <CTRL>-C in the console.
