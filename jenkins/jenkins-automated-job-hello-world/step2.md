@@ -1,61 +1,66 @@
-### Test Manually Triggered Build
 
-We can trigger a build manually via Jenkins -> drop-down right of “GitHub Triggered Build” -> Build Now.
+### Create a Job
 
-![2016-12-09-11_46_03-dashboard-jenkins](https://user-images.githubusercontent.com/558905/37997255-612f5cb4-31e8-11e8-9b68-33a69cef4ee2.png)
+>Note: first go to the Manage Plugins and add the Github plugin as before.
 
-Click on #1 of the build history:
+Now, either click on “Create new Jobs” or on New Item. Now enter an Item name and click on Freestyle Project and OK:
 
-![2017-01-02-14_59_15-github-triggered-build-jenkins-v2](https://user-images.githubusercontent.com/558905/37997312-7e763054-31e8-11e8-8c91-8badaba0e606.png)
+![2016-12-09-10_55_56-new-item-jenkins](https://user-images.githubusercontent.com/558905/37997764-ff732eb8-31e9-11e8-943e-9263e6e27c44.png)
 
-then on Console Output:
+#### Specify GitHub Project
 
-![2017-01-02-15_02_46-github-triggered-build-1-jenkins-v2](https://user-images.githubusercontent.com/558905/37997313-7e84dc76-31e8-11e8-9663-fbded1ae4aa4.png)
+Check “GitHub project” and add the HTTPS GitHub URL. I have used a small Apache Camel project of mine that provides a simple restful file storage: https://github.com/oveits/simple-restful-file-storage
 
- 
-We can observe the console output e.g. by clicking on the build link in the build history, then clicking Console:
+![2016-12-09-11_02_22-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997765-ff827f76-31e9-11e8-9d34-a2df72fae369.png)
 
-#### Alternative Maven:
+#### Configure Source Code Management
 
-![2017-01-03-14_05_03-github-triggered-build-4-console-jenkins](https://user-images.githubusercontent.com/558905/37997324-7f03fca4-31e8-11e8-9708-7229e7f6a322.png)
+Under Source Code Management, we choose “Git” and specify the GitHub repository a second time. If it is public, we do not enter the credentials for now:
 
-This may take a while (~8 min in my case with a 100Mbps Internet connection):
+![2016-12-09-14_53_46-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997252-61087310-31e8-11e8-8429-203e9eba9a46.png)
 
-![2017-01-03-14_42_22-github-triggered-build-4-console-jenkins](https://user-images.githubusercontent.com/558905/37997325-7f110e9e-31e8-11e8-96b5-a2dab68f1e2b.png)
+Click Apply
 
-We can see in the output, that the JAR file was placed to
+Note also that we have chosen a branch different from the master branch (“jenkinstest”). We have created this new branch in order to keep the master branch clean from any changes that might be needed to test Jenkins.
 
-/var/jenkins_home_local/workspace/GitHub Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar
+#### Configure Build Triggers
 
->Note: Yayy! This was the first successful Jenkins triggered Git download and Maven build.
+For now, we will test only manual “build now” triggers, so we do not need to specify any build triggers. Build triggers will be tested in the next stage. You can either build with Maven or Gradle. If you prefer to build via Gradle, go to the Alternative below.
 
-#### Alternative Gradle
+#### Alternative: Configure Maven Build
 
-![2017-01-02-15_04_25-github-triggered-build-1-console-jenkins](https://user-images.githubusercontent.com/558905/37997314-7e955236-31e8-11e8-8f25-6bb3c793d86d.png)
+Here, we show how to build the project via Maven. If you prefer to build via Gradle, see the next section.
 
-This may take a while (~11 min in my case with a 100Mbps Internet connection):
+Here, we scroll down to “Build” -> click -> “Invoke Maven script”
 
-![2017-01-02-15_48_17-github-triggered-build-1-console-jenkins](https://user-images.githubusercontent.com/558905/37997315-7ea48620-31e8-11e8-95e5-b0b7204e78c4.png)
+![2017-01-03-13_52_27-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997322-7ee9d3ce-31e8-11e8-8723-0860b435c463.png)
 
->Note: Yayy! This was the first successful Jenkins triggered Git download and Gradle build.
+Choose the Maven version we have prepared in Step 3 and specify the goal “package”:
 
+![2017-01-03-14_00_05-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997323-7ef84c38-31e8-11e8-97c1-062f7b538e79.png)
 
-#### Optional: Measure Time Consumption for Gradle clean Build
+>Note that keeping the (Default) Maven version will not work, as long as this Default has not been defined.
 
-Let us test again, whether the build is quicker the second time:
+The Maven goal “package” will build our JAR file.
 
-Click -> Back to Project -> Configure
+-> Click Save at the bottom left.
 
--> Add “clean” Gradle task before “jar” Gradle task:
+#### Alternative: Configure Gradle Build
 
-![2017-01-02-16_00_27-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997316-7eb44cd6-31e8-11e8-9894-9e52074144f8.png)
+Prerequisite: For creation of an executable JAR, the file `build.gradle` in the project root directory must be prepared.
 
-Click -> Save -> Build Now
+Here, we show how to build the project via Gradle. 
 
-Then click Build History -> current build
+Here, we scroll down to “Build” -> click “Invoke Gradle script”
 
-Then -> Console Output
+![2016-12-09-11_11_47-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997766-ff8f7226-31e9-11e8-99cb-5f1bd2cc4093.png)
 
-Clean Build - Console Ouptut
+Choose the Gradle version we have prepared in Step 3 and add the task “jar”:
 
-This is showing that a clean build takes only ~6.4 sec, if all SW is downloaded already.
+![2017-01-02-14_56_34-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997311-7e53bde4-31e8-11e8-87cd-eb03fbb87127.png)
+
+>Note that keeping the (Default) Gradle version will not work, as long as this Default has not been defined.
+
+The Gradle task “jar” will create our executable JAR file.
+
+-> Click Save at the bottom left.
