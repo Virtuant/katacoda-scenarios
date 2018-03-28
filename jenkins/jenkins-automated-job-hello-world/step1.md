@@ -4,7 +4,6 @@ If you later prefer to use Maven instead of (or in addition to) Gradle, you need
 
 Goto Jenkins -> Manage Jenkins -> Global Tool Configuration (available for Jenkins >2.0)
 
-![2016-12-09-11_19_14-github-triggered-build-1-console-jenkins](https://user-images.githubusercontent.com/558905/37997767-ff9d55d0-31e9-11e8-9ede-9afeff756247.png)
 ![2016-12-09-11_34_55-manage-jenkins-jenkins](https://user-images.githubusercontent.com/558905/37997763-ff645992-31e9-11e8-815e-cb8f28e43f9b.png)
 
 
