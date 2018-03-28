@@ -28,9 +28,9 @@ For now, we will test only manual “build now” triggers, so we do not need to
 
 Here, we show how to build the project via Maven. If you prefer to build via Gradle, see the next section.
 
-Here, we scroll down to “Build” -> click 2017-01-02-14_54_07-github-triggered-build-config-jenkins -> “Invoke Maven script”
+Here, we scroll down to “Build” -> click -> “Invoke Maven script”
 
-2017-01-03-13_52_27-github-triggered-build-config-jenkins
+![2017-01-03-13_52_27-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997322-7ee9d3ce-31e8-11e8-8723-0860b435c463.png)
 
 Choose the Maven version we have prepared in Step 3 and specify the goal “package”:
 
@@ -82,7 +82,7 @@ The Gradle task “jar” will create our executable JAR file.
 ![2017-01-02-16_01_49-github-triggered-build-jenkins](https://user-images.githubusercontent.com/558905/37997318-7ec3f73a-31e8-11e8-9cd4-c402f3bb4932.png)
 ![2017-01-02-16_03_16-github-triggered-build-3-console-jenkins](https://user-images.githubusercontent.com/558905/37997319-7ed18eae-31e8-11e8-92af-81a197c170d0.png)
 ![2017-01-03-00_17_19-ubuntu-trusty64-docker_openshift-install](https://user-images.githubusercontent.com/558905/37997320-7edddfd8-31e8-11e8-825e-b0926f897bd6.png)
-![2017-01-03-13_52_27-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997322-7ee9d3ce-31e8-11e8-8723-0860b435c463.png)
+
 ![2017-01-03-14_00_05-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997323-7ef84c38-31e8-11e8-97c1-062f7b538e79.png)
 ![2017-01-03-14_05_03-github-triggered-build-4-console-jenkins](https://user-images.githubusercontent.com/558905/37997324-7f03fca4-31e8-11e8-9708-7229e7f6a322.png)
 ![2017-01-03-14_42_22-github-triggered-build-4-console-jenkins](https://user-images.githubusercontent.com/558905/37997325-7f110e9e-31e8-11e8-96b5-a2dab68f1e2b.png)
