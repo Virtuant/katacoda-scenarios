@@ -1,5 +1,5 @@
 {
-    "icon":"fa-jenkins",
+    "icon": "fa-jenkins",
     "pathwayTitle": "Jenkins",
     "title": "Jenkins Pipelines",
     "description": "Learn how to use Jenkins Pipelines with Git and Maven",
