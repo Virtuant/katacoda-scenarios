@@ -8,20 +8,22 @@ After running Ansible, your new config should rollout and Nginx should be restar
 "hostIP" book.example.com
 </blockquote></pre>
 
-# REPLACE
-2\. Now, as before, log in to the virtual machine with `vagrant ssh`.
 
-3\. Once you've successfully logged in, run the following commands to formulate the test display:
+2\. Once you've added that, run the following commands to create the appropriate folder:
 
 `sudo mkdir -p /var/www/book.example.com`{{execute}}
 
+3\. Then, run the following to formulate the test display:
+
 `echo "<?php echo date('H:i:s'); " | sudo tee /var/www/book.example.com/index.php`{{execute}}
 
-4\. Always remember to exit out of your instances, before running further commands!
+4\. You should now verify that, the command was successful in copying to the file.
 
-`exit`{{execute HOST1}}
+`cat /var/www/book.example.com/index.php`{{execute}}
 
-5\. Finally, visit `http://book.example.com` in your browser. You should see the current time.
+5\. Finally, ping `http://book.example.com` in your terminal, using curl. You should see the current time:
+
+`curl http://book.example.com`{{execute}}
 
 Now, that is pretty cool, huh? I hope you're proud of yourself.
 

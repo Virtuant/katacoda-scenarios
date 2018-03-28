@@ -2,13 +2,11 @@
 
 1\. Now, you need to create an upstream definition in the configuration file so that nginx knows where to pass the request on to. Add the following at the **top** of your template before the opening server { line }:
 
-<pre class="file" data-filename="default.yml"><blockquote>
+<pre class="file" data-filename="default.yml" data-target="prepend"><blockquote>
 upstream php {
       server unix:/run/php/php7.2-fpm.sock;
 }
 </blockquote></pre>
-
->Note: Understand that php7.2 may not be right and you'll only know that by doing the next step.
 
 *[Important]* You'll need to confirm which socket your PHP-FPM pool is listening on. If the results are differ from the code sample above, you will have to update the code.
 
@@ -22,7 +20,6 @@ upstream php {
 
 >Note: Remember, pay close attention to whether ($) or (#) are used, because they indicate where the code is to be run.
 
-#REPLACE
 3\. Make sure that you run Ansible, to bring everything up to date.
 
 `ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
