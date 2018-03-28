@@ -1,3 +1,5 @@
+### Leave off for now
+
 Step 7: How to get the JAR file from the Jenkins Container to the Docker Host in case you have mapped the jenkins_home
 
 In case, you have taken the alternative (A) way or starting Jenkins with your own jenkins_home directory on the Docker host on step 1.2, you can retrieve the JAR file from the project file without copying the file from the container to the Docker host. In my case, the project folder is located on
