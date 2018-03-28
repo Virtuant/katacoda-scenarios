@@ -17,50 +17,55 @@ touch templates/nginx/default`{{execute}}
 3\. Edit `templates/nginx/default` and make sure that it contains the following content:
 
 <pre class="file" data-filename="provisioning/templates/nginx/default"><blockquote>
+upstream php {
+                server unix:/run/php/php7.2-fpm.sock;
+}
+
 server {
         server_name book.example.com;
         root /var/www/book.example.com;
-
         index index.php;
-
         location = /favicon.ico {
                 log_not_found off;
                 access_log off;
-	      }
+	}
         location = /robots.txt {
                 allow all;
                 log_not_found off;
                 access_log off;
-	      }
+	}
 
-	      location ~ /\. {
+	location ~ /\. {
                 deny all;
-	      }
- 	      location ~* /(?:uploads|files)/.*\.php$ {
+	}
+ 	location ~* /(?:uploads|files)/.*\.php$ {
                 deny all;
-	      }
+	}
 
-	      location / {
+	location / {
                 try_files $uri $uri/ /index.php?$args;
-	      }
+	}
         rewrite /wp-admin$ $scheme://$host$uri/ permanent;
 
         location ~*
 ^.+\.(ogg|ogv|svg|svgz|eot|otf|woff|mp4|ttf|rss|atom|jpg|jpeg|gif|png|ico|zip|tgz|gz|rar|bz2|doc|xls|exe|ppt|tar|mid|midi|wav|bmp|rtf)$ {
-                access_log off;
-                log_not_found off;
-	               expires max;
-	      }
+               access_log off;
+               log_not_found off;
+	       expires max;
+	}
 
-	      location ~ [^/]\.php(/|$) {
-                 fastcgi_split_path_info ^(.+?\.php)(/.*)$;
-                 if (!-f $document_root$fastcgi_script_name) {
-			                   return 404;
-		             }
-		             include fastcgi_params;
-		             fastcgi_index index.php;
-		             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-		             fastcgi_pass php;
-	      }
+	location ~ [^/]\.php(/|$) {
+                fastcgi_split_path_info ^(.+?\.php)(/.*)$;
+                if (!-f $document_root$fastcgi_script_name) {
+			return 404;
+		}
+		include fastcgi_params;
+		fastcgi_index index.php;
+		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+		fastcgi_pass php;
+	}
 }
+
 </blockquote></pre>
+
+>Note: The following configuration example is taken from the WordPress codex located at https://codex.wordpress.org/Nginx. This file is tricky! You may find that you'll need to alter it after copying and pasting it. 
