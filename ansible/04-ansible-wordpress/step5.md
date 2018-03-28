@@ -14,7 +14,7 @@ touch templates/nginx/default`{{execute}}
       template: src=templates/nginx/default dest=/etc/nginx/sites-available/default
 </blockquote></pre>
 
-3\. Edit `provisioning/templates/nginx/default` and make sure that it contains the following content:
+3\. Edit `templates/nginx/default` and make sure that it contains the following content:
 
 <pre class="file" data-filename="provisioning/templates/nginx/default"><blockquote>
 server {
