@@ -60,6 +60,8 @@ Clean Build - Console Ouptut
 
 This is showing that a clean build takes only ~6.4 sec, if all SW is downloaded already.
 
+----
+
 ### Check on History
 
 Check on the lifecycle of your build:
