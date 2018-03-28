@@ -22,7 +22,7 @@ Note also that we have chosen a branch different from the master branch (“jenk
 
 #### Configure Build Triggers
 
-For now, we will test only manual “build now” triggers, so we do not need to specify any build triggers. Build triggers will be tested in the next stage. You can either build with Maven or Gradle. If you prefer to build via Gradle, go to the Alternative B below.
+For now, we will test only manual “build now” triggers, so we do not need to specify any build triggers. Build triggers will be tested in the next stage. You can either build with Maven or Gradle. If you prefer to build via Gradle, go to the Alternative below.
 
 #### Alternative: Configure Maven Build
 
