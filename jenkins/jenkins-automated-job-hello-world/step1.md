@@ -27,24 +27,17 @@ Since we have checked “Install automatically” above, I expect that it will b
 
 #### Alternative: Prepare Gradle Usage
 
-If you later prefer to use Gradle instead of (or in addition to) Maven, you need to prepare its first usage. For Maven preparation, see Step 3, Alternative (b) below.
 
-On this wiki page about the Gradle plugin we find that we need to configure Gradle first:
+Scroll down to Gradle -> Add Gradle
 
 ![2016-12-09-11_35_26-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997254-612332b8-31e8-11e8-8317-76bbaa291e3c.png)
 
 
 ![2017-01-02-14_27_26-global-tool-configuration-jenkins](https://user-images.githubusercontent.com/558905/37997309-7e37eab0-31e8-11e8-9398-1b12e6fecffc.png)
 
-2016-12-09-11_35_26-global-tool-configuration-jenkins
+-> choose Version (Gradle 3.2.1 in this case)
 
-Scroll down to Gradle -> Add Gradle
-
-2017-01-02-14_27_26-global-tool-configuration-jenkins
-
--> choose Version (Gradle 3.2.1 in my case)
-
--> Add a name (“Gradle 3.2.1” in my case)
+-> Add a name (“Gradle 3.2.1” in this case)
 
 -> Save
 
