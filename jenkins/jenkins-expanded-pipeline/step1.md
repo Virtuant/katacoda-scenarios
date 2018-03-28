@@ -4,9 +4,11 @@ You probably want to check out the container. If so, do a `docker ps` and get th
 
 ![image](https://user-images.githubusercontent.com/558905/37946707-cfeaa10c-3154-11e8-99ba-c84bfc1a5d06.png)
 
+`docker ps`{{execute}}
+
 And then at the terminal, do a:
 
-`docker exec -it b36 /bin/bash`
+`docker exec -it b36 /bin/bash`{{execute}}
 
 were `b36` is the first few letters of the container id.
 
