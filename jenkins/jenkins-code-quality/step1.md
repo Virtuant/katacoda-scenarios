@@ -62,14 +62,12 @@ I need to access the files on
 
 file:///D:/veits/Vagrant/ubuntu-trusty64-docker_openshift-installer/jenkins_home/workspace/GitHub%20Triggered%20Build/build/reports/checkstyle/
 
+
 ![2016-12-28-15_48_11-index-von-d__veits_vagrant_ubuntu-trusty](https://user-images.githubusercontent.com/558905/38052015-edc0513c-329d-11e8-8df2-136a308eab49.png)
-![2016-12-28-15_48_11-index-von-d__veits_vagrant_ubuntu-trusty](https://user-images.githubusercontent.com/558905/38052768-4d9d79a2-32a0-11e8-9f2d-f2c6665423ac.png)
-2016-12-28-15_48_11-index-von-d__veits_vagrant_ubuntu-trusty64-docker_openshift-installer_jenkins_ho
+
 
 And on main.html we find:
 
 ![2016-12-28-15_49_04-main-html](https://user-images.githubusercontent.com/558905/38052017-edde386e-329d-11e8-9120-f29446c18c7c.png)
-![2016-12-28-15_49_04-main-html](https://user-images.githubusercontent.com/558905/38052769-4dbf0392-32a0-11e8-8b35-e810fe265585.png)
-2016-12-28-15_49_04-main-html
 
 Wow, it seems like I really need to clean the code…
