@@ -4,8 +4,7 @@ With Gradle, we can invoke the Checkstyle plugin as follows:
 
 #### Prepare Gradle for Performing Checkstyle
 
-Add to build.gradle:
-
+<pre class="file" data-filename="build.gradle" data-target="replace"><blockquote>
 apply plugin: 'checkstyle'
 
 tasks.withType(Checkstyle) {
@@ -14,36 +13,40 @@ tasks.withType(Checkstyle) {
  html.enabled = true
  }
 }
+</blockquote></pre>
 
 We have set ignoreFailures to true, since we do not want the Gradle build to fail for now. We are just interested in the Checkstyle reports for now.
 
 We can download an example Checkstyle configuration file from the Apache Camel repository, for example:
 
+```
 git clone <yourprojectURL>
 mkdir -p <yourprojectDir>/config/checkstyle/
 curl https://raw.githubusercontent.com/apache/camel/master/buildingtools/src/main/resources/camel-checkstyle.xml > <yourprojectDir>/config/checkstyle/checkstyle.xml
+```
 
-Step 3.2 (optional): Test Checkstyle locally
+#### (optional): Test Checkstyle locally
 
 If you have no Git and/or no Gradle installed, you may want to skip this step and directly proceed to the next step, so Jenkins is performing this task for you.
 
 We can locally invoke CheckStyle as follows:
 
-gradle check
+`gradle check`{{execute}}
 
-Step 3.3: Configure Jenkins to invoke Checkstyle
+#### Configure Jenkins to invoke Checkstyle
 
-Adding Gradle Checkstyle tests to be performed before each build is as simple as performing Step 4.1 and then adding “check” as a goal to the list of Jenkins Build Gradle Tasks:
+Adding Gradle Checkstyle tests to be performed before each build is as simple as performing this and then adding “check” as a goal to the list of Jenkins **Build Gradle** Tasks:
 
 On Dashboard -> Click on Project name -> Configure -> Build, add “check” before the jar task:
 
-2016-12-28-15_33_58-github-triggered-build-config-jenkins
+![2016-12-28-15_33_58-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/38052009-ed39b58c-329d-11e8-9b38-0a6fbf8e7e3c.png)
 
 Click Save.
 
 Now we verify the setting by either checking changed code into the SW repository (now is a good time to commit and push the changes performed in Step 4.1) or by clicking “Build now” -> Click on Build Link in Build History -> Console Output in the Project home:
 
-2016-12-28-15_39_37-github-triggered-build-725-console-jenkins2016-12-28-15_40_08-github-triggered-build-725-console-jenkins
+2016-12-28-15_39_37-github-triggered-build-725-console-jenkins
+2016-12-28-15_40_08-github-triggered-build-725-console-jenkins
 
 We have received a very long list of CheckStyle Errors, but, as configured, the build does not fail nevertheless.
 
@@ -67,7 +70,7 @@ Wow, it seems like I really need to clean the code…
 
 
 ![2016-12-28-22_47_06-update-center-jenkins](https://user-images.githubusercontent.com/558905/38052008-ed296fce-329d-11e8-99ec-248d7f5129a6.png)
-![2016-12-28-15_33_58-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/38052009-ed39b58c-329d-11e8-9b38-0a6fbf8e7e3c.png)
+
 ![2016-12-28-15_39_37-github-triggered-build-725-console-jenki](https://user-images.githubusercontent.com/558905/38052010-ed48593e-329d-11e8-809a-ac8325d15f90.png)
 ![2016-12-28-15_40_08-github-triggered-build-725-console-jenki](https://user-images.githubusercontent.com/558905/38052013-ed832154-329d-11e8-877b-d1e0aa71d0f7.png)
 ![2016-12-28-15_48_11-index-von-d__veits_vagrant_ubuntu-trusty](https://user-images.githubusercontent.com/558905/38052015-edc0513c-329d-11e8-8df2-136a308eab49.png)
