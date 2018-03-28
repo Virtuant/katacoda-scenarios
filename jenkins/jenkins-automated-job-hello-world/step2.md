@@ -1,4 +1,4 @@
-Step 5: Test manually triggered Build
+### Test Manually Triggered Build
 
 We can trigger a build manually via Jenkins -> drop-down right of “GitHub Triggered Build” -> Build Now.
 
@@ -38,7 +38,6 @@ This may take a while (~11 min in my case with a 100Mbps Internet connection):
 ![2017-01-02-15_48_17-github-triggered-build-1-console-jenkins](https://user-images.githubusercontent.com/558905/37997315-7ea48620-31e8-11e8-95e5-b0b7204e78c4.png)
 
 >Note: Yayy! This was the first successful Jenkins triggered Git download and Gradle build.
-
 
 
 #### Optional: Measure Time Consumption for Gradle clean Build
