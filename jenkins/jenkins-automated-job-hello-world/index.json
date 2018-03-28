@@ -8,7 +8,7 @@
     "details": {
         "steps": [
             {
-                "title": "Build a Job",
+                "title": "Setup Maven or Gradle",
                 "text": "step1.md"
             },
             {
@@ -18,6 +18,10 @@
             {
                 "title": "Start",
                 "text": "step3.md"
+            },
+            {
+                "title": "Start",
+                "text": "step4.md"
             }
         ],
         "intro": {
