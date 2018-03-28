@@ -1,7 +1,7 @@
 
 ### Create a Job
 
->Note: first go to the Manage Plugins and add the Github plugin as before.
+>Note: you may need to first go to the Manage Plugins and add the Github plugin as before.
 
 Now, either click on “Create new Jobs” or on New Item. Now enter an Item name and click on Freestyle Project and OK:
 
