@@ -30,7 +30,7 @@ Our plugin can now communicate with Docker. In this step, we'll configure how to
 2. For the Docker Image, use **benhall/dind-jenkins-agent**. This image is configured with a Docker client and available at https://hub.docker.com/r/benhall/dind-jenkins-agent/
 3. To enable builds to specify Docker as a build agent, set a label of **docker-agent**.
 4. Now add the Credentials you created earlier `jenkins /******`.
-4. Finally, go back up the page under Images and expand the **Container Settings** section by clicking the button. In the "Volumes" text box enter **/var/run/docker.sock:/var/run/docker.sock**
-5. Click Save.
+5. Finally, go back up the page under Images and expand the **Container Settings** section by clicking the button. In the "Volumes" text box enter **/var/run/docker.sock:/var/run/docker.sock**
+6. Click Save.
 
 Jenkins can now start a Build Agent as a container when required.
