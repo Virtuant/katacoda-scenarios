@@ -10,8 +10,7 @@ We now have a configured job that will build Docker Images based on our Git repo
 
 In the background, Jenkins is launching the container and connecting to it via SSH. Sometimes this can take a moment or two.
 
-2\. Go back to Terminal. You can watch the progress using `docker logs --tail=10 jenkins`{{execute}}
+2\. Go back to Terminal. You can watch the progress using `docker logs --tail=10 jenkins`{{execute}}.<br>
+3\. As the Jenkins slave is a container, you can view it using the Docker CLI tools `docker ps -a`{{execute}}.<br>
 
-3\. As the Jenkins slave is a container, you can view it using the Docker CLI tools `docker ps -a`{{execute}}
-
-It's normal for this to take a few moments to complete, please be patient. 
+It's normal for this to take a few moments to complete, please be patient.

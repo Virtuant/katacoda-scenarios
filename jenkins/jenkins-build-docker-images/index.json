@@ -3,8 +3,8 @@
     "pathwayTitle": "Jenkins",
     "title": "Build Docker Images with Jenkins",
     "description": "Learn how to build and deploy Docker images with Jenkins",
-    "difficulty": "Advanced",
-    "time": "15-20 minutes",
+    "difficulty": "Intermediate",
+    "time": "25-30 minutes",
     "details": {
         "steps": [
             {
