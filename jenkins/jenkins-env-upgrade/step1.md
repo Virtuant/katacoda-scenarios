@@ -11,6 +11,6 @@ All plugins and configurations get persisted to the host at _/root/jenkins_. Por
 
 #### Load Dashboard
 
-You can load the Jenkins' dashboard via either the Dashboard (right of Terminal) or through the following URL https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+You can load the Jenkins' dashboard via either the Dashboard (right of Terminal, may have to wait a couple minutes) or through the following URL https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
 In the next steps, you'll use the dashboard to configure the plugins and start building Docker Images.
