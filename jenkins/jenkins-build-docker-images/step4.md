@@ -6,8 +6,8 @@ This step creates a new project which Jenkins will build via our new agent. The 
 
 1\. On the Jenkins dashboard, select **Create new jobs**<br>
 2\. Give the job a friendly name such as **Jenkins Job** and select **Freestyle project** and press **OK**.<br>
-3\. The build will depend on having access to Docker. Using the "Restrict where this project can be run" we can define the label we set of our configured Docker agent. Then set "Label Expression" to **docker-agent**. You should have a configuration of "Label is serviced by no nodes and 1 cloud".<br>
-4\. Under Source Code Management, select the Repository type as **Git** and set the Repository to be **https://github.com/katacoda/katacoda-jenkins-demo**.<br>
+3\. The build will depend on having access to Docker. Using the **Restrict where this project can be run** we can define the label we set of our configured Docker agent. Then set **Label Expression** to **docker-agent**. You should have a configuration of **Label is serviced by no nodes and 1 cloud**.<br>
+4\. Under **Source Code Management**, select the Repository type as **Git** and set the Repository to be **`https://github.com/katacoda/katacoda-jenkins-demo`**.<br>
 
 >Note: If Git is not in the Source Code Management list, you need to install the Git plugin as mentioned earlier.
 
@@ -29,3 +29,5 @@ The first stage lists all the files in the directory which will be built. When c
 At this point, or in an additional step, you could execute a `docker push` to upload the image to a centralised Docker Registry.
 
 7\. Our build is now complete. Click **Save**.
+
+Okay, now comes the fun part! Let's go!

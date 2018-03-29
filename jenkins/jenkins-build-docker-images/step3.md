@@ -6,17 +6,18 @@ The plugin treats Docker as a cloud provider, spinning up containers as and when
 
 #### Task: Configure Security
 
-1\. Click on Credentials (on the left side)
+1\. Click on Credentials (on the left side)<br>
 
 ![image](https://user-images.githubusercontent.com/558905/37984825-53a50ac6-31c5-11e8-8d88-76610aa7426e.png)
 
-2\. Select the `global` option, then the `This credential domain is empty. How about *adding some credentials*?` prompt.
-3\. Jenkins uses SSH to communicate with agents. Add a new set of "Credentials". The username is **jenkins** and the password is **jenkins**:
+2\. Select the **_(global)** option, then click the `This credential domain is empty. How about`*`adding some credentials`*`?` embedded hyperlink.<br>
+
+3\. Jenkins uses SSH to communicate with agents. Add a new set of "Credentials". The username is **jenkins** and the password is **jenkins**:<br>
 
 ![image](https://user-images.githubusercontent.com/558905/37985129-fd391d84-31c5-11e8-8954-44a13e2c98c3.png)
 
-4\. Click the `OK` button
-5\. The, click the `Back to credential domains` hyperlink.
+4\. Click the **OK** button<br>
+5\. Then, click the **Back to credential domains** hyperlink to go back to the main page.
 
 #### Task: Configure Plugin
 
@@ -33,11 +34,12 @@ This step configures the plugin to communicate with a Docker host/daemon.
 
 Our plugin can now communicate with Docker. In this step, we'll configure how to launch the Docker Image for the agent.
 
-1\. Using the Images dropdown, select **Add Docker Template** dropdown.<br>
-2\. For the Docker Image, use **benhall/dind-jenkins-agent**. This image is configured with a Docker client and available at https://hub.docker.com/r/benhall/dind-jenkins-agent/<br>
+1\. Using the Images dropdown, select **Add Docker Template** dropdown and click on **Docker Template**.<br>
+2\. For the Docker Image, use **benhall/dind-jenkins-agent**. This image is configured with a Docker client and available at `https://hub.docker.com/r/benhall/dind-jenkins-agent/`.<br>
 3\. To enable builds to specify Docker as a build agent, set a label of **docker-agent**.<br>
-4\. Select the previously created credentials ID in the drop-down list left of the "Add" button.<br>
-6\. Finally, expand the Container Settings section by clicking the button. In the "Volumes" text box enter **/var/run/docker.sock:/var/run/docker.sock**<br>
+4\. Select the previously created credentials ID in the drop-down list left of the **Add** button.<br>
+6\. Finally, scroll up a bit to expand the **Container Settings** section, by clicking the button labeled **Container Settings**.<br>
+7\. In the **Volumes** text box enter **/var/run/docker.sock:/var/run/docker.sock**<br>
 7\. Click **Save**.<br>
 
-Jenkins can now start a Build Agent as a container when required.
+Jenkins can now start a Build Agent as a container when required. Great job! Next?!
