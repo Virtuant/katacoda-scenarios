@@ -29,7 +29,7 @@ Our plugin can now communicate with Docker. In this step, we'll configure how to
 
 1. Using the Images dropdown, select **Add Docker Template** dropdown.
 2. For the Docker Image, use **benhall/dind-jenkins-agent**. If you want to look at it, the image is configured with a Docker client and available [here](https://hub.docker.com/r/benhall/dind-jenkins-agent).
-3. To enable builds to specify Docker as a build agent, set a **Label** of **docker-agent**.
+3. To enable builds to specify Docker as a build agent, set the **Labels** to **docker-agent**.
 4. Now add the Credentials you created earlier `jenkins/******`.
 5. Finally, go back up the page under Images and expand the **Container Settings** section by clicking the button. In the "Volumes" text box enter **/var/run/docker.sock:/var/run/docker.sock**
 6. Click Save.
