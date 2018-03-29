@@ -1,8 +1,3 @@
-
-Go to the Jenkins console (Dashboard to the right):
-
-http://localhost:8080 ----------->
-	
 Click on the New Item link.
 
 ![image021](https://user-images.githubusercontent.com/558905/37422371-78187f48-2791-11e8-964d-1fc87349a14b.jpg)
