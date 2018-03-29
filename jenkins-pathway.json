@@ -4,18 +4,11 @@
   "description": "Jenkins pathway",
   "courses": [
     {
-      "title": "Create a Job in Jenkins",
-      "description": "Learn how to deploy a Job with Jenkins",
-      "course_id": "jenkins-job",
+      "title": "Build Docker Images with Jenkins",
+      "description": "Learn how to build and deploy Docker images with Jenkins",
+      "course_id": "jenkins-build-docker-images",
       "pathway_id": "jenkins",
-      "id": "jenkins-job"
-    },
-    {
-      "title": "Add Development Metrics with Jenkins",
-      "description": "Learn how to do dev metrics in Jenkins",
-      "course_id": "jenkins-development-metrics",
-      "pathway_id": "jenkins",
-      "id": "jenkins-development-metrics"
+      "id": "jenkins-build-docker-images"
     },
     {
       "title": "Create a Pipelne in Jenkins",
@@ -39,18 +32,25 @@
       "id": "jenkins-env-upgrade-id"
     },
     {
-      "title": "Build Docker Images with Jenkins",
-      "description": "Learn how to build and deploy Docker images with Jenkins",
-      "course_id": "jenkins-build-docker-images",
-      "pathway_id": "jenkins",
-      "id": "jenkins-build-docker-images"
-    },
-    {
       "title": "Jenkins Automation of a Job",
       "description": "Learn how to do a hello world automated by Jenkins",
       "course_id": "jenkins-automated-job-hello-world",
       "pathway_id": "jenkins",
       "id": "jenkins-automated-job-hello-world"
-    }
+    },
+    {
+      "title": "Add Development Metrics with Jenkins",
+      "description": "Learn how to do dev metrics in Jenkins",
+      "course_id": "jenkins-development-metrics",
+      "pathway_id": "jenkins",
+      "id": "jenkins-development-metrics"
+    },
+    {
+      "title": "Create a Job in Jenkins",
+      "description": "Learn how to deploy a Job with Jenkins",
+      "course_id": "jenkins-job",
+      "pathway_id": "jenkins",
+      "id": "jenkins-job"
+    },
   ]
 }
