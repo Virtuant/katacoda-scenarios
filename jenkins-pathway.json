@@ -43,7 +43,7 @@
       "description": "Learn how to build and deploy Docker images with Jenkins",
       "course_id": "jenkins-build-docker-images",
       "pathway_id": "jenkins",
-      "external_link": "https://katacoda.com/virtuant/courses/jenkins/jenkins-build-docker-images"
+      "id": "jenkins-build-docker-images"
     },
     {
       "title": "Jenkins Automation of a Job",
