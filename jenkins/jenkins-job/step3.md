@@ -4,6 +4,8 @@ Click on the New Item link.
 
 Enter SimpleGreeting for the project name.
 
+>Note: you may need to install `Github plugin` first.
+
 Select Maven Project as the project type.
 
 ![image023](https://user-images.githubusercontent.com/558905/37422373-78430e5c-2791-11e8-8520-049501cf5a5a.png)
