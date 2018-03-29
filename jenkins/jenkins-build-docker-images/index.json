@@ -34,7 +34,8 @@
         ],
         "intro": {
             "text": "intro.md",
-            "code": "env-init.sh"
+            "code": "env-init.sh",
+            "credits": "https://github.com/BenHall"
         },
         "finish": {
             "text": "finish.md"
