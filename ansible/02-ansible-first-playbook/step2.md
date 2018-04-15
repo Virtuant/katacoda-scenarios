@@ -24,7 +24,7 @@
 
 4\. Now, "provision" your newest changes to Ansible on the machine by executing:
 
-`$ ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
 
 You should see output that looks like the following:
 
@@ -64,4 +64,4 @@ default         : ok=2    changed=0    unreachable=0    failed=0
 
 7\. Run it! It will no longer say `TASK: [ping ]`. Instead, it will show the description that you provided.
 
-`$ ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}

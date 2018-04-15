@@ -3,7 +3,7 @@ At this point, you can begin to test your instance, to make sure that everything
 
 1\. First, test to ensure that PHP has been installed correctly:
 
-`$ which php`{{execute HOST1}}
+`which php`{{execute HOST1}}
 
 Output:
 
@@ -13,7 +13,7 @@ Output:
 
 2\. Secondly, look to make sure Nginx has been installed accordingly:
 
-`$ which nginx`{{execute HOST1}}
+`which nginx`{{execute HOST1}}
 
 Output:
 
@@ -23,7 +23,7 @@ Output:
 
 3\. Lastly, run the same command to check MySQL installation:
 
-`$ which mysqld`{{execute HOST1}}
+`which mysqld`{{execute HOST1}}
 
 Output:
 

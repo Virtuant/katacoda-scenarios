@@ -21,7 +21,7 @@
 
 3\. Now, run the playbook yet again, and see that it will collapse all output for that one task into one block.
 
-`$ ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
 
 Output:
 

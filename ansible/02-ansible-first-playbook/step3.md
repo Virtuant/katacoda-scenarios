@@ -16,7 +16,7 @@
 
 2\. If you provision this changes again, it should attempt to install the `php5` package.
 
-`$ ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
 
 Unfortunately, it fails, giving a message such as the following:
 
@@ -56,7 +56,7 @@ visible above. Please fix these errors and try again.
 
 4\. Once you’ve entered this change, run the playbook again. This time, Ansible should tell you that PHP has been installed successfully:
 
-`$ ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
 
 >Note: This installation process may take up to a minute, so please be patient.
 
@@ -81,7 +81,7 @@ visible above. Please fix these errors and try again.
 
 6\. As with the `php5-cli` package, this should show up in your Ansible output when you run the playbook once again:
 
-`$ ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
 
 Output:
 
