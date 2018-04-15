@@ -26,8 +26,7 @@
     - name: Create project folder
       file: dest=/var/www/book.example.com state=directory
     - name: Copy WordPress files
-      command: cp -a /tmp/wordpress/. /var/www/book.example.com
-      creates=/var/www/book.example.com/wp-settings.php
+      command: cp -a /tmp/wordpress/. /var/www/book.example.com creates=/var/www/book.example.com/wp-settings.php
 </blockquote></pre>
 
 

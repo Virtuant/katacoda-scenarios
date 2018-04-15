@@ -28,8 +28,6 @@ https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
 ![image007](https://user-images.githubusercontent.com/558905/37434287-8642954e-27b5-11e8-928a-9bd3ce2119ce.png)
 
-If asked to log in, use **wasadmin** for user and password.
-
 >Note: At this point, Jenkins should restart itself. If it doesn't return to the main screen within a few minutes, you may need to use the **Services** portion of the **Windows Control Panel** to restart the service manually. Consult your instructor, in case of difficulty.
 
 8\. Click **Back to Dashboard**.
