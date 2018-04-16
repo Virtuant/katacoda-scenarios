@@ -2,9 +2,9 @@
 
 1\. Install Ansible on our host machine
 
-`apt-get install -y software-properties-common &&\
-apt-add-repository -y ppa:ansible/ansible &&\
-apt-get -y update &&\
+`apt-get update && \
+apt-get install -y software-properties-common && \
+apt-add-repository -y ppa:ansible/ansible && \
 apt-get install -y ansible`{{execute HOST1}}
 
 
