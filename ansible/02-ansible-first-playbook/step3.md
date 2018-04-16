@@ -37,7 +37,7 @@ Ansible failed to complete successfully. Any error output should be
 visible above. Please fix these errors and try again.
 ```
 
-3\. Ansible basically needs to sudo this command! However, let's add it to the playbook in such a way that the permission granted, can be reused by other commands. You'll do that by adding `become: true` to our playbook, like this:
+3\. Ansible basically needs to `sudo` this command! However, let's add it to the playbook in such a way that the permission granted can be reused by other commands. You'll do that by adding `become: true` to our playbook, like this:
 
 <pre class="file" data-filename="playbook.yml" data-target="replace"><blockquote>
 
@@ -51,8 +51,6 @@ visible above. Please fix these errors and try again.
       apt: name=php5-cli state=present update_cache=yes
 
 </blockquote></pre>
-
->Note: This installation process may take up to a minute, so please be patient.
 
 4\. Once you’ve entered this change, run the playbook again. This time, Ansible should tell you that PHP has been installed successfully:
 
