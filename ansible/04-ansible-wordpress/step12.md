@@ -35,7 +35,6 @@ exit`{{execute}}
       when: db_exist.rc > 0
 </blockquote></pre>
 
-#REPLACE
 5\. Make sure to add the above lines of code to your playbook, but once you're done, run Ansible to finialize our changes. Pay close attention to which tasks are skipped!
 
 `ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}

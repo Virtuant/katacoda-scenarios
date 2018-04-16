@@ -4,7 +4,7 @@
 
 `cp ~/.ssh/id_rsa.pub /shared_volume/ansible_id_rsa.pub`{{execute HOST1}}
 
-> In situations, where no shared_volume is available, it is sufficient to copy the content of the file to the clipboard, so we can paste it to the appropriate file on the target.
+> In situations where no `shared_volume` is available, it is sufficient to copy the content of the file to the clipboard, so we can paste it to the appropriate file on the `target`.
 
 #### Append public key to target's authorized_keys file
 

@@ -1,6 +1,5 @@
 ## Making It Idempotent
 
-# REPLACE
 1\. Go ahead and run Ansible again, but for the last time in this lab:
 
 `ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
