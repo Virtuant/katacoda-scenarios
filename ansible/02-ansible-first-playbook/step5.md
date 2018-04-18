@@ -13,7 +13,7 @@
     - name: Install required packages
       apt: name={{item}} state=present update_cache=yes
       with_items:
-        - php5-cli
+        - php-cli
         - nginx
         - mysql-server
 

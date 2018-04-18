@@ -10,11 +10,11 @@
     - name: Make sure that we can connect to the machine
       ping:
     - name: Install PHP
-      apt: name=php5-cli state=present update_cache=yes
+      apt: name=php-cli state=present update_cache=yes
 
 </blockquote></pre>
 
-2\. If you provision this changes again, it should attempt to install the `php5` package.
+2\. If you provision this changes again, it should attempt to install the `php-cli` package.
 
 `ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
 
@@ -48,7 +48,7 @@ visible above. Please fix these errors and try again.
     - name: Make sure that we can connect to the machine
       ping:
     - name: Install PHP
-      apt: name=php5-cli state=present update_cache=yes
+      apt: name=php-cli state=present update_cache=yes
 
 </blockquote></pre>
 
@@ -69,7 +69,7 @@ visible above. Please fix these errors and try again.
     - name: Make sure that we can connect to the machine
       ping:
     - name: Install PHP
-      apt: name=php5-cli state=present update_cache=yes
+      apt: name=php-cli state=present update_cache=yes
     - name: Install nginx
       apt: name=nginx state=present
     - name: Install mySQL
@@ -77,7 +77,7 @@ visible above. Please fix these errors and try again.
 
 </blockquote></pre>
 
-6\. As with the `php5-cli` package, this should show up in your Ansible output when you run the playbook once again:
+6\. As with the `php-cli` package, this should show up in your Ansible output when you run the playbook once again:
 
 `ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
 
