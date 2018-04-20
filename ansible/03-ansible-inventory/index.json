@@ -35,12 +35,9 @@
 			"host01": [{
 				"file": "playbook.yml",
 				"target": "/home/scrapbook/tutorial"
-			}]
-		}
-
-
-	},
-
+		}]
+	}
+},
 	"environment": {
 		"showdashboard": true,
 		"dashboards": [{
@@ -49,7 +46,7 @@
 		}],
 		"uilayout": "editor-terminal",
 		"uimessage1": "\u001b[32mYour Interactive Host Terminal.\u001b[m\r\n"
-	},
+		},
 
 	"backend": {
 		"imageid": "ansible"
