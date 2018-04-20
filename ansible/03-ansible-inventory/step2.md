@@ -3,11 +3,11 @@ To run an ad-hoc task, like the one we saw using a single module, use the ansibl
 
 1\. So, now running the previous command, looks like this:
 
-`ansible all –i myhosts –m ping`{{execute HOST1}}
+`ansible all –i myhosts –m ping`{{execute}}
 
 2\. Check the current date and time of the remote host, like this:
 
-`ansible group1 -i myhosts -m command -a date`{{execute HOST1}}
+`ansible group1 -i myhosts -m command -a date`{{execute}}
 
 >Note: If the command fails the first time, try again in few seconds, as the test host may not yet have been provisioned.
 

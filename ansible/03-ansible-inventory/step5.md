@@ -27,7 +27,7 @@ Update the playbook to remove `mysql-server-5.6`.
 
 Then re-run the playbook:
 
-`ansible-playbook -i myhosts playbook.yml`{{execute HOST1}}
+`ansible-playbook -i myhosts playbook.yml`{{execute}}
 
 Pretty cool, huh?
 

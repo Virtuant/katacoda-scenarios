@@ -15,7 +15,7 @@ This playbook runs one task, on our one host, `host01`. Note the indentation - i
     - name: Install required packages
       apt: name={{item}} state=present update_cache=yes
       with_items:
-        - php5-cli
+        - php-cli
         - nginx
         - mysql-server
 
@@ -23,11 +23,11 @@ This playbook runs one task, on our one host, `host01`. Note the indentation - i
 
 The above code is already in a file called `playbook.yml`. Let's check the contents:
 
-`cat playbook.yml`{{execute HOST1}}
+`cat playbook.yml`{{execute}}
 
 To run the playbook, use the `ansible-playbook` command with the inventory file `myhosts`:
 
-`ansible-playbook -i myhosts playbook.yml`{{execute HOST1}}
+`ansible-playbook -i myhosts playbook.yml`{{execute}}
 
 Ansible should return the result `'Changed=1'`, indicating that the package was installed.
 

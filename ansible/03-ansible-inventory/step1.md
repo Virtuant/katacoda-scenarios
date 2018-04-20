@@ -14,10 +14,10 @@ We can run that command ourselves, but first we gotta create an inventory file. 
 
 2\. Then, add the host to the group, while also passing the username to use for SSH access, as an inventory parameter.
 
-`echo "host01 ansible_ssh_user=ubuntu" >> myhosts`{{execute HOST1}}
+`echo "host01 ansible_ssh_user=ubuntu" >> myhosts`{{execute}}
 
 3\. You can obviously look at the editor, but of course, you can also use your terminal to verify that `myhosts` has been modified correctly, also:
 
-`cat myhosts`{{execute HOST1}}
+`cat myhosts`{{execute}}
 
 So, now we can move on to running that command!
