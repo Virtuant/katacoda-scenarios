@@ -22,7 +22,7 @@
 				"title": "Ensure a Package is Removed",
 				"text": "step5.md"
 			}
-		 ],
+		 	],
 
 			"intro": {
 				"text": "intro.md",
@@ -31,7 +31,23 @@
 
 			"finish": {
 				"text": "finish.md"
-				}
+			},
+			"assets": {
+        "client": [
+      {
+        "file": "playbook-client.yml",
+        "target": "~/"
+      }
+    	],
+    		"host01": [
+      {
+        "file": "playbook-host.yml",
+        "target": "~/"
+      }
+    ]
+  }
+
+
 	},
 
 		"environment": {
