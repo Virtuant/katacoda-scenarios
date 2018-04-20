@@ -1,4 +1,3 @@
-## Prepare Remote Connection: Create SSH Key on Ansible Host
 
 In order to be able to connect from the Ansible container to the target container, we need to create a private + public SSH key pair on Ansible and copy the public key to the target machine.
 

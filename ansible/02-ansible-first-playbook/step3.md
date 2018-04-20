@@ -1,4 +1,3 @@
-#### Installation Additions
 
 1\. Previously, you used the `ping` module to connect to your machine. This time, you’ll be using the `apt` module to install something on that machine:
 

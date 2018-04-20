@@ -1,7 +1,7 @@
-## [Optional] MySQL Security
+#### [Optional] MySQL Security
 #### Creating a New Config File
 
->Note: SKIP THIS PAGE, if you are not doing the security portion of MySQL configuration. 
+>Note: SKIP THIS PAGE, if you are not doing the security portion of MySQL configuration.
 
 This is actually quite a lot of work! At this point, your installation is secure, but you’re not quite done. Like we learned, Ansible expects to be able to run database commands without a password, which was fine when you didn’t have a root password, but will fail now that you do. You need to write out a new config file (located at `/root/.my.cnf`) containing the new root password so that the root user can run MySQL commands automatically.
 

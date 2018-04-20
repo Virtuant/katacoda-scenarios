@@ -1,4 +1,3 @@
-## Prepare Remote Target: Install SSH
 
 1\. Let us exit from the ansible container:
 

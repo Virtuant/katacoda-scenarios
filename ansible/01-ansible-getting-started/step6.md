@@ -1,4 +1,3 @@
-## Connect from Ansible host to Target
 
 1\. Now, since the target knows about the Ansible host's public SSH key, we are ready to connect from the Ansible host to our target:
 

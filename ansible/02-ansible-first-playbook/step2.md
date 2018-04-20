@@ -1,4 +1,3 @@
-#### Bare Essentials Playbook
 
 1\. Now, tell Ansible to run on all available hosts by adding - hosts: all to our new playbook. After adding these lines, your playbook should now look like this:
 

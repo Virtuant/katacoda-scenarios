@@ -1,4 +1,4 @@
-## Ansible Ensures
+
 A fundamental principle of Ansible is that it ensures a desired state.
 
 From the previous example:

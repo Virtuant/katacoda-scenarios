@@ -1,4 +1,4 @@
-## Ensure a Package is Removed
+
 The apt module allows you to specify the state you wish the package to be in.
 
 If you want a specific version, you append it to the package name, for example:

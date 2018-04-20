@@ -1,4 +1,3 @@
-#### Playbook Simplification
 
 1\. The first thing to do is to delete the `ping` task. Go to your playbook in the editor now, highlight, then and erase the `ping` task entirely. Be careful not to erase, or cripple the syntax of remaining code.
 

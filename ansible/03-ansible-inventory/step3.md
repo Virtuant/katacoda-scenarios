@@ -1,4 +1,3 @@
-## Running a Playbook
 
 What is a play?
 A play is a set of tasks mapped to a set of hosts. Plays are organised inside a text file called a playbook. We just learned about playbooks in our last lab.

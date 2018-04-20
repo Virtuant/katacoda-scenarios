@@ -1,4 +1,3 @@
-## Remotely Perform a Shell Command on the Target
 
 Now we can perform the first remote shell command!
 

@@ -1,4 +1,3 @@
-## Installing Ansible
 
 1\. Install Ansible on our host machine
 

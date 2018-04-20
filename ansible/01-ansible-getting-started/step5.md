@@ -1,4 +1,3 @@
-## Prepare Remote Connection: Transfer SSH public Key to Target
 
 1\. Let us copy the public key of the Ansible host to a shared folder, we have prepared beforehand.
 

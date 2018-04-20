@@ -1,4 +1,3 @@
-## Check Ansible Version
 
 1\. As soon as the ansible container are seen in the docker ps command, we should be able to connect to the Ansible container using our definition from the previous step:
 

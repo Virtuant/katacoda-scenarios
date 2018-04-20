@@ -1,4 +1,4 @@
-## Installing Dependencies
+
 Like we've already seen, you start by creating a simple playbook that shows that Ansible can run against your host machine.
 
 We've already created a playbook.yml file, but it won't show up until you add code to it.

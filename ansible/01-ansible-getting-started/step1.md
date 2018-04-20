@@ -1,4 +1,3 @@
-## Prepare Environment for easier Toggling between Ansible and Target System
 
 To make our lives easier later, let us define the commands "a" and "t" for quickly connecting from the base system to the ansible and target container:
 
