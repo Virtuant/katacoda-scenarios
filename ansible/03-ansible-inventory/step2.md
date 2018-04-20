@@ -29,4 +29,7 @@ When you run the command above, Ansible establishes an SSH connection with the r
 >Hint: When was the last time anybody updated this thing?
 
 
-```ansible all –i myhosts –m ping```{{execute}}
+`ansible all –i 'myhosts' –m ping`{{execute}}
+`ansible all –i myhosts –m command -a ping`{{execute}}
+`ansible all –i 'myhosts,' –m ping`{{execute}}
+`ansible all –i 'myhosts' –m command -a ping`{{execute}}
