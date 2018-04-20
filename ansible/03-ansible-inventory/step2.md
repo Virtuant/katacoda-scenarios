@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+## Running Ad-hoc Tasks
+>>>>>>> eebf148b90b21cacf997f756664efce0e319b27c
 
 To run an ad-hoc task, like the one we saw using a single module, use the ansible command.
 
