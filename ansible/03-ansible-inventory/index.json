@@ -34,7 +34,7 @@
 		"assets": {
 			"host01": [{
 				"file": "playbook.yml",
-				"target": "~/home/scrapbook/tutorial"
+				"target": "/home/scrapbook/tutorial"
 			}]
 		}
 
