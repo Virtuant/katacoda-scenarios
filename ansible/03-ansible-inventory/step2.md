@@ -5,6 +5,9 @@ To run an ad-hoc task, like the one we saw using a single module, use the ansibl
 
 `ansible all –i myhosts –m ping`{{execute}}
 
+`ansible all –\i myhosts –\m ping`{{execute HOST1}}
+
+
 2\. Check the current date and time of the remote host, like this:
 
 `ansible group1 -i myhosts -m command -a date`{{execute}}
