@@ -27,17 +27,16 @@
 			"text": "intro.md",
 			"code": "env-init.sh"
 		},
-
-		"finish": {
-			"text": "finish.md"
-		},
 		"assets": {
 			"host01": [{
 				"file": "playbook.yml",
 				"target": "/home/scrapbook/tutorial"
 		}]
-	}
-},
+		},
+		"finish": {
+			"text": "finish.md"
+		}
+	},
 	"environment": {
 		"showdashboard": true,
 		"dashboards": [{
