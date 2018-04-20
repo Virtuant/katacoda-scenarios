@@ -1,4 +1,5 @@
 ## Running Ad-hoc Tasks
+
 To run an ad-hoc task, like the one we saw using a single module, use the ansible command.
 
 1\. So, now running the previous command, looks like this:
