@@ -35,7 +35,7 @@ ok: [default]
 
 TASK: [Install required packages]
 *********************************************
-ok: [default] => (item=php5-cli,nginx,mysql-server-5.6)
+ok: [default] => (item=php-cli,nginx,mysql-server)
 
 PLAY RECAP
 ********************************************************************
