@@ -3,7 +3,7 @@ The apt module allows you to specify the state you wish the package to be in.
 
 If you want a specific version, you append it to the package name, for example:
 
-<pre class="file" data-filename="playbook.yml"><blockquote>
+<pre class="file" data-filename="playbook.yml" data-target="replace"><blockquote>
 
 ---
 - hosts: host01

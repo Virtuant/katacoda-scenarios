@@ -9,6 +9,14 @@ To run an ad-hoc task, like the one we saw using a single module, use the `ansib
 
 2\. When asked to authenticate the host, simply type `yes`, followed by `ENTER`
 
+```
+Output:
+host01 | success >> {
+    "changed": false,
+    "ping": "pong"
+}
+```
+
 3\. Then, you can check the current date and time of the remote host, like this:
 
 `ansible group1 -i myhosts -m command -a date`{{execute}}
