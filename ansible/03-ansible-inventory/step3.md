@@ -5,6 +5,13 @@ A play is a set of tasks mapped to a set of hosts. Plays are organised inside a 
 Running a playbook
 This playbook runs one task, on our one host, `host01`. Note the indentation - it's important for how the file gets parsed. Blank lines are ignored, but makes the playbook more readable for humans.
 
+1\. Firstly, create a new folder and title it `playbook.yml`, like this:
+
+`cd /home/scrapbook/tutorial`{{execute}}
+`touch playbook.yml`{{execute}}
+
+2\. Now, rather than copying this code into your playbook automatically, try to copy it in manual in pieces, taking time to understand each component.
+
 <pre class="file" data-filename="playbook.yml"><blockquote>
 
 ---
@@ -20,11 +27,11 @@ This playbook runs one task, on our one host, `host01`. Note the indentation - i
 
 </blockquote></pre>
 
-The above code is already in a file called `playbook.yml`. Let's check the contents:
+3\.The above code is already in a file called `playbook.yml`. Let's check the contents:
 
 `cat playbook.yml`{{execute}}
 
-To run the playbook, use the `ansible-playbook` command with the inventory file `myhosts`:
+4\. To run the playbook, use the `ansible-playbook` command with the inventory file `myhosts`:
 
 `ansible-playbook -i myhosts playbook.yml`{{execute}}
 

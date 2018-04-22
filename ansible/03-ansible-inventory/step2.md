@@ -1,15 +1,15 @@
-<<<<<<< HEAD
-=======
-## Running Ad-hoc Tasks
->>>>>>> eebf148b90b21cacf997f756664efce0e319b27c
 
-To run an ad-hoc task, like the one we saw using a single module, use the ansible command.
+To run an ad-hoc task, like the one we saw using a single module, use the `ansible` command.
 
 1\. So, now running the previous command, looks like this:
 
 `ansible all –i myhosts –m ping`{{execute}}
 
-2\. Check the current date and time of the remote host, like this:
+>Note: If the above command fails, double check the actually command copied to the terminal, make need adjustments and run it again.
+
+2\. When asked to authenticate the host, simply type `yes`, followed by `ENTER`
+
+3\. Then, you can check the current date and time of the remote host, like this:
 
 `ansible group1 -i myhosts -m command -a date`{{execute}}
 
@@ -26,17 +26,8 @@ To run an ad-hoc task, like the one we saw using a single module, use the ansibl
 
 When you run the command above, Ansible establishes an SSH connection with the remote host, executes the command, captures the output and returns it.
 
-3\. Now, use this same command structure and run a command of your own!
+4\. [Optional ]Now, use this same command structure and run a command of your own!
 
 `ansible group1 -i "inventory" -m "module" -a "module-argument"`
 
 >Hint: When was the last time anybody updated this thing?
-
-
-`ansible all –i 'myhosts' –m ping`{{execute}}
-
-`ansible all –i myhosts –m command -a ping`{{execute}}
-
-`ansible all –i 'myhosts,' –m ping`{{execute}}
-
-`ansible all –i 'myhosts' –m command -a ping`{{execute}}
