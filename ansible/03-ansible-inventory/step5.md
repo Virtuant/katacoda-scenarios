@@ -12,7 +12,7 @@ The apt module allows you to specify the state you wish the package to be in.
     - name: Install required packages
       apt: name={{item}} state=present update_cache=yes
       with_items:
-        - php5-cli
+        - php-cli
         - nginx
         - mysql-server-5.6
 
