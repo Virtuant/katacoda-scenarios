@@ -18,7 +18,7 @@ But that's not very realistic! Besides, why did we go to all that trouble to cre
 
 3\. So, run another ad-hoc command, but this time run it using the inventory file you created:
 
-`ansible group1 -i 'myhosts,' -m command -a date`{{execute HOST01}}
+`ansible group1 -i myhosts -m command -a date`{{execute}}
 
 ##### Let's break down the command, you just ran:
 - `group1` group to run against. You can also use the name of an individual host, so `host01` would work just as well for this example.

@@ -50,4 +50,4 @@ What happened here?
 
 `ansible-doc apt`{{execute}}
 
-To close the documentation, enter q in the terminal.
+To close the documentation, enter `q` in the terminal.
