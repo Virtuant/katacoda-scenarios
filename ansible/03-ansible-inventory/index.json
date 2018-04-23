@@ -45,6 +45,6 @@
 	},
 
 	"backend": {
-		"imageid": "ansible"
+		"imageid": "docker"
 	}
 }
