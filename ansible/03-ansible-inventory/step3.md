@@ -9,7 +9,9 @@ This playbook runs one task, on our one host, `host01`. Note the indentation - i
 
 `touch playbook.yml`{{execute}}
 
-2\. Now, rather than copying this code into your playbook automatically, try to copy it in manual in pieces, taking time to understand each component.
+2\. Now, rather than copying this code into your playbook automatically, copy it in manually, taking time to understand each component. Simply click on the `playboook.yml` tab above your text editor and begin moving the following code over.
+
+>Note: Katacoda will save the lines of code you add to the file automatically.
 
 <pre class="file" data-filename="playbook.yml"><blockquote>
 
@@ -26,7 +28,7 @@ This playbook runs one task, on our one host, `host01`. Note the indentation - i
 
 </blockquote></pre>
 
-3\.The above code is already in a file called `playbook.yml`. Let's check the contents:
+3\.Now that the above code is in `playbook.yml`, let's verify the contents:
 
 `cat playbook.yml`{{execute}}
 

@@ -27,6 +27,6 @@ If you run the playbook again, Ansible does the former, and instead of `"Changed
 
 1\. Try it out:
 
-`ansible-playbook -i myhosts site.yml`{{execute}}
+`ansible-playbook -i myhosts playbook.yml`{{execute}}
 
 This is a simple example that conveys a powerful truth about Ansible.
