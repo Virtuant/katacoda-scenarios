@@ -16,7 +16,7 @@ If you want a specific version, you append it to the package name, for example:
 
 Try it! Update the playbook using `sed`, to remove `sysstat=10.2.0-1`, like this:
 
-`sed -i -e 's/state: present/state: absent/' -e 's/ensure.*/ensure sysstat=10.2.0-1 is removed/' playbook.yml`{{execute}}
+`sed -i -e 's/state: latest/state: absent/' -e 's/ensure.*/ensure sysstat is removed/' playbook.yml`{{execute}}
 
 2\. Now, re-run the playbook:
 
