@@ -14,7 +14,7 @@ If you want a specific version, you append it to the package name, for example:
 
 1\. However, if you want to ensure that the package is not installed, you can declare `state: absent`, and Ansible will ensure it remains absent.
 
-Try it! Update the playbook using `sed`, to remove `sysstat=10.2.0-1`, like this:
+Try it! Update the playbook using `sed`, to remove `sysstat`, like this:
 
 `sed -i -e 's/state: latest/state: absent/' -e 's/ensure.*/ensure sysstat is removed/' playbook.yml`{{execute}}
 
