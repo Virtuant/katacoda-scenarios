@@ -41,7 +41,7 @@
 	},
 
 	"backend": {
-		"imageid": "ubuntu",
+		"imageid": "ansible",
 		"port":22
 	}
 }
