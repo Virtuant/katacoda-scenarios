@@ -7,7 +7,6 @@ This playbook runs one task, on our one host, `host01`. Note the indentation - i
 
 1\. Firstly, create a new folder and title it `playbook.yml`, like this:
 
-`cd /home/scrapbook/tutorial`{{execute}}
 `touch playbook.yml`{{execute}}
 
 2\. Now, rather than copying this code into your playbook automatically, try to copy it in manual in pieces, taking time to understand each component.
