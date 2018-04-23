@@ -18,7 +18,7 @@ Try it! Update the playbook using `sed`, to remove `sysstat=10.2.0-1`, like this
 
 `sed -i -e 's/state: present/state: absent/' -e 's/ensure.*/ensure sysstat=10.2.0-1 is removed/' playbook.yml`{{execute}}
 
-4\. Then re-run the playbook:
+2\. Now, re-run the playbook:
 
 `ansible-playbook -i myhosts playbook.yml`{{execute}}
 
