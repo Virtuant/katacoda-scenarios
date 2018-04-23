@@ -36,16 +36,12 @@
 	},
 	"environment": {
 		"showdashboard": true,
-		"dashboards": [{
-			"name": "localhost",
-			"port": 8080
-		}],
 		"uilayout": "editor-terminal",
 		"uimessage1": "\u001b[32mYour Interactive Host Terminal.\u001b[m\r\n"
 	},
 
 	"backend": {
-		"imageid": "docker",
-		"port":80
+		"imageid": "ubuntu",
+		"port":22
 	}
 }
