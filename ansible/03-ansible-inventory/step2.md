@@ -3,7 +3,7 @@ To run an ad-hoc task, like the one we saw using a single module, use the `ansib
 
 1\. We can always run our ad-hoc commands off the localhost, like this:
 
-`ansible all -i 'localhost,' -c local -m ping`{{execute HOST01}}
+`ansible all -i 'localhost,' -c local -m ping`{{execute}}
 
 Output:
 

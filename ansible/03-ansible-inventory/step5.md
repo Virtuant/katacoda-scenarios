@@ -29,7 +29,7 @@ Try it! Update the playbook using `sed`, to remove `sysstat=10.2.0-1`, like this
 
 4\. Then re-run the playbook:
 
-`ansible-playbook -i myhosts playbook.yml`{{execute HOST1}}
+`ansible-playbook -i myhosts playbook.yml`{{execute}}
 
 Pretty cool, huh?
 

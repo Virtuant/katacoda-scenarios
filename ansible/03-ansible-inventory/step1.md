@@ -11,7 +11,7 @@ We can run that command ourselves, but first we gotta create an inventory file. 
 
 1\. We'll call our inventory file `myhosts`, and you'll add one group called `group1`:
 
-`echo "[group1]" > myhosts`{{execute HOST1}}
+`echo "[group1]" > myhosts`{{execute}}
 
 2\. Then, add the host to the group, while also passing the username to use for SSH access, as an inventory parameter.
 
