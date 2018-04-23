@@ -18,14 +18,20 @@ The apt module allows you to specify the state you wish the package to be in.
 
 </blockquote></pre>
 
+2\. By then running the playbook again, we see the change is made:
+
+`ansible-playbook -i myhosts playbook.yml`{{execute}}
+
+Output:
+
 
 If you want to ensure that the package is not installed, you can declare that with `state: absent`, and Ansible will ensure it.
 
-2\. Update the playbook to remove `mysql-server-5.6`.
+3\. Update the playbook to remove `mysql-server-5.6`.
 
 `sed -i -e 's/state: present/state: absent/' -e 's/ensure.*/ensure mysql-server-5.6 is removed/' playbook.yml`{{execute HOST1}}
 
-3\. Then re-run the playbook:
+4\. Then re-run the playbook:
 
 `ansible-playbook -i myhosts playbook.yml`{{execute}}
 
