@@ -10,11 +10,9 @@ From the previous example:
     state: latest
 ```
 
-This tells Ansible to check if the items listed using `with_items` are present. If they are, Ansible will do nothing more, since the state is already achieved. However, if the items are not present, or if it's an older version, Ansible will ensure the items are present by installing the latest version.
+This tells Ansible to check if the latest version of sysstat is installed. If it is, Ansible will do nothing more, since the "latest" state is already achieved. If sysstat is not already there, or of an older version than what is available, Ansible installs the latest version.
 
-If you run the playbook again, Ansible does the former, and instead of `"Changed: 1"`, you will get `"OK: 2, Changed 0"`.
-
-1\. Try it out:
+1\. If you run the playbook again, Ansible does the former, and instead of `"Changed: 1"`, you will get `"OK: 2, Changed 0"`:
 
 `ansible-playbook -i myhosts playbook.yml`{{execute}}
 

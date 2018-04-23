@@ -32,7 +32,7 @@ This playbook runs one task, on our one host, `host01`. Note the indentation - i
 
 4\. Okay! Now, you are ready to run the playbook using the `ansible-playbook` command with the inventory file `myhosts`:
 
-`ansible-playbook -i 'myhosts,' playbook.yml`{{execute}}
+`ansible-playbook -i myhosts playbook.yml`{{execute}}
 
 Ansible should return the result `'Changed=1'`, indicating that the package was installed.
 
