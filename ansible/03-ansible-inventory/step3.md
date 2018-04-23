@@ -30,7 +30,7 @@ This playbook runs one task, on our one host, `host01`. Note the indentation - i
 
 `cat playbook.yml`{{execute}}
 
-4\. Okay! Now, you are ready to run the playbook, use the `ansible-playbook` command with the inventory file `myhosts`:
+4\. Okay! Now, you are ready to run the playbook using the `ansible-playbook` command with the inventory file `myhosts`:
 
 `ansible-playbook -i 'myhosts,' playbook.yml`{{execute}}
 
