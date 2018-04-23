@@ -7,7 +7,7 @@ To run an ad-hoc task, like the one we saw using a single module, use the `ansib
 
 By using the (`-i`) you indicate to Ansible that you want to run the command via the inventory file. Which in this case, is our `myhosts` file.
 
->Note: If the above command fails, double check the actually command copied to the terminal, make need adjustments and run it again.
+>Note: If the above command fails, double check the actually command copied to the terminal, make the needed adjustments and run it again. Sometimes this command doesn't copy over correctly.
 
 2\. When asked to authenticate the host, simply type `yes`, followed by `ENTER`. You should then see something like, this:
 
