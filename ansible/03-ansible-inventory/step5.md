@@ -5,16 +5,10 @@ The apt module allows you to specify the state you wish the package to be in.
 
 <pre class="file" data-filename="playbook.yml" data-target="replace"><blockquote>
 
----
-- hosts: host01
-  become: true
-  tasks:
-    - name: Install required packages
-      apt: name={{item}} state=present update_cache=yes
-      with_items:
-        - php-cli
-        - nginx
-        - mysql-server-5.6
+- name: ensure sysstat is installed at version 10.2.0-1
+  apt:
+    name: sysstat=10.2.0-1
+    state: installed
 
 </blockquote></pre>
 
@@ -23,17 +17,19 @@ The apt module allows you to specify the state you wish the package to be in.
 `ansible-playbook -i myhosts playbook.yml`{{execute}}
 
 Output:
+```
+PUT CODE HERE
+```
 
+3\. If you want to ensure that the package is not installed, you can declare `state: absent`, and Ansible will ensure it remains absent.
 
-If you want to ensure that the package is not installed, you can declare that with `state: absent`, and Ansible will ensure it.
+Try it! Update the playbook using `sed`, to remove `sysstat=10.2.0-1`, like this:
 
-3\. Update the playbook to remove `mysql-server-5.6`.
-
-`sed -i -e 's/state: present/state: absent/' -e 's/ensure.*/ensure mysql-server-5.6 is removed/' playbook.yml`{{execute HOST1}}
+`sed -i -e 's/state: present/state: absent/' -e 's/ensure.*/ensure sysstat=10.2.0-1 is removed/' playbook.yml`{{execute HOST1}}
 
 4\. Then re-run the playbook:
 
-`ansible-playbook -i myhosts playbook.yml`{{execute}}
+`ansible-playbook -i myhosts playbook.yml`{{execute HOST1}}
 
 Pretty cool, huh?
 

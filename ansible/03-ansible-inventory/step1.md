@@ -1,12 +1,11 @@
 
-By default, Ansible will read `/etc/ansible/hosts` as its default inventory file. Using this file is not recommended, though. You should maintain a different inventory file for each project that you have and pass it to both the `ansible` and `ansible-playbook` commands using the `–i` option.
+By default, Ansible will read `/etc/ansible/hosts` as its default inventory file. Using this file is not recommended though. You should maintain a different inventory file for each project that you have and pass it to both the `ansible` and `ansible-playbook` commands using the `–i` option.
 
 Here is an example of passing a custom inventory file to `ansible` before running the `ping` module:
 
 ```
-ansible all –i /path/to/inventory -c local –m ping
+ansible all –i /path/to/inventory –m ping
 ```
->Note: The `-c local` option, tells Ansible to running the playbook via the inventory file, but locally.
 
 We can run that command ourselves, but first we gotta create an inventory file. In this tutorial you have access to one host named `host01`. To let Ansible know about it, put its hostname in an inventory file.
 
