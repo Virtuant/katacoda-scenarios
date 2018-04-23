@@ -3,7 +3,7 @@ To run an ad-hoc task, like the one we saw using a single module, use the `ansib
 
 1\. So, now running the previous command, looks like this:
 
-`ansible all –i myhosts –m ping`{{execute}}
+`ansible all -i 'myhosts,' -c local -m ping`{{execute}}
 
 By using the (`-i`) you indicate to Ansible that you want to run the command via the inventory file. Which in this case, is our `myhosts` file.
 
@@ -21,7 +21,7 @@ host01 | success >> {
 
 3\. Then, you can check the current date and time of the remote host, like this:
 
-`ansible group1 -i myhosts -m command -a date`{{execute}}
+`ansible group1 -i 'myhosts,' -c local -m command -a date`{{execute}}
 
 >Note: If the command fails the first time, try again in few seconds, as the test host may not yet have been provisioned.
 
