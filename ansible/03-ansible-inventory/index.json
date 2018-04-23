@@ -24,11 +24,13 @@
 		}],
 
 		"intro": {
+			"title": "Introduction",
 			"text": "intro.md",
 			"code": "env-init.sh"
 		},
 
 		"finish": {
+			"title": "Conclusion",
 			"text": "finish.md"
 		}
 	},
