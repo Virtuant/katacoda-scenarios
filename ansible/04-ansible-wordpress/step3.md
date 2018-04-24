@@ -8,7 +8,7 @@ This is actually quite a lot of work! At this point, your installation is secure
 1\. First, you need to create a folder to hold your template and create the file that you are going to copy over. Run these commands from your terminal, in the same directory as your playbook, to create the required folders and files:
 
 `mkdir -p templates/mysql && \
-touch templates/mysql/my.cnf`{{execute HOST1}}
+touch templates/mysql/my.cnf`{{execute}}
 
 2\. Once you’ve created `my.cnf`, edit it and make sure that it has the following contents:
 
@@ -90,11 +90,11 @@ If the file `/root/.my.cnf` does not exist, `mysql_new_root_pass.changed` will b
 
 7\. Run Ansible now to generate a new root password and clean up the MySQL installation:
 
-`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute}}
 
 8\. If you run Ansible again, you should see that all of these steps are skipped:
 
-`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute}}
 
 Output *Snippet*:
 ```

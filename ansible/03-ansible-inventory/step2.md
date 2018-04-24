@@ -16,7 +16,7 @@ localhost | success >> {
 ```
 But that's not very realistic! Besides, why did we go to all that trouble to create an inventory file, if we weren't going to use it?
 
-3\. So, run another ad-hoc command, but this time run it using the inventory file you created:
+3\. So, run another ad-hoc command, but this time run it using the inventory file, `myhosts`:
 
 `ansible group1 -i myhosts -m command -a date`{{execute}}
 
@@ -33,7 +33,8 @@ Mon Jan 01 00:00:00 UTC 2018
 ```
 
 ##### Let's break down the command, you just ran:
-- `group1` group to run against. You can also use the name of an individual host, so `host01` would work just as well for this example.
+- `group1` group to run against; defined in your inventory file.
+- `host01` would work just as well for this example.
 - `myhosts` name of the inventory file listing all available hosts.
 - `command` module to use (the command module returns the result of a bash command).
 - `date` argument for the module, in this case a standard shell command date.

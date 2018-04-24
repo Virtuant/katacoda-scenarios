@@ -13,7 +13,7 @@
 
 2\. Run Ansible now to install `nginx` and start it running.
 
-`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute}}
 
 3\. You can now visit `localhost` in your web browser, and you will see the “Welcome to nginx” page.
 

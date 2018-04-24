@@ -5,7 +5,7 @@ We've already created a playbook.yml file, but it won't show up until you add co
 
 1\. Go ahead and list the contents of your working directory to confirm:
 
-`ls`{{execute HOST1}}
+`ls`{{execute}}
 
 2\. Now, you'll specify which hosts the playbook should run on, as well as a set of tasks to run. For now, you'll just implement the `ping` module for now, like before:
 
@@ -21,7 +21,7 @@ We've already created a playbook.yml file, but it won't show up until you add co
 
 3\. So, now that you've added some code to the file, confirm it's present in your working directory:
 
-`ls`{{execute HOST1}}
+`ls`{{execute}}
 
 4\. At this point, you should run ansible-playbook to prove that you can connect to the host. We do that by running our playbook against our localhost, like before:
 
@@ -52,7 +52,7 @@ We've already created a playbook.yml file, but it won't show up until you add co
 
 3\. Run Ansible again after adding these tasks, to make sure it is completed successfully.
 
-`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute}}
 
 >Note: If your playbook doesn't run successfully, the changes are it's just a syntax error. Check your code, make any needed changes, and then run Ansible again.
 
@@ -89,6 +89,6 @@ Output:
 
 7\. Run Ansible once again to check functionality, before moving on:
 
-`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute}}
 
 Great job!

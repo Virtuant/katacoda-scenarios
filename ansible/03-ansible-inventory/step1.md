@@ -7,7 +7,7 @@ Here is an example of passing a custom inventory file to `ansible` before runnin
 ansible all –i /path/to/inventory –m ping
 ```
 
-We can run that command ourselves, but first we gotta create an inventory file. In this tutorial you have access to one host named `host01`. To let Ansible know about it, put its hostname in an inventory file.
+You can run that command yourself, but first you gotta create an inventory file. In this tutorial you have access to one host named `host01`. To let Ansible know about it, put its hostname in an inventory file.
 
 1\. We'll call our inventory file `myhosts`, and you'll add one group called `group1`:
 

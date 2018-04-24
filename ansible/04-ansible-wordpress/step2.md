@@ -12,7 +12,7 @@
 
 2\. Now, you should run Ansible now, to install all of the PHP and MySQL packages. It may take a few minutes, but it should complete successfully.
 
-`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute}}
 
 >Note: Don't be discouraged if it doesn't run successfully the first time. Go back, check your code, run it again, and if you still can't get it, alert your instructor.
 
