@@ -12,14 +12,14 @@ upstream php {
 
 2\. Go ahead and confirm the version of PHP currently running:
 
-`ls /etc/php/`{{execute HOST1}}
+`ls /etc/php/`{{execute}}
 
 3\. Once you have that number, which at the time of writing this is 7.2,
 
-`cat /etc/php/7.X/fpm/pool.d/www.conf  | grep "listen ="`{{execute HOST1}}
+`cat /etc/php/7.X/fpm/pool.d/www.conf  | grep "listen ="`{{execute}}
 
 >Note: Remember, pay close attention to whether ($) or (#) are used, because they indicate where the code is to be run.
 
 3\. Make sure that you run Ansible, to bring everything up to date.
 
-`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute}}

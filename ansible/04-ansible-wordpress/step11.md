@@ -1,4 +1,3 @@
-## Create MySQL User Credentials
 
 1\. You will not want to give WordPress root access to your database, so let’s create a dedicated MySQL user to use by adding the following tasks to your playbook:
 
@@ -26,7 +25,7 @@ Like we learned in the lecture, this will create a database called `wordpress` a
 
 5\. After adding this task, run Ansible again in your terminal. And voilà!
 
-`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute}}
 
 >Note: Wait, no voilà? When you run Ansible, you may get an error message similar to the following:
 `AnsibleError: ERROR! template error while templating string`<br>

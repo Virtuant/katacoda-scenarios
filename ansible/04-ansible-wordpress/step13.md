@@ -1,8 +1,7 @@
-## Making It Idempotent
 
 1\. Go ahead and run Ansible again, but for the last time in this lab:
 
-`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute}}
 
 Like we learned in the lecture, it isn't ideal to have a task that states *changed* every time Ansible runs. It could cause real trouble! Do you remember which task is causing this issue?
 
@@ -25,3 +24,7 @@ Like we learned in the lecture, it isn't ideal to have a task that states *chang
       ignore_errors: true
       changed_when: false
 </blockquote></pre>
+
+4\. Now, run Ansible to complete this lab and ensure your WordPress install is idempotent.
+
+> SUCCESS!

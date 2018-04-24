@@ -22,4 +22,4 @@ We learned in the lecture that we face a unquie challenge here. Nginx needs to b
 
 3\. Be sure to save it! Go ahead and run Ansible again to ensure our playbook is fully functional.
 
-`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
+`ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute}}
