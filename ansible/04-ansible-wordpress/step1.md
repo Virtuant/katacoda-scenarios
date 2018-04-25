@@ -27,8 +27,6 @@ We've already created a playbook.yml file, but it won't show up until you add co
 
 `ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute HOST1}}
 
-## Installation
-
 #### Installing PHP
 
 1\. Now that you know Ansible will run, let’s install PHP. Add the following to your playbook in the tasks section:
@@ -68,7 +66,7 @@ Output:
 
 5\. If that looks good, continue by installing all of the other PHP packages that you’ll need. Let’s use `with_items` to make the playbook easier to read though. So, delete the previous task "Install PHP", then copy and paste the following into its place in the playbook:
 
-<pre><blockquote>
+```
     - name: Install PHP
       apt: name={{item}} state=present
       with_items:
@@ -76,7 +74,7 @@ Output:
         - php-fpm
         - php-mysql
         - php-xml
-</blockquote></pre>
+```
 
 >Note: You're only to change the "Install PHP" section! You're using the with_items to wrap your request and include additional PHP packages.
 
