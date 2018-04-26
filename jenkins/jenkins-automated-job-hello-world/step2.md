@@ -1,7 +1,26 @@
 
 ### Create a Job
 
->Note: you may need to first go to the Manage Plugins and add the Github plugin as before.
+#### Download GitHub plugin
+You are going to need the GitHub plugin again, like before. Begin by navigating to the
+
+Like you've done before, navigate to the "Manage Jenkins" page from the home page. The page will look, like this:
+
+<img width="905" alt="manage-jenkins-page" src="https://user-images.githubusercontent.com/21102559/39327134-1e19bc6e-4965-11e8-8c07-66db8a93f0d4.png">
+
+Now, as you've also done before, scroll down the page, locate the "Manage Plugins" hyperlink and click it.
+
+<img width="376" alt="manage-plugins-hyperlink" src="https://user-images.githubusercontent.com/21102559/39327163-3761ef16-4965-11e8-9a20-f6d343c74130.png">
+
+Once you're on the managing plugins page, type "GitHub" into the filter search bar and press the appropriate button to begin the search.
+
+<img width="318" alt="filter-github" src="https://user-images.githubusercontent.com/21102559/39327111-0e161696-4965-11e8-92b4-91276ce0ac34.png">
+
+From there, again, scroll down the page, locate the correct plugin and check its box. There are a lot of GitHub related plugins, so look before and make sure you verify it before installing it:
+
+<img width="892" alt="check-github-plugin" src="https://user-images.githubusercontent.com/21102559/39327039-ce0aa152-4964-11e8-8e98-21224a1534ec.png">
+
+Now, simply click, "Install without restart" and move to the next step, after the install is complete.
 
 Now, either click on “Create new Jobs” or on New Item. Now enter an Item name (such as "Github Triggered Build") and click on Freestyle Project and OK:
 
