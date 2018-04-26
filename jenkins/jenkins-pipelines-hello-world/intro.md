@@ -1,3 +1,5 @@
+<img style="float: left;" src="https://user-images.githubusercontent.com/21102559/39315185-0d9230fe-4944-11e8-9660-0d23401d30ca.png">
+
 In this scenario you'll dog into an increasingly popular Jenkins plugin named [Pipeline](https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+Plugin), an increasingly popular plugin that helps defining versatile Jenkins workflows as Groovy code.
 
 Traditionally, Jenkins is administered by a graphical Web interface. Now, the Pipeline plugin allows teams and DevOps to manage workflow definitions within source control, giving them the ability to clone, change, review and iterate upon the continuous delivery pipeline. Moreover, the plugin offers teams a nice interface to view the stages of each workflow, like follows:
