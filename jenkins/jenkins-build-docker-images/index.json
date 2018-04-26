@@ -4,7 +4,7 @@
     "title": "Build Docker Images with Jenkins",
     "description": "Learn how to build and deploy Docker images with Jenkins",
     "difficulty": "Intermediate",
-    "time": "25-30 minutes",
+    "time": "45-60 minutes",
     "details": {
         "steps": [
             {

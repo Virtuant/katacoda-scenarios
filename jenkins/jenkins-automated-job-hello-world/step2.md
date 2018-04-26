@@ -47,7 +47,7 @@ The Maven goal “package” will build our JAR file.
 
 Prerequisite: For creation of an executable JAR, the file `build.gradle` in the project root directory must be prepared.
 
-Here, we show how to build the project via Gradle. 
+Here, we show how to build the project via Gradle.
 
 Here, we scroll down to “Build” -> click “Invoke Gradle script”
 

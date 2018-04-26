@@ -22,7 +22,7 @@ Since we have checked “Install automatically” above, I expect that it will b
 
 ----
 
-#### Alternative: Prepare Gradle Usage
+#### [OPTIONAL] Alternative: Prepare Gradle Usage
 
 Scroll down to Gradle -> Add Gradle
 
