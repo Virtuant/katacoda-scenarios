@@ -6,6 +6,6 @@ docker run -d -u root --rm --name jenkins \
     -c "tail -F /jenkins.log"
 
 docker exec -d jenkins \
-    bash -c 'git clone https://github.com/oveits/jenkins_home_alpine \
-        && export JENKINS_HOME=$(pwd)/jenkins_home_alpine \
-        && java -jar /usr/share/jenkins/jenkins.war 2>&1 1>/jenkins.log &'
+    bash -c 'git clone https://github.com/oveits/jenkins_home_alpine  && \
+    export JENKINS_HOME=$(pwd)/jenkins_home_alpine  && \
+    java -jar /usr/share/jenkins/jenkins.war 2>&1 1>/jenkins.log &'
