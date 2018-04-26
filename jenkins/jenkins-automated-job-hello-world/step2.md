@@ -1,7 +1,7 @@
 
 ### Create a Job
 
-#### Download GitHub plugin
+#### Download GitHub Plugin
 You are going to need the GitHub plugin again, like before. Begin by navigating to the
 
 Like you've done before, navigate to the "Manage Jenkins" page from the home page. The page will look, like this:
@@ -22,11 +22,15 @@ From there, again, scroll down the page, locate the correct plugin and check its
 
 Now, simply click, "Install without restart" and move to the next step, after the install is complete.
 
+<img width="254" alt="github-plugin-install-success" src="https://user-images.githubusercontent.com/21102559/39327769-06c2edfe-4967-11e8-86f1-0f22e717b6b5.png">
+
+Once that's complete, move on to the next step!
+
+#### Specify GitHub Project
+
 Now, either click on “Create new Jobs” or on New Item. Now enter an Item name (such as "Github Triggered Build") and click on Freestyle Project and OK:
 
 ![2016-12-09-10_55_56-new-item-jenkins](https://user-images.githubusercontent.com/558905/37997764-ff732eb8-31e9-11e8-943e-9263e6e27c44.png)
-
-#### Specify GitHub Project
 
 Check “GitHub project” and add the HTTPS GitHub URL. I have used a small Apache Camel project of mine that provides a simple restful file storage: https://github.com/oveits/simple-restful-file-storage
 
