@@ -3,7 +3,7 @@
     "pathwayTitle": "Jenkins",
     "title": "Add Jenkins Development Metrics",
     "description": "Integrate code coverage metrics using the Cobertura plugin",
-    "difficulty": "Advanced",
+    "difficulty": "Intermediate",
     "time": "25-30 minutes",
     "details": {
         "steps": [
