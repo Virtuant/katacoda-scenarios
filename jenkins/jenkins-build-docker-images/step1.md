@@ -21,6 +21,8 @@ We will prepare an environment with a Jenkins server running as a Docker Contain
 
 `docker exec jenkins ps -ef`{{execute}}
 
+4\. By sure to exit out of the process before moving on to the next step!
+
 #### Load Dashboard
 
 1\. You can load the Jenkins' dashboard either by clicking the Dashboard tab on the right of Terminal, or clicking the URL: https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
