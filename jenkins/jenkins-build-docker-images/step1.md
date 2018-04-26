@@ -23,6 +23,6 @@ We will prepare an environment with a Jenkins server running as a Docker Contain
 
 #### Load Dashboard
 
-1\. You can load the Jenkins' dashboard either by clicking the Dashboard tab on the right of Terminal, or clicking the URL https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/ in a separate browser.
+1\. You can load the Jenkins' dashboard either by clicking the Dashboard tab on the right of Terminal, or clicking the URL: https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
 In the next steps, you'll use the dashboard to configure the plugins and start building Docker Images.

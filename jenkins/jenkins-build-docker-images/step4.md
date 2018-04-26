@@ -26,7 +26,7 @@ docker images
 
 The first stage lists all the files in the directory which will be built. When calling _docker build_ we use the Jenkins build number as the image tag. This allows us to version our Docker Images. We also tag the build with _latest_.
 
-At this point, or in an additional step, you could execute a `docker push` to upload the image to a centralised Docker Registry.
+At this point, or in an additional step, you could execute a `docker push` to upload the image to a centralized Docker Registry.
 
 7\. Our build is now complete. Click **Save**.
 

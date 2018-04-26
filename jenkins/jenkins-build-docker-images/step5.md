@@ -14,6 +14,6 @@ In the background, Jenkins is launching the container and connecting to it via S
 
 >Note: It's normal for this to take a few moments to complete, please be patient.
 
-3\. Once the status bar shows it's complet, go back to **Terminal**. You can now verify the progress using `docker logs --tail=10 jenkins`{{execute}}.<br>
+3\. Once the status bar shows it's complete, go back to **Terminal**. You can now verify the progress using `docker logs --tail=10 jenkins`{{execute}}.<br>
 
 Are you ready for the big reveal? Let's do it!
