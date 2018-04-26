@@ -27,9 +27,11 @@ We can see in the output, that the JAR file was placed to:
 
 `/jenkins_home_alpine/workspace/Github Triggered/Build/target/camel-spring4-0.0.1-SNAPSHOT.jar`
 
+>Note: The path details may defer from that of the above example.
+
 Copy the path and file from the above screen. We'll use it on the next page.
 
->Note: Yayy! This was the first successful Jenkins triggered Git download and Maven build.
+Great! This was the first successful Jenkins triggered Git download and Maven build.
 
 #### Alternative Gradle
 
@@ -39,8 +41,7 @@ This may take a while (~11 min in my case with a 100Mbps connection):
 
 ![2017-01-02-15_48_17-github-triggered-build-1-console-jenkins](https://user-images.githubusercontent.com/558905/37997315-7ea48620-31e8-11e8-95e5-b0b7204e78c4.png)
 
->Note: Yayy! This was the first successful Jenkins triggered Git download and Gradle build.
-
+And that, was the first successful Jenkins triggered Git download and Gradle build. Great job!
 
 #### Optional: Measure Time Consumption for Gradle clean Build
 
@@ -58,7 +59,7 @@ Then click Build History -> current build
 
 Then -> Console Output
 
-Clean Build - Console Ouptut
+Clean Build - Console Output
 
 This is showing that a clean build takes only ~6.4 sec, if all SW is downloaded already.
 

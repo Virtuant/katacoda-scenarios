@@ -15,7 +15,7 @@ Click Finish to create the new file.
 
 Enter the following text into the new file (Note: this is the same script that we used above, so you could copy/paste it from the Jenkins Web UI if you want to avoid some typing):
 
-```console
+```
 node {
   stage 'Checkout'
   git url: 'C:\\Software\\repos\\SimpleGreeting.git'
@@ -46,10 +46,10 @@ Enter 'SimpleGreetingPipelineFromGit' as the name of the new item, and select Pi
 ![image](https://user-images.githubusercontent.com/558905/37570721-c3990448-2ac9-11e8-8559-7c9362135d2d.png)
 
 Click OK to create the new item.
-    
+
 Scroll down to the Build Triggers section.
 
-Click on Poll SCM and enter '* * * * *' as the polling schedule. This entry will cause Jenkins to poll once per minute.
+Click on Poll SCM and enter '* * * * ' as the polling schedule. This entry will cause Jenkins to poll once per minute.
 
 ![image](https://user-images.githubusercontent.com/558905/37570722-c933ce10-2ac9-11e8-80c7-ffc4d027389e.png)
 

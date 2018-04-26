@@ -1,7 +1,7 @@
 The pipeline that we've defined so far appears to work perfectly. But we haven't tested it with a build that fails. In the following steps, we'll insert a test failure and see what happens to our pipeline.
 
 In Eclipse, go to the Project Explorer and locate the file 'Greeting.java'. It will be under src/main/java in the package 'com.simple'. Open 'Greeting.java'.
- 
+
 Locate the line that reads 'return "GOOD";'. Change it to read 'return "BAD";'
 
 ![image](https://user-images.githubusercontent.com/558905/37570728-d9fb5fc4-2ac9-11e8-9a31-f5c11e75d5a3.png)

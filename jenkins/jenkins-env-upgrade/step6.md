@@ -1,9 +1,13 @@
-Once the build has completed you should see the Image and Tags using the Docker CLI `docker images`{{execute}}.
+Once the build has completed you should see the Image and Tags using:
+
+`docker images`{{execute}}.
 
 What was built into the Docker Image was a small HTTP server. You can launch it using:
+
 `docker run -d -p 80:80 katacoda/jenkins-demo:latest`{{execute}}
 
 Using cURL you should see the server respond:
+
 `curl docker`{{execute}}
 
 Jenkins will have the console output of our build, available via the dashboard. You should be able to access it below:
