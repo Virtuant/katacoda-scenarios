@@ -4,7 +4,7 @@ In this scenario you'll learn how to configure Jenkins to build Docker Images ba
 
 In this scenario, we will perform our first automated job within Jenkins, the most popular open source tool for Continuous Integration and Continuous Deployment. We will start Jenkins in a Docker container and define and run a first task:
 
-    Download source code from GitHub
-    Create a fat  executable JAR file via Maven
+- Download source code from GitHub
+- Create a fat  executable JAR file via Maven
 
 At the end of this session, we will have learned how to download GitHub code and build a Java program (executable JAR file) on a push of a button.
