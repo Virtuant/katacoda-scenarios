@@ -5,6 +5,7 @@
 <pre class="file" data-filename="playbook.yml"><blockquote>
     - name: Install nginx
       apt: name=nginx state=present
+
     - name: Start nginx
       service: name=nginx state=started
 </blockquote></pre>

@@ -10,11 +10,12 @@ After running Ansible, your new config should rollout and nginx should be restar
 
 2\. Once you've added that, run the following commands to create the appropriate folder:
 
-`sudo mkdir -p /var/www/book.example.com`{{execute}}
+`cd ~/tutorial/  && \
+mkdir -p /var/www/book.example.com`{{execute}}
 
 3\. Then, run the following to formulate the test display:
 
-`echo "<?php echo date('H:i:s'); " | sudo tee /var/www/book.example.com/index.php`{{execute}}
+`echo "<?php echo date('H:i:s'); " | tee /var/www/book.example.com/index.php`{{execute}}
 
 4\. You should now verify that, the command was successful in copying to the file.
 
