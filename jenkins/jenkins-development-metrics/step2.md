@@ -20,7 +20,7 @@ Click on the Add post-build action button and then select Publish Cobertura Cove
 
 Enter the following for the Cobertura XML Report Pattern
 
-**/target/site/cobertura/coverage.xml
+**/target/site/cobertura/coverage.xml**
 
 Scroll up to find the Build section.
 
@@ -39,7 +39,7 @@ You will see the project screen view and Coverage Report is activated shown as b
 ![image020](https://user-images.githubusercontent.com/558905/37434301-874e62a6-27b5-11e8-8be5-b90f0652411b.jpg)
 ![image021](https://user-images.githubusercontent.com/558905/37434302-8763c236-27b5-11e8-8ce4-435efabbd94a.png)
 ![image022](https://user-images.githubusercontent.com/558905/37434303-877a83a4-27b5-11e8-8655-7cfd3422eb94.png)
-![image023](https://user-images.githubusercontent.com/558905/37434304-87925236-27b5-11e8-9ef6-36d4f363a755.jpg) 
+![image023](https://user-images.githubusercontent.com/558905/37434304-87925236-27b5-11e8-9ef6-36d4f363a755.jpg)
 
 Now lets update the SimpleGreeting Project pom file in Git to handle report metrics.
 
