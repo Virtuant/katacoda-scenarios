@@ -92,4 +92,4 @@ On the lower edge of the editor panel, click on pom.xml to select the XML view o
 </project>
 ```
 
-Save and close the file.
+Great! Now, save and close the file.
