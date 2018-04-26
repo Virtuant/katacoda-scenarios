@@ -10,15 +10,13 @@ This step creates a new project which Jenkins will build via our new agent. The 
 5. We can now add a new **Build Step** using the dropdown. Select **Execute Shell**.
 6. Because the logical of how to build is specified in our Dockerfile, Jenkins only needs to call build and specify a friendly name.
 
-In this example, use the following commands.
+In this example, use the following commands:
 
-```
-ls
-docker info
-docker build -t katacoda/jenkins-demo:${BUILD_NUMBER} .
-docker tag katacoda/jenkins-demo:${BUILD_NUMBER} katacoda/jenkins-demo:latest
-docker images
-```
+`ls`{{execute}}
+`docker info`{{execute}}
+`docker build -t katacoda/jenkins-demo:${BUILD_NUMBER} `{{execute}}
+`docker tag katacoda/jenkins-demo:${BUILD_NUMBER} katacoda/jenkins-demo:latest`{{execute}}
+`docker images`{{execute}}
 
 The first stage lists all the files in the directory which will be built. When calling _docker build_ we use the Jenkins build number as the image tag. This allows us to version our Docker Images. We also tag the build with _latest_.
 
