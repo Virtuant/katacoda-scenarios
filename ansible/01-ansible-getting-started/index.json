@@ -40,11 +40,11 @@
 		"environment": {
 			"showdashboard": true,
 			"dashboards": [{ "name": "Nginx", "port": 8080, "host": "host01" }],
-			"uilayout": "editor-terminal",
+			"uilayout": "terminal-terminal",
 			"uimessage1": "\u001b[32mYour Interactive Host Terminal.\u001b[m\r\n"
 		},
 		"backend": {
-			"imageid": "docker",
+			"imageid": "swarm",
 			"port": 8080
 		}
 	}
