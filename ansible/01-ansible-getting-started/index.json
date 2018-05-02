@@ -40,7 +40,7 @@
 		"environment": {
 			"showdashboard": true,
 			"dashboards": [{ "name": "Nginx", "port": 8080, "host": "host01" }],
-			"uilayout": "terminal",
+			"uilayout": "editor-terminal",
 			"uimessage1": "\u001b[32mYour Interactive Host Terminal.\u001b[m\r\n"
 		},
 		"backend": {
