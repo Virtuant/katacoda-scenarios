@@ -21,6 +21,7 @@ The Jenkins build job will use this container to execute the build and create th
 5\. While on this page, also search for and check the **Git plugin** for obtaining the source code from a Git repository.<br>
 
 6\. Click **Install without Restart** at the bottom.<br>
+
 7\. The plugins will now be downloaded and installed.<br>
 
 >Note: Please note this process can take several minutes to complete. However, if the process runs in excess of 5 minutes, return to the **Manage Plugins** page and click the **Installed** tab to verify if installation was a success or not.
