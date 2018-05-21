@@ -2,4 +2,4 @@
 
 Now, you'll combine a little bit of everything you've learned and launch a fully functional WordPress blog.
 
-You’ll install all of the required dependencies, fetch the WordPress source files from their release page, and automatically install it. 
+You’ll install all of the required dependencies, fetch the WordPress source files from their release page, and automatically install it.
