@@ -9,12 +9,17 @@ The Jenkins build job will use this container to execute the build and create th
 #### Task: Install Plugin
 
 1\. Within the Dashboard, select **Manage Jenkins** on the left.<br>
+
 >Note:You can either ignore the error warnings at the top, or simply hit Dismiss buttons.<br>
 
 2\. On the Configuration page, select **Manage Plugins**.<br>
+
 3\. Manage Plugins page will give you a tabbed interface. Click **Available** to view all the Jenkins plugins that can be installed.<br>
+
 4\. Using the search box, search for **Docker**. There are multiple Docker plugins, select **Docker plugin** using the checkbox.<br>
+
 5\. While on this page, also search for and check the **Git plugin** for obtaining the source code from a Git repository.<br>
+
 6\. Click **Install without Restart** at the bottom.<br>
 7\. The plugins will now be downloaded and installed.<br>
 
