@@ -4,12 +4,12 @@ We now will start a pre-configured Jenkins. You can skip this step, if you have 
 
 If you have performed step 1 to 3 already, you can skip this step and go to the next step immediately. If you have skipped setps 1-3, or if they were not successful, follow the following instructions to download a clean pre-configured Jenkins installation:
 
-1. Stop and remove any containers named "jenkins", if required:
+1\. Stop and remove any containers named "jenkins", if required:
 
 `docker stop jenkins && \
 docker rm jenkins`{{execute}}
 
-2. Download and start a pre-configured Jenkins container.
+2\. Download and start a pre-configured Jenkins container.
 
 `docker run -d --rm --name jenkins \
     -p 8080:8080 -p 50000:50000 \
