@@ -14,7 +14,7 @@ This step configures the SSH settings to communicate with Docker.
 
 4\. Jenkins will use SSH to communicate with agents (user and password). Add a new set of "Credentials". The username is **jenkins** and the password is **jenkins**. Be careful about spaces in the user/password and click **Ok** once you're ready to move to the next step.<br>
 
-5\. Go **Back to credential domains**.
+5\. Now, click **Back to credential domains** and move to the next step.
 
 #### Task: Configure Plugin
 
