@@ -2,13 +2,19 @@ This step creates a new project which Jenkins will build via our new agent. The 
 
 #### Task: Create New Job
 
-1. On the Jenkins dashboard, select **Create new jobs**
-2. Give the job a friendly name such as **Jenkins Environment** and select **Freestyle project**.
-3. The build will depend on having access to Docker. Using the **Restrict where this project can be run** we can define the label we set of our configured Docker agent. The set **Label Expression** to **docker-agent**. You should have a configuration of "Label is serviced by no nodes and 1 cloud".
-4. Under **Source Code Management** Select the Repository type as **Git** and set the **Repository URL** to be **https://github.com/katacoda/katacoda-jenkins-demo**.
-  >Note: if Git is not in the "Source Code Management" list, you need to install the `Git plugin` as before.
-5. We can now add a new **Build Step** using the dropdown. Select **Execute Shell**.
-6. Because the logical of how to build is specified in our Dockerfile, Jenkins only needs to call build and specify a friendly name.
+1\. On the Jenkins dashboard, select **Create new jobs**<br>
+
+2\. Give the job a friendly name such as **Jenkins Environment** and select **Freestyle project**.<br>
+
+3\. The build will depend on having access to Docker. Using the **Restrict where this project can be run** we can define the label we set of our configured Docker agent. The set **Label Expression** to **docker-agent**. You should have a configuration of "Label is serviced by no nodes and 1 cloud".<br>
+
+4\. Under **Source Code Management** Select the Repository type as **Git** and set the **Repository URL** to be **https://github.com/katacoda/katacoda-jenkins-demo**.
+
+>Note: if Git is not in the "Source Code Management" list, you need to install the `Git plugin` as before.<br>
+
+5\. We can now add a new **Build Step** using the dropdown. Select **Execute Shell**.<br>
+
+6\. Because the logical of how to build is specified in our Dockerfile, Jenkins only needs to call build and specify a friendly name.<br>
 
 In this example, use the following commands:
 
