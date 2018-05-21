@@ -44,6 +44,6 @@
 			"uimessage1": "\u001b[32mYour Interactive Host Terminal.\u001b[m\r\n"
 		},
 		"backend": {
-			"imageid": "docker",
+			"imageid": "docker"
 		}
 	}
