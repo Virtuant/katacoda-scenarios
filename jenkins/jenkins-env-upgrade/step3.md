@@ -24,7 +24,7 @@ This step configures the plugin to communicate with a Docker host/daemon.
 
 2\. Select **Configure System** to access the main Jenkins settings.<br>
 
-3\. At the bottom, there is a dropdown called **Add a new cloud**. Select **Docker** from the list.<br>
+3\. Scroll to the bottom of the page and locate a dropdown menu button called **Add a new cloud**. Click that button and select **Docker** from the list.<br>
 
 4\. You can now configure the container options. Set the name of the agent to **docker-agent**.<br>
 
