@@ -21,11 +21,13 @@ We will prepare an environment with a Jenkins server running as a Docker Contain
         && export JENKINS_HOME=$(pwd)/jenkins_home_alpine \
         && java -jar /usr/share/jenkins/jenkins.war 2>&1 1>/jenkins.log '`{{execute}}
 
-4\. After maybe several minutes, we should see that the `jenkins.war` is started:
+4\. Wait a moment and run the following command, which will confirm that `jenkins.war` has indeed started:
 
 `docker exec jenkins ps -ef`{{execute}}
 
-5\. By sure to exit out of the process before moving on to the next step!
+> If the process isn't listed, please wait another moment and try again.
+
+5\. Be sure to exit out of the process, before moving on to the next step!
 
 #### Load Dashboard
 
