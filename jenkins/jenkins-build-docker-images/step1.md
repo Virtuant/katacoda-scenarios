@@ -10,18 +10,22 @@ We will prepare an environment with a Jenkins server running as a Docker Contain
     jenkins:2.46.2-alpine \
     -c "tail -F /jenkins.log"`{{execute}}
 
-2\. With the next command, we clone a Jenkins Home directory into the container, before we start the Jenkins application. The Jenkins Home directory has been prepared to allow us using Jenkins without any login:
+2\. This class doesn't cover Docker, but in order to confirm that the previous command has run successfully, run the following command to confirm that the container 'jenkins' is running:
+
+`docker ps`{{execute}}
+
+3\. With the next command, we clone a Jenkins Home directory into the container, before we start the Jenkins application. The Jenkins Home directory has been prepared  allow us using Jenkins without any login:
 
 `docker exec -d jenkins \
     bash -c 'git clone https://github.com/oveits/jenkins_home_alpine \
         && export JENKINS_HOME=$(pwd)/jenkins_home_alpine \
-        && java -jar /usr/share/jenkins/jenkins.war 2>&1 1>/jenkins.log &'`{{execute}}
+        && java -jar /usr/share/jenkins/jenkins.war 2>&1 1>/jenkins.log '`{{execute}}
 
-3\. After maybe several minutes, we should see that the `jenkins.war` is started:
+4\. After maybe several minutes, we should see that the `jenkins.war` is started:
 
 `docker exec jenkins ps -ef`{{execute}}
 
-4\. By sure to exit out of the process before moving on to the next step!
+5\. By sure to exit out of the process before moving on to the next step!
 
 #### Load Dashboard
 
