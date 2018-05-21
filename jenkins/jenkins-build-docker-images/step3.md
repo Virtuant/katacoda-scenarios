@@ -55,4 +55,4 @@ Our plugin can now communicate with Docker. In this step, we'll configure how to
 
 8\. Click **Save**.<br>
 
-Jenkins can now start a Build Agent as a container when required. Great job! Next?!
+Jenkins can now start a Build Agent as a container when required. Great job!

@@ -6,7 +6,7 @@ The first step is to install the [Github](https://wiki.jenkins-ci.org/display/JE
 
 2\. On the Configuration page, select **Manage Plugins**.<br>
 
-3\. Manage Plugins page will give you a tabbed interface. Click **Available** and wait three seconds to view all the Jenkins plugins that can be installed.<br>
+3\. Manage Plugins page will give you a tabbed interface, click the **Available** tab to view all the Jenkins plugins that can be installed.<br>
 
 4\. Using the search box, search for **Github plugin** and choose the plugin via checkbox.<br>
 
