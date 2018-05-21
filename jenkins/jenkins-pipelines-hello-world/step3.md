@@ -8,7 +8,7 @@ This step configures the Maven plugin.
 
 2\. Select **Global Tool Configuration**.<br>
 
-3\. At the bottom, there is a button called **Maven installations...**. Click it.<br>
+3\. At the bottom, there is a button called **Add Maven**, in the "Maven installations..." section. Click it.<br>
 
 4\. Choose the name **M3**.<br>
 
