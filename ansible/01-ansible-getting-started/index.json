@@ -45,6 +45,5 @@
 		},
 		"backend": {
 			"imageid": "docker",
-			"port": 8080
 		}
 	}
