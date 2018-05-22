@@ -73,10 +73,9 @@ For other projects, you will need to adapt the part in <mainClass> above.
 
 Then:
 
-```
-$ git add pom.xml
-$ git commit -m "Maven creates fat executable JAR file now"
-$ git push
+`$ git add pom.xml`{{execute}}
+`$ git commit -m "Maven creates fat executable JAR file now"`{{execute}}
+`$ git push`{{execute}}
 ```
 
 Now again, let us build the project: click on the Build Now, then check the Console Output.
@@ -130,8 +129,7 @@ Let us see, where the executable jar file can be found:
 
 For that, let us enter a bash session on the same Docker container:
 
-`docker exec -it jenkins bash
-java jar "/jenkins_home_alpine/workspace/Github Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar"`{{execute}}
+`docker exec -it jenkins bash java jar "/jenkins_home_alpine/workspace/Github Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar"`{{execute}}
 
 In case you have started Jenkins with the jenkins image (Step 1.2, alternative (A)), the project will be found on
 
