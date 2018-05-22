@@ -1,4 +1,4 @@
-<img style="float: left; padding:5px 20px 5px 20px" src="https://user-images.githubusercontent.com/21102559/39315185-0d9230fe-4944-11e8-9660-0d23401d30ca.png">
+<img style="float: left; padding:5px 10px 5px 20px" src="https://user-images.githubusercontent.com/21102559/39315185-0d9230fe-4944-11e8-9660-0d23401d30ca.png">
 
 In this scenario you'll learn how to configure Jenkins to build Docker Images based on a Dockerfile. The scenario is designed to demonstrate how you can use Docker within a CI/CD pipeline, using Images as a build artifact that can be promoted to different environments and finally production.
 
