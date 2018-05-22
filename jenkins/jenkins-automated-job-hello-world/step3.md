@@ -1,19 +1,18 @@
 ### Test Manually Triggered Build
 
-Choose `Build Now` from the menu. We also can trigger a build manually via Jenkins -> drop-down right of “GitHub Triggered Build” -> Build Now.
+1\. Choose **Build Now** from the menu. We also can trigger a build manually via **Jenkins -> drop-down right of “GitHub Triggered Build” -> Build Now**.
 
 ![2016-12-09-11_46_03-dashboard-jenkins](https://user-images.githubusercontent.com/558905/37997255-612f5cb4-31e8-11e8-9b68-33a69cef4ee2.png)
 
-Click on "#1" of the build history:
+2\. Click on **#1** of the build history:
 
 ![2017-01-02-14_59_15-github-triggered-build-jenkins-v2](https://user-images.githubusercontent.com/558905/37997312-7e763054-31e8-11e8-8c91-8badaba0e606.png)
 
-then on Console Output:
+3\. Then, on **Console Output**:
 
 ![2017-01-02-15_02_46-github-triggered-build-1-jenkins-v2](https://user-images.githubusercontent.com/558905/37997313-7e84dc76-31e8-11e8-9663-fbded1ae4aa4.png)
 
-
-We can observe the console output e.g. by clicking on the build link in the build history, then clicking Console:
+4\. We can observe the console output e.g. by clicking on the build link in the build history, then clicking **Console**
 
 #### Alternative Maven:
 
@@ -29,7 +28,7 @@ We can see in the output, that the JAR file was placed to:
 
 >Note: The path details may defer from that of the above example.
 
-Copy the path and file from the above screen. We'll use it on the next page.
+Remember this path and file from the above screen. We'll use it on the next page.
 
 Great! This was the first successful Jenkins triggered Git download and Maven build.
 
@@ -45,21 +44,21 @@ And that, was the first successful Jenkins triggered Git download and Gradle bui
 
 #### Optional: Measure Time Consumption for Gradle clean Build
 
-Let us test again, whether the build is quicker the second time:
+1\. Let us test again, whether the build is quicker the second time:
 
-Click -> Back to Project -> Configure
+**Click -> Back to Project -> Configure**
 
--> Add “clean” Gradle task before “jar” Gradle task:
+2\. Add **clean** Gradle task before **jar** Gradle task:
 
 ![2017-01-02-16_00_27-github-triggered-build-config-jenkins](https://user-images.githubusercontent.com/558905/37997316-7eb44cd6-31e8-11e8-9894-9e52074144f8.png)
 
-Click -> Save -> Build Now
+3\. **Click -> Save -> Build Now**
 
-Then click Build History -> current build
+4\. Then click **Build History -> current build**
 
-Then -> Console Output
+5\. Then -> **Console Output**
 
-Clean Build - Console Output
+6\. **Clean Build - Console Output**
 
 This is showing that a clean build takes only ~6.4 sec, if all SW is downloaded already.
 
@@ -67,6 +66,6 @@ This is showing that a clean build takes only ~6.4 sec, if all SW is downloaded 
 
 ### Check on History
 
-Go back up to the top-level Jenkins menu. Check on the lifecycle of your build:
+1\. Go back up to the top-level Jenkins menu. Check on the lifecycle of your build:
 
 ![image](https://user-images.githubusercontent.com/558905/38007181-2025b5aa-3216-11e8-8bba-f9e84e7ab690.png)
