@@ -24,7 +24,7 @@ You are going to need the GitHub plugin again, like before. Begin by navigating 
 
 <img width="254" alt="github-plugin-install-success" src="https://user-images.githubusercontent.com/21102559/39327769-06c2edfe-4967-11e8-86f1-0f22e717b6b5.png">
 
-Once that's complete, move on to the next step!
+Once that's complete click **Go back to the top page**, and move on to the next step!
 
 #### Specify GitHub Project
 
