@@ -1,4 +1,4 @@
-<img style="float: left;" src="https://user-images.githubusercontent.com/21102559/37915472-9f254882-30e7-11e8-979b-aad02f818e60.png">
+<img style="float: left; padding:5px 20px 5px 10px" src="https://user-images.githubusercontent.com/21102559/37915472-9f254882-30e7-11e8-979b-aad02f818e60.png">
 
 ## Introduction
 Welcome to your second lab and your first glance at Ansible Playbooks!
