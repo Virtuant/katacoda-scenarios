@@ -22,7 +22,7 @@ This may take a while (8+ mins in my case, with a 100Mbps connection):
 
 ![2017-01-03-14_42_22-github-triggered-build-4-console-jenkins](https://user-images.githubusercontent.com/558905/37997325-7f110e9e-31e8-11e8-96b5-a2dab68f1e2b.png)
 
-We can see in the output, that the JAR file was placed to:
+By scrolling to the bottom of the output we can see in the output, that the JAR file was placed to:
 
 `/jenkins_home_alpine/workspace/Github Triggered/Build/target/camel-spring4-0.0.1-SNAPSHOT.jar`
 

@@ -91,8 +91,7 @@ After ~2.5 minutes, it is ready:
 
 And we can find and run the new fat JAR file on the Docker container:
 
-`docker exec -it jenkins bash
-ls -ltr "/var/jenkins_home_local/workspace/GitHub Triggered Build/target"`{{execute}}
+`docker exec -it jenkins bash ls -ltr "/jenkins_home_alpine/workspace/Github Triggered Build/target"`{{execute}}
 
 ```
 total 57680
