@@ -1,7 +1,6 @@
 
 Now, you'll need to make a backup, so that if you were to destroy this instance you could bring it back up at 100%. As it is right now, you would be 90 percent of the way to a WordPress install. You would end up at that final screen where you need to provide details about your website. All of that information is stored in the database, so let’s make a backup and have Ansible automatically import it.
 
-
 1\. Run the following commands to create a backup SQL file to be used by your playbook:
 
 `sudo su - && \
@@ -19,7 +18,6 @@ exit`{{execute}}
       register: db_exist
       ignore_errors: true
 </blockquote></pre>
-
 
 3\. If you need to import the database, you’ll need to copy your database to the remote environment before you import it, so you will need two tasks to perform the import:
 
