@@ -72,7 +72,7 @@
 
     "files": [
         "playbook.yml",
-        "default"
+        "/templates/nginx/default"
     ],
 
     "environment": {
