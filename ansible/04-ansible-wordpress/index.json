@@ -71,7 +71,7 @@
     },
 
     "files": [
-        "playbook.yml"
+        "playbook.yml",
         "default"
     ],
 
