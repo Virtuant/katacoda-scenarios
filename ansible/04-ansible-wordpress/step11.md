@@ -37,4 +37,6 @@ If you get this error message, take a look at the contents your `wp-config.php` 
 
 >Note: If your browser shows an error message relating to timeouts, make sure that you have added book.example.com to your hosts file, as discussed earlier in this chapter.
 
-Okay, now voilà? Great job! We are almost there, so let's finish strong.
+Okay, now voilà? Great job!
+
+> SUCCESS!
