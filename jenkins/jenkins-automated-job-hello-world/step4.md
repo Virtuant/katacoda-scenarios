@@ -31,7 +31,7 @@ Okay, the jar is not executable yet. Let us change the POM file to create an exe
 
 ```
 $ git clone https://github.com/oveits/simple-restful-file-storage
-$ cd https://github.com/oveits/simple-restful-file-storage
+$ cd simple-restful-file-storage
 $ vi pom.xml
 ```
 
@@ -76,7 +76,7 @@ Then:
 `$ git add pom.xml`{{execute}}
 `$ git commit -m "Maven creates fat executable JAR file now"`{{execute}}
 `$ git push`{{execute}}
-```
+
 
 Now again, let us build the project: click on the Build Now, then check the Console Output.
 
@@ -90,7 +90,7 @@ After ~2.5 minutes, it is ready:
 
 And we can find and run the new fat JAR file on the Docker container:
 
-`docker exec -it jenkins bash ls -ltr 'jenkins_home_alpine/workspace/Github Triggered Build/target'`{{execute}}
+`docker exec -it jenkins bash ls -ltr jenkins_home_alpine/workspace/GithubTriggeredBuild/target`{{execute}}
 
 ```
 total 57680
@@ -106,7 +106,7 @@ drwxr-xr-x 2 jenkins jenkins     4096 Jan  5 00:00 archive-tmp
 
 Here, we can see, that a large JAR file with all dependencies has been created. Now let us try to execute it:
 
-`docker exec -it jenkins bash java jar 'jenkins_home_alpine/workspace/Github Triggered Build/target/camel-spring4-0.0.1-SNAPSHOT.jar'`{{execute}}
+`docker exec -it jenkins bash java jar jenkins_home_alpine/workspace/GithubTriggeredBuild/target/camel-spring4-0.0.1-SNAPSHOT.jar`{{execute}}
 
 ```
 17/01/05 00:07:50 INFO main.MainSupport: Apache Camel 2.16.0 starting
