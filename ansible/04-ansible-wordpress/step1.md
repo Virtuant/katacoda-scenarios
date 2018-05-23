@@ -89,10 +89,10 @@ Output:
 7\. Also, because Apache automatically creates its own `index.html` file, you'll need to add the following to your playbook in oder to remove it.
 
 <pre class="file" data-filename="playbook.yml" data-target="append"><blockquote>
-   - name: Remove apache2 index.html
-     file:
-       state: absent
-       path: /var/www/html/index.html
+    - name: Remove apache2 index.html
+      file:
+        state: absent
+        path: /var/www/html/index.html
 </blockquote></pre>
 
 8\. Run Ansible once again to check functionality, before moving on:
