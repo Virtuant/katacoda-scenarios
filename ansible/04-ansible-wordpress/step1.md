@@ -91,7 +91,7 @@ Output:
 <pre class="file" data-filename="playbook.yml" data-target="append"><blockquote>
    - name: Remove apache2 index.html
      file:
-       state: removed
+       state: absent
        path: /var/www/html/index.html
 </blockquote></pre>
 
