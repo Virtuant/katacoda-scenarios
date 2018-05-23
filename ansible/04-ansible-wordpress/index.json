@@ -49,17 +49,10 @@
 						{
                 "title": "Create MySQL User Credentials",
                 "text": "step11.md"
-            },
-						{
-                "title": "Making a Backup",
-                "text": "step12.md"
-            },
-						{
-                "title": "Making It Idempotent",
-                "text": "step13.md"
-            }
 
+            }
 				],
+
         "intro": {
             "text": "intro.md",
             "code": "env-init.sh"
