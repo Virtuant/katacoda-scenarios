@@ -85,7 +85,17 @@ Output:
       apt: name=apache2 state=absent
 </blockquote></pre>
 
-7\. Run Ansible once again to check functionality, before moving on:
+
+7\. Also, because Apache automatically creates its own `index.html` file, you'll need to add the following to your playbook in oder to remove it.
+
+<pre class="file" data-filename="playbook.yml" data-target="append"><blockquote>
+   - name: Remove apache2 index.html
+     file:
+       state: removed
+       path: /var/www/html/index.html
+</blockquote></pre>
+
+8\. Run Ansible once again to check functionality, before moving on:
 
 `ansible-playbook -i 'localhost,' -c local playbook.yml`{{execute}}
 
