@@ -10,7 +10,7 @@ After running Ansible, your new config should rollout and nginx should be restar
 
 2\. Once you've added that, run the following commands to create the appropriate folder:
 
-`cd ~/tutorial/  && \
+`cd ~  && \
 mkdir -p /var/www/book.example.com`{{execute}}
 
 3\. Then, run the following to formulate the test display:
@@ -35,4 +35,11 @@ If it's running, move on to the next step, however if it is currently not runnin
 
 Now, that is pretty cool, huh?
 
->Note: If you've come to this point and you've been unable to render the appropriate results, don't worry! It happens to the best of us. Go back to your `default` nginx folder and check for syntax errors. Also, check the indentation of code in your playbook. You'll get it!
+7\. [Troubleshooting] If you've come to this point and you've been unable to render the appropriate results, don't worry! It happens to the best of us. Here's the first two things to try:
+  > 1. Restart nginx manually. This problem is specific to the Katacoda Lab environment, not Ansible. To proceed, to the following:
+
+      `service nginx restart`{{execute}}
+
+  > 2. Go back to your `default` nginx folder and check for syntax errors. Also, check the indentation of code in your playbook.
+
+You'll get it! Feel free to ask your instructor for help, if needed.
