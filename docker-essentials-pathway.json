@@ -1,0 +1,36 @@
+{
+  "icon": "fa-docker",
+  "pathwayTitle": "docker-essentials-pathway",
+  "title": "Docker Essentials",
+  "description": "Learning Docker is fun, when you have the right place to learn.",
+  "courses": [
+    {
+
+      "title": "Introduction to Docker",
+      "description": "Your journey begins here and it couldn't get any easier! Jump right in, when you're ready.",
+      "course_id": "introduction-docker"
+
+    },
+    {
+
+      "title": "Practice Docker Basics",
+      "description": "Practice makes perfect, and Docker is no different. Let's get some more pratice with Docker Basics.",
+      "course_id": "practice-docker-basics"
+
+    },
+    {
+
+      "title": "Dockerfile",
+      "description": "Creating images using Dockerfiles is one of the key concepts of Docker. Learn how to create your Dockerfile here.",
+      "course_id": "dockerfile"
+
+    },
+    {
+
+      "title": "Deploying Registry Server",
+      "description": "Once you've created an image, you'll need a place to store it. Launching a local registry is one way to do that.",
+      "course_id": "dockerfile"
+
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+
+    "title": "Introduction to Docker",
+    "description": "Your journey begins here and it couldn't get any easier! Jump right in, when you're ready.",
+    "difficulty": "Intermediate",
+    "time": "25-30 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Create and Execute a Dockerfile",
+                "text": "step1.md"
+            },
+            {
+                "title": "History of a Dockerfile",
+                "text": "step2.md"
+            },
+            {
+                "title": "Adding CMD and ENTRYPOINT",
+                "text": "step3.md"
+            },
+            {
+                "title": "Dockerizing an App",
+                "text": "step4.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "env-init.sh"
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+	  },
+	"files": [
+        "Dockerfile",
+        "helloworld.c"
+    	],
+
+	"environment": {
+		"showdashboard": true,
+		"dashboards": [{"name": "Browser", "port": 8080}],
+		"uilayout": "editor-terminal",
+        "uisettings": "Dockerfile",
+		"uimessage1": "\u001b[32mYour Interactive Host Terminal.\u001b[m\r\n"
+	},
+
+	"backend": {
+		"imageid": "docker"
+	}
+}
+

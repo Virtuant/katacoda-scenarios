@@ -1,0 +1,48 @@
+{
+
+    "title": "Introduction to Docker",
+    "description": "Your journey begins here and it couldn't get any easier! Jump right in, when you're ready.",
+    "difficulty": "Beginner",
+    "time": "15 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Exploring Docker Help",
+                "text": "step1.md"
+            },
+            {
+                "title": "Pulling Images Down From Docker Hub",
+                "text": "step2.md"
+            },
+            {
+                "title": "Launching Containers From Images",
+                "text": "step3.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "env-init.sh"
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+	  },
+	"files": [
+    "playbook.yml"
+    	],
+
+	"environment": {
+		"showdashboard": true,
+		"dashboards": [{"name": "Browser", "port": 8080}],
+		"uilayout": "terminal",
+        "uisettings": "yaml",
+		"uimessage1": "\u001b[32mYour Interactive Host Terminal.\u001b[m\r\n"
+	},
+
+	"backend": {
+		"imageid": "docker",
+        "port": 8080
+
+	}
+}
+

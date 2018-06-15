@@ -1,0 +1,57 @@
+{
+
+    "title": "Practice Docker Basics",
+    "description": "Practice makes perfect, and Docker is no different. Let's get some more pratice with Docker Basics.",
+    "difficulty": "Intermediate",
+    "time": "25-30 Minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Learn Container Run Options",
+                "text": "step1.md"
+            },
+            {
+                "title": "Explore and Create",
+                "text": "step2.md"
+            },
+            {
+                "title": "Stop, Start, and Execute",
+                "text": "step3.md"
+            },
+            {
+                "title": "Building Images With Dockerfile",
+                "text": "step4.md"
+            },
+            {
+                "title": "Removing Images and Containers",
+                "text": "step5.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "env-init.sh"
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+	  },
+    
+	"files": [
+        "Dockerfile",
+        "hello.py"
+    	],
+
+	"environment": {
+		"showdashboard": true,
+		"dashboards": [{"name": "Browser", "port": 8080}],
+		"uilayout": "editor-terminal",
+        "uisettings": "dockerfile",
+		"uimessage1": "\u001b[32mYour Interactive Host Terminal.\u001b[m\r\n"
+	},
+
+	"backend": {
+		"imageid": "docker"
+
+	}
+}
+
