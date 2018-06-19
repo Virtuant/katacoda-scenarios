@@ -1,5 +1,6 @@
 {
   "icon": "fa-docker",
+  "private": true,
   "pathwayTitle": "docker-essentials-pathway",
   "title": "Docker Essentials",
   "description": "Learning Docker is fun, when you have the right place to learn.",
