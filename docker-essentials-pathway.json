@@ -34,11 +34,11 @@
 
     },
     {
-
+      
+      "external_link": "https://www.katacoda.com/courses/docker/data-containers/",
       "title": "Creating Containers",
       "description": "Once you've created an image, you'll need a place to store it. Launching a local registry is one way to do that.",
-      "course_id": "data-containers",
-      "external_link": "https://www.katacoda.com/courses/docker/data-containers/"
+      "course_id": "data-containers"
     }
   ]
 }
