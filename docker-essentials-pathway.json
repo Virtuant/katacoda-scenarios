@@ -27,9 +27,10 @@
     },
     {
 
-      "title": "Deploying Registry Server",
-      "description": "Once you've created an image, you'll need a place to store it. Launching a local registry is one way to do that.",
-      "course_id": "dockerfile"
+      "title": "Building Container Images",
+      "description": "Learn how to build and launch your own container images",
+      "course_id": "dockerfile".
+      "external_link": "https://www.katacoda.com/courses/docker/2"
 
     },
     {
