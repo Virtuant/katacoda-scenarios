@@ -10,11 +10,11 @@ $ vim Dockerfile
   
 2\. Copy the following text inside the new Dockerfile:
 
-<pre class="file" data-filename="Dockerfile" data-target="append"><blockquote>
+<pre class="file" data-filename="Dockerfile" data-target="append">
 FROM ubuntu
 RUN apt-get -y update
 RUN apt-get install -y figlet
-</blockquote></pre>
+</pre>
 
 3\. After saving the file, execute as follows:
 
