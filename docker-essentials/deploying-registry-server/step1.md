@@ -9,7 +9,11 @@ Docker expects all registries to run on HTTPS. The next section of this lab will
 http: server gave HTTP response to HTTPS client
 ```
 
-1\. The Docker Engine needs to be explicitly setup to use HTTP for the insecure registry. Edit or create `/etc/docker/docker` file: 
+1\. The Docker Engine needs to be explicitly setup to use HTTP for the insecure registry, so create the directory:
+
+`mkdir /etc/docker`{{execute}}
+
+Edit or create `/etc/docker/docker` file: 
 
 `vi /etc/docker/docker`{{execute}}
 
