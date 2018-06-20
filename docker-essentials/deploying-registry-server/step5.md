@@ -11,7 +11,7 @@ In this example, the new container will use a host-mounted Docker volume. When t
 
 `mkdir registry-data`{{execute}}
 
-`docker run -d -p 5000:5000 --name registry -v pwd /registry-data:/var/lib/registry registry:2`{{execute}}
+`docker run -d -p 5000:5000 --name registry -v /registry-data:/var/lib/registry registry:2`{{execute}}
 
 3\. Tag and push the container with the new IP address of the registry.
 

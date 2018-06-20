@@ -36,17 +36,15 @@ If you are running the registry locally, be sure to use your host name as the CN
 
 2\. To get the docker daemon to trust the certificate, copy the `domain.crt` file.
 
-`sudo su`{{copy}}
-
 `mkdir /etc/docker/certs.d`{{copy}}
 
 `mkdir /etc/docker/certs.d/<localhost>:5000`{{copy}}
 
-`cp `pwd`/certs/domain.crt /etc/docker/certs.d/<localhost>:5000/ca.crt`{{copy}}
+`cp /certs/domain.crt /etc/docker/certs.d/<localhost>:5000/ca.crt`{{copy}}
 
 
 3\. Make sure to restart the docker daemon.
 
-`sudo service docker restart`{{execute}}
+`service docker restart`{{execute}}
 
 Now we have an SSL certificate and can run a secure registry.
