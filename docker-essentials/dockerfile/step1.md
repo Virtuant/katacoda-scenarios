@@ -1,13 +1,12 @@
 Creating a new Dockerfile is easy. Follow alone to make a new directory and initialize a new, empty Dockerfile.
 
-1\. Create a Dockerfile inside this directory:
+1\. Create a Dockerfile inside this directory (or simply edit it in the top window):
 
 ```
-$ cd myimage
 $ vim Dockerfile
 ```
 
->NOTE: Vim is used by default, feel free to use another available text editor. Ask the instructor if this is confusing.
+>NOTE: The editor at top automatically saves your edits. Or, `vim` is used by default, feel free to use another available text editor. Ask the instructor if this is confusing.
   
 2\. Copy the following text inside the new Dockerfile:
 
@@ -53,4 +52,4 @@ Successfully built xxxxxxxxxxxx
 _Pretty cool, huh?_
 
 And of course, be sure to exit out of your container:
-`exit`{{copy}}
+`exit`{{execute T1}}
