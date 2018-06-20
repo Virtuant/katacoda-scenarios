@@ -6,7 +6,7 @@ For this step, leave the secondary terminal window and return to the primary. If
 
 2\. Now, let’s create a file. We will name it ```hello.py``` and you can fill it up with just about anything you want to. Following along here, and make sure to put the file in your Home directory.
 
-`cd `{{execute T2}}
+`cd ~`{{execute T2}}
 
 `touch hello.py`{{execute T2}}
 
