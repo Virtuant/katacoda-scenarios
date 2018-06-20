@@ -1,26 +1,22 @@
 {
 
-    "title": "Introduction to Docker",
-    "description": "Your journey begins here and it couldn't get any easier! Jump right in, when you're ready.",
+    "title": "Deploy Static HTML Website as Container",
+    "description": "Now let's serve up a web page.",
     "difficulty": "Intermediate",
-    "time": "25-30 minutes",
+    "time": "15-20 minutes",
     "details": {
         "steps": [
             {
-                "title": "Create and Execute a Dockerfile",
+                "title": "Create Dockerfile",
                 "text": "step1.md"
             },
             {
-                "title": "History of a Dockerfile",
+                "title": "Build Docker Image",
                 "text": "step2.md"
             },
             {
-                "title": "Adding CMD and ENTRYPOINT",
+                "title": "Run",
                 "text": "step3.md"
-            },
-            {
-                "title": "Dockerizing an App",
-                "text": "step4.md"
             }
         ],
         "intro": {
@@ -31,11 +27,6 @@
             "text": "finish.md"
         }
 	  },
-	"files": [
-        "Dockerfile",
-        "helloworld.c"
-    	],
-
 	"environment": {
 		"showdashboard": true,
 		"dashboards": [{"name": "Browser", "port": 8080}],
