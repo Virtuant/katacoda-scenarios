@@ -6,7 +6,7 @@ To create a Data Container we first create a container with a well-known name fo
 
 When creating the container, we also provide a -v option to define where other containers will be reading/saving data.
 
-Create a Data Container for storing configuration files using 
+1. Create a Data Container for storing configuration files using 
 
 `docker create -v /config --name dataContainer busybox`{{execute T1}}
 
