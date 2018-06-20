@@ -5,40 +5,36 @@
   "description": "Learning Docker is fun, when you have the right place to learn.",
   "courses": [
     {
-
       "title": "Introduction to Docker",
       "description": "Your journey begins here and it couldn't get any easier! Jump right in, when you're ready.",
       "course_id": "introduction-docker"
-
     },
     {
-
       "title": "Practice Docker Basics",
       "description": "Practice makes perfect, and Docker is no different. Let's get some more pratice with Docker Basics.",
       "course_id": "practice-docker-basics"
-
     },
     {
-
       "title": "Dockerfile",
       "description": "Creating images using Dockerfiles is one of the key concepts of Docker. Learn how to create your Dockerfile here.",
       "course_id": "dockerfile"
 
     },
     {
-
       "title": "Building Container Images",
       "description": "Learn how to build and launch your own container images",
-      "course_id": "dockerfile",
-      "external_link": "https://www.katacoda.com/courses/docker/2/"
+      "course_id": "dockerfile"
 
     },
     {
-      
-      "external_link": "courses/docker/data-containers/",
       "title": "Creating Containers",
       "description": "Once you've created an image, you'll need a place to store it. Launching a local registry is one way to do that.",
       "course_id": "data-containers"
+    },
+    {
+      "title": "Deploy Static HTML Website as Container",
+      "description": "In this scenario, you'll learn how to create a Docker Image for running a static HTML website using Nginx. The scenario will explain how to build a Docker Image running Nginx with your HTML site.",
+      "course_id": "reate-nginx-static-web-server"
     }
   ]
 }
