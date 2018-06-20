@@ -1,9 +1,9 @@
 {
 
-    "title": "Practice Docker Basics",
-    "description": "Practice makes perfect, and Docker is no different. Let's get some more pratice with Docker Basics.",
+    "title": "Docker Data Containers",
+    "description": "There are two ways of approaching stateful Containers, that is containers are store and persistent data for future use. This could be the container creating and storing data, for example, a database. Alternatively, it could be data requiring additional for instance the configuration or SSL certifications. This approach can also be used to backup data or debug containers. One approach we've discussed is using the -v <host-dir>:<container-dir> option to map directories. The other approach is to use Data Containers. This scenario will introduce the advantages of using Data Containers.",
     "difficulty": "Intermediate",
-    "time": "25-30 Minutes",
+    "time": "15 Minutes",
     "details": {
         "steps": [
             {
