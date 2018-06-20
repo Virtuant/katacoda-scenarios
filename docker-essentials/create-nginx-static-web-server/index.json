@@ -1,9 +1,9 @@
 {
 
     "title": "Deploy Static HTML Website as Container",
-    "description": "Now let's serve up a web page.",
+    "description": "Now let's see what we can do with a static web page.",
     "difficulty": "Intermediate",
-    "time": "15-20 minutes",
+    "time": "25-30 minutes",
     "details": {
         "steps": [
             {
@@ -27,6 +27,11 @@
             "text": "finish.md"
         }
 	  },
+	"files": [
+        "Dockerfile",
+        "index.html"
+    	],
+
 	"environment": {
 		"showdashboard": true,
 		"dashboards": [{"name": "Browser", "port": 8080}],
