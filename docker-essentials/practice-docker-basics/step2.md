@@ -20,9 +20,9 @@ For this step, leave the secondary terminal window and return to the primary. If
 
 `vi hello.py`{{execute T1}}
 
-5\. Now, copy and paste the following line into the file:
+5\. Now, hit `i` to insert and copy and paste the following line into the file:
 
 `hello-world`{{copy}}
 
 **Vim (`vi`) Basic Instruction:**<br>
-Before writing any text you must press (`i`). To save your text to the `hello.py` doc, hit (`esc`) and then type out (`:qw`) and hit (`enter`). If this is uneffective consult with the instructor.
+To save your text to the `hello.py` doc, hit (`esc`) and then type out (`:qw`) and hit (`enter`). If this is ineffective consult with the instructor.
