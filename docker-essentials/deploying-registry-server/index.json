@@ -1,9 +1,9 @@
 {
 
-    "title": "Introduction to Docker",
+    "title": "Deploy a Registry Server",
     "description": "Your journey begins here and it couldn't get any easier! Jump right in, when you're ready.",
     "difficulty": "Beginner",
-    "time": "15 minutes",
+    "time": "15-25 minutes",
     "details": {
         "steps": [
             {
