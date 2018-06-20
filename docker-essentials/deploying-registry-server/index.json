@@ -63,9 +63,6 @@
             "text": "finish.md"
         }
 	  },
-	"files": [
-        "docker-compose.yml"
-    	],
 
 	"environment": {
 		"showdashboard": true,
