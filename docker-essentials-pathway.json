@@ -21,9 +21,9 @@
 
     },
     {
-      "title": "Building Container Images",
+      "title": "Deploying A Registry Server",
       "description": "Learn how to build and launch your own container images",
-      "course_id": "dockerfile"
+      "course_id": "deploying-registry-server"
 
     },
     {
