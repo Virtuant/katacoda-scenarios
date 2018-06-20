@@ -13,14 +13,14 @@ return 0;
 
 3\. Now, from inside our `helloworld` directory, create a new "Dockerfile" and copy the following code into it:
 
-```
+<pre class="file" data-filename="Dockerfile" data-target="replace"><blockquote>
 FROM ubuntu
 RUN apt-get update
 RUN apt-get install -y build-essential
 COPY helloworld.c /
 RUN make helloworld
 CMD /helloworld
-```
+</blockquote></pre>
 
 > **NOTE:** See how we are using the COPY command in our Dockerfile to bring our application into our container. This is called "dockerizing" and it's very useful.
 
