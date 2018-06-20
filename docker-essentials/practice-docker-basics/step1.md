@@ -1,6 +1,6 @@
 As we discussed in the last lesson, (“Introduction to Docker Containers”) our containers don’t necessarily stay running, but what else can we do when we run a container?
 
-1\. In your terminal, type `docker run —help`{{execute T1}} and let’s look at a list of run options, like we did before.<br>
+1\. In your terminal, type `docker —help run`{{execute T1}} and let’s look at a list of run options, like we did before.<br>
 
 > NOTE: The list is to large to print here. Consult the instructor if you think you aren’t getting the appropriate output.<br>
 
