@@ -33,8 +33,8 @@
     },
     {
       "title": "Deploy Static HTML Website as Container",
-      "description": "In this scenario, you'll learn how to create a Docker Image for running a static HTML website using Nginx. The scenario will explain how to build a Docker Image running Nginx with your HTML site.",
-      "course_id": "reate-nginx-static-web-server"
+      "description": "In this scenario, you'll learn how to create a Docker Image for running a static HTML website using Nginx.",
+      "course_id": "create-nginx-static-web-server"
     }
   ]
 }
