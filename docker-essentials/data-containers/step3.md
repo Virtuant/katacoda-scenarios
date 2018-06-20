@@ -1,5 +1,3 @@
-Step 3 - Mount Volumes From
-
 Now our Data Container has our config, we can reference the container when we launch dependent containers requiring the configuration file.
 
 Using the `--volumes-from <container>` option we can use the mount volumes from other containers inside the container 

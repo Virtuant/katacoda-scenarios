@@ -7,24 +7,20 @@
     "details": {
         "steps": [
             {
-                "title": "Learn Container Run Options",
+                "title": "Create Container",
                 "text": "step1.md"
             },
             {
-                "title": "Explore and Create",
+                "title": "Copy Files",
                 "text": "step2.md"
             },
             {
-                "title": "Stop, Start, and Execute",
+                "title": "Mount Volumes From",
                 "text": "step3.md"
             },
             {
-                "title": "Building Images With Dockerfile",
+                "title": "Export/Import Containers",
                 "text": "step4.md"
-            },
-            {
-                "title": "Removing Images and Containers",
-                "text": "step5.md"
             }
         ],
         "intro": {
@@ -35,12 +31,6 @@
             "text": "finish.md"
         }
 	  },
-    
-	"files": [
-        "Dockerfile",
-        "hello.py"
-    	],
-
 	"environment": {
 		"showdashboard": true,
 		"dashboards": [{"name": "Browser", "port": 8080}],
