@@ -2,7 +2,7 @@ For this step, leave the secondary terminal window and return to the primary. If
 
 1\. Take a minute and explore the interactive Ubuntu container we’ve spun up. Once done, following along further to insure our container is up to date.
 
-`sudo apt-get update`{{copy}}
+`apt-get update`{{copy}}
 
 2\. Now, let’s create a file. We will name it ```hello.py``` and you can fill it up with just about anything you want to. Following along here, and make sure to put the file in your Home directory.
 
