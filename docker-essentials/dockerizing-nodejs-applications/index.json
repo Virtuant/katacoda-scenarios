@@ -1,0 +1,79 @@
+{
+
+    "title": "Dockerizing Node.js Applications",
+    "description": ".",
+    "difficulty": "Intermediate",
+    "time": "15-25 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Running a Registry Container in Linux",
+                "text": "step1.md"
+            },
+            {
+                "title": "Testing the Registry Image",
+                "text": "step2.md"
+            },
+            {
+                "title": "Understanding Image Names",
+                "text": "step3.md"
+            },
+            {
+                "title": "Pushing and Pulling from the Local Registry",
+                "text": "step4.md"
+            },
+            {
+                "title": "Running a Registry Container with External Storage",
+                "text": "step5.md"
+            },
+            {
+                "title": "Generating the SSL Certificate in Linux",
+                "text": "step6.md"
+            },
+            {
+                "title": "Running the Registry Securely",
+                "text": "step7.md"
+            },
+            {
+                "title": "Accessing the Secure Registry",
+                "text": "step8.md"
+            },
+            {
+                "title": "Usernames and Passwords",
+                "text": "step9.md"
+            },
+            {
+                "title": "Running an Authenticated Secure Registry",
+                "text": "step10.md"
+            },
+            {
+                "title": "Authenticating with the Registry",
+                "text": "step11.md"
+            },
+            {
+                "title": "Using Docker Compose to Start the Registry",
+                "text": "step12.md"
+            }
+        ],
+        "intro": {
+            "text": "intro.md",
+            "code": "env-init.sh"
+        },
+        "finish": {
+            "text": "finish.md"
+        }
+	  },
+
+	"environment": {
+		"showdashboard": true,
+		"dashboards": [{"name": "Browser", "port": 8080}],
+		"uilayout": "terminal",
+        "uisettings": "yaml",
+		"uimessage1": "\u001b[32mYour Interactive Host Terminal.\u001b[m\r\n"
+	},
+
+	"backend": {
+		"imageid": "docker"
+	}
+}
+
